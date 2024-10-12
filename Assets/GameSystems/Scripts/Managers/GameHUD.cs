@@ -24,6 +24,6 @@ public class GameHUD : IGlobalSingleton<GameHUD>
     public void Resume()
     {
         pauseCanvas.SetActive(false);
-        InputHandler.instance.UnlockInput();
+     
     }
 }

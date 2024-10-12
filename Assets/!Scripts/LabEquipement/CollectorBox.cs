@@ -14,7 +14,7 @@ public class CollectorBox : MonoBehaviour
         // "collision" contains details about the object that collided with the box
         GameObject enteringObject = collision.gameObject;
         taskManager.CompleteTaskByName(enteringObject.name);
-        taskManager.upgradeProgress();
+  
     }
 
 

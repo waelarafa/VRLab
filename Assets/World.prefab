@@ -3961,10 +3961,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 1958528087730029460}
-  waterBottle: {fileID: 1488547655034092005}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 1638447329990254831}
-  box: {fileID: 2663848033438594354}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -5203,10 +5200,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 8908790207415741448}
-  waterBottle: {fileID: 1602516371066136123}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 4499580201035568906}
-  box: {fileID: 4098356301949788956}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -8067,10 +8061,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 1204889609428682867}
   worldCanvas: {fileID: 7764636622698577896}
   measurementCanvas: {fileID: 4118476245370410234}
   oceanBuoy: {fileID: 9019019196244561839}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -10779,10 +10774,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 1961958053574617465}
   worldCanvas: {fileID: 2108372321779972303}
   measurementCanvas: {fileID: 4496229479145502338}
   oceanBuoy: {fileID: 1405221804595099577}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -12440,10 +12436,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 4673978934518203353}
-  waterBottle: {fileID: 4987719763946627889}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 3693811180893570186}
-  box: {fileID: 8320443283102602893}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -12661,7 +12654,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5450531325466723140}
   - component: {fileID: 4820918334827913583}
-  - component: {fileID: 3941202918983973332}
   - component: {fileID: 7481364776107250310}
   m_Layer: 0
   m_Name: TaskBehavour2
@@ -12715,27 +12707,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!135 &3941202918983973332
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2389797314849164590}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2.75
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &7481364776107250310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12756,10 +12727,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 6455652887006275458}
-  waterBottle: {fileID: 7502142380523887320}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 6476422300081798924}
-  box: {fileID: 4098356301949788956}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -14874,10 +14842,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 8768178445615203378}
   worldCanvas: {fileID: 4052282403081868263}
   measurementCanvas: {fileID: 3482694592528066932}
   oceanBuoy: {fileID: 1347550442239498690}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 25
@@ -15187,10 +15156,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 6946575842089446428}
   worldCanvas: {fileID: 3746807598674435749}
   measurementCanvas: {fileID: 488982992383023512}
   oceanBuoy: {fileID: 1229949323211939480}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -16784,10 +16754,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 4136299268113341057}
-  waterBottle: {fileID: 5993658319210444300}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 6512868815585145834}
-  box: {fileID: 8320443283102602893}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 20
@@ -17109,8 +17076,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2995001090586033272}
-  - component: {fileID: 3849740084346898972}
-  - component: {fileID: 1415996925899427699}
   - component: {fileID: 4088249770053155667}
   m_Layer: 0
   m_Name: TaskBehavour1
@@ -17128,7 +17093,7 @@ Transform:
   m_GameObject: {fileID: 3341255797242511502}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7439992, y: -2.71, z: -0.149}
+  m_LocalPosition: {x: -0.7439986, y: -2.7100005, z: -0.14900026}
   m_LocalScale: {x: 0.077946626, y: 1.4833645, z: 0.077946626}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17138,54 +17103,6 @@ Transform:
   - {fileID: 7917317202833029867}
   m_Father: {fileID: 7388787647846571018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3849740084346898972
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3341255797242511502}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!135 &1415996925899427699
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3341255797242511502}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 7.64
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4088249770053155667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17205,10 +17122,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 3954151178018518384}
   worldCanvas: {fileID: 119220809181055054}
   measurementCanvas: {fileID: 249055982499315195}
   oceanBuoy: {fileID: 4447070882660368029}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -18557,10 +18475,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 1526480795857747896}
-  waterBottle: {fileID: 1980416784933205462}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 6238594672759242169}
-  box: {fileID: 8320443283102602893}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -21078,10 +20993,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 7968283619199422544}
   worldCanvas: {fileID: 4648818922306307906}
   measurementCanvas: {fileID: 5177019708543348326}
   oceanBuoy: {fileID: 6296932121563686102}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -22752,10 +22668,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 2604326581754009005}
-  waterBottle: {fileID: 8734341130597837421}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 5041860119106816470}
-  box: {fileID: 8666946766972524043}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 20
@@ -23315,10 +23228,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 5138207016512571428}
   worldCanvas: {fileID: 2267340462392184627}
   measurementCanvas: {fileID: 5059958256287544141}
   oceanBuoy: {fileID: 6218145657423903550}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -27754,10 +27668,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 1986044150297633665}
-  waterBottle: {fileID: 4717856851597780531}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 4163601991675218850}
-  box: {fileID: 8666946766972524043}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -27908,10 +27819,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 6008539296598602585}
-  waterBottle: {fileID: 2677534119742018733}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 6103395844341697074}
-  box: {fileID: 8666946766972524043}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -27969,7 +27877,6 @@ GameObject:
   - component: {fileID: 8107612112257397698}
   - component: {fileID: 327651297790831136}
   - component: {fileID: 7570164263578281756}
-  - component: {fileID: 6551282055753412039}
   m_Layer: 0
   m_Name: AreasCanvas
   m_TagString: Untagged
@@ -28063,18 +27970,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6551282055753412039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5130414491126755698}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 950c4676fd78fe5429825996e07f7a42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5138353470320800667
 GameObject:
   m_ObjectHideFlags: 0
@@ -28327,10 +28222,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 1221465477344436402}
   worldCanvas: {fileID: 6993835402877240684}
   measurementCanvas: {fileID: 2843520360763075877}
   oceanBuoy: {fileID: 5016101651332594411}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 25
@@ -31525,10 +31421,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 1168222999783328931}
-  waterBottle: {fileID: 488545812598542267}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 3593625327518247118}
-  box: {fileID: 4098356301949788956}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -32623,10 +32516,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 3804076886570729757}
   worldCanvas: {fileID: 6526008139012662223}
   measurementCanvas: {fileID: 9178008925821573126}
   oceanBuoy: {fileID: 6432449902266128733}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -33838,10 +33732,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 9011176526491589656}
-  waterBottle: {fileID: 2514156088762943398}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 5318366058947934089}
-  box: {fileID: 8666946766972524043}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -34294,10 +34185,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 1923571986795316786}
   worldCanvas: {fileID: 3658628016229804636}
   measurementCanvas: {fileID: 6188113056459325957}
   oceanBuoy: {fileID: 4322914172960860008}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -35365,10 +35257,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 7366723348649810039}
   worldCanvas: {fileID: 49856681830977936}
   measurementCanvas: {fileID: 8222127288219270550}
   oceanBuoy: {fileID: 7210525738123442779}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 25
@@ -36865,10 +36758,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 6126424365805949730}
-  waterBottle: {fileID: 3636457123414530567}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 4208748237873526999}
-  box: {fileID: 2663848033438594354}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -37992,7 +37882,6 @@ GameObject:
   - component: {fileID: 7388787647846571018}
   - component: {fileID: 143149178480179711}
   - component: {fileID: 8767804005143797547}
-  - component: {fileID: 6162941423975319968}
   m_Layer: 0
   m_Name: Area 1
   m_TagString: Untagged
@@ -38076,29 +37965,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6162941423975319968
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6794346223583919148}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 1.83
-  m_Height: 38.33
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &6833709295376980984
 GameObject:
   m_ObjectHideFlags: 0
@@ -40075,7 +39941,6 @@ GameObject:
   - component: {fileID: 6670620332695255191}
   - component: {fileID: 4369577721294066414}
   - component: {fileID: 3256028152713114796}
-  - component: {fileID: 1111322169599736173}
   m_Layer: 0
   m_Name: GlovesSource
   m_TagString: Untagged
@@ -40151,27 +40016,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1111322169599736173
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7264644812525233435}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7299855591717201427
 GameObject:
   m_ObjectHideFlags: 0
@@ -43336,10 +43180,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 523392421079786670}
-  waterBottle: {fileID: 6464481983709344962}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 1408424989494752053}
-  box: {fileID: 4098356301949788956}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 20
@@ -44964,10 +44805,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 4319318183183992422}
-  waterBottle: {fileID: 5487895694740467389}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 3694127612788831386}
-  box: {fileID: 2663848033438594354}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -47013,10 +46851,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 5624239149723834449}
-  waterBottle: {fileID: 7417674146197810116}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 467083814316592740}
-  box: {fileID: 2663848033438594354}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -47469,10 +47304,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 3003746408080851519}
   worldCanvas: {fileID: 704371951504755202}
   measurementCanvas: {fileID: 6754381195940742986}
   oceanBuoy: {fileID: 5457697876161198745}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -47599,10 +47435,11 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  measurementSpot: {fileID: 8282466547768278376}
   worldCanvas: {fileID: 3205883374522146931}
   measurementCanvas: {fileID: 3965809613938524043}
   oceanBuoy: {fileID: 6872501212454228009}
+  AreaCanvas: {fileID: 0}
+  MultiparameterTable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -50601,10 +50438,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 2218818684807361286}
-  waterBottle: {fileID: 1333735455558232285}
-  waterBottleAnimationDelay: 4
-  label: {fileID: 7299373359204131680}
-  box: {fileID: 8320443283102602893}
+  bottleIndicator: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -52201,12 +52035,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 384347854693052040}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6103395844341697074 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 384347854693052040}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &407662883401056455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52796,12 +52624,6 @@ PrefabInstance:
 --- !u!224 &2005314167397958482 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 537358501044410627}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6238594672759242169 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
     type: 3}
   m_PrefabInstance: {fileID: 537358501044410627}
   m_PrefabAsset: {fileID: 0}
@@ -53415,12 +53237,6 @@ PrefabInstance:
 --- !u!224 &1488265497776357863 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 578215281868381110}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6476422300081798924 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
     type: 3}
   m_PrefabInstance: {fileID: 578215281868381110}
   m_PrefabAsset: {fileID: 0}
@@ -54210,12 +54026,6 @@ PrefabInstance:
 --- !u!224 &1667992121062116609 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 829999160694888272}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6512868815585145834 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
     type: 3}
   m_PrefabInstance: {fileID: 829999160694888272}
   m_PrefabAsset: {fileID: 0}
@@ -55852,12 +55662,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1449786793090002284}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5041860119106816470 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1449786793090002284}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1601954893316140363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56447,12 +56251,6 @@ PrefabInstance:
 --- !u!224 &326827158891710818 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1740717913589502771}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5318366058947934089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
     type: 3}
   m_PrefabInstance: {fileID: 1740717913589502771}
   m_PrefabAsset: {fileID: 0}
@@ -59375,12 +59173,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3794970009457084378}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &7299373359204131680 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 3794970009457084378}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3913841952514287424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60968,12 +60760,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f2e488d3bf53c14ba39a309caacc5b8, type: 3}
---- !u!1 &1408424989494752053 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4786586880774936463}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6830840514266992094 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
@@ -61818,12 +61604,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f2e488d3bf53c14ba39a309caacc5b8, type: 3}
---- !u!1 &1638447329990254831 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 5141434375237076053}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6627980865779834372 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
@@ -64526,12 +64306,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f2e488d3bf53c14ba39a309caacc5b8, type: 3}
---- !u!1 &467083814316592740 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 6313358630994340574}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5421441218058514575 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
@@ -65495,12 +65269,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f2e488d3bf53c14ba39a309caacc5b8, type: 3}
---- !u!1 &3593625327518247118 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 6933849398743846004}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8978103305804142117 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
@@ -66053,12 +65821,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f2e488d3bf53c14ba39a309caacc5b8, type: 3}
---- !u!1 &3694127612788831386 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 7107464186858426400}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9080263093691894385 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
@@ -66453,12 +66215,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f2e488d3bf53c14ba39a309caacc5b8, type: 3}
---- !u!1 &3693811180893570186 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 7108344641811619888}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &9080580539397847649 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
@@ -67182,12 +66938,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f2e488d3bf53c14ba39a309caacc5b8, type: 3}
---- !u!1 &4163601991675218850 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 7507203208970088216}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8399120545937634633 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
@@ -67582,12 +67332,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f2e488d3bf53c14ba39a309caacc5b8, type: 3}
---- !u!1 &4208748237873526999 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 7750306013969652845}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8588298966551332412 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
@@ -68219,12 +67963,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f2e488d3bf53c14ba39a309caacc5b8, type: 3}
---- !u!1 &4499580201035568906 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901655568123995322, guid: 4f2e488d3bf53c14ba39a309caacc5b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 8040996964779144112}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8301829607766501857 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2063029240631761489, guid: 4f2e488d3bf53c14ba39a309caacc5b8,

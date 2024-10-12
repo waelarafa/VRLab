@@ -10,7 +10,7 @@ public class GameEnd : MonoBehaviour
     public int taskFinished;
     [SerializeField] private GameObject finalCanvas;
 
-    public InputHandler inputHandler;
+
 
     
     public void End()
@@ -18,7 +18,7 @@ public class GameEnd : MonoBehaviour
         if (taskFinished >= tasks)
         {
             finalCanvas.SetActive(true);
-            inputHandler.LockUnlockCursor(true);
+          
         }
          
     }

@@ -9,7 +9,7 @@ public class PopupHandler : IGlobalSingleton<PopupHandler>
 
     public void TaskFinished(GameTask gameTask)
     {
-        InputHandler.instance.ShowCursorAndBlockInput();
+      
         modalWindowManager.titleText = "TASK FINISHED";
         modalWindowManager.descriptionText = gameTask.taskTitle;
         modalWindowManager.Open();
@@ -18,7 +18,7 @@ public class PopupHandler : IGlobalSingleton<PopupHandler>
         modalWindowManager.onConfirm.AddListener(() => {
             gameTask.DisableTaskListItem();
             modalWindowManager.Close();
-            InputHandler.instance.HideCursorAndEnableInput();
+            
         });
     }
 }

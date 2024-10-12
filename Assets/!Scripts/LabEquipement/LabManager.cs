@@ -14,12 +14,15 @@ public class TaskManager : MonoBehaviour
     private float progressRate;
     private float TotalProgress;
     public TextMeshProUGUI progressUI;
-    public Canvas TaskCanva;
-    public Canvas endCanva;
+    public GameObject TaskCanva;
+    public GameObject endCanva;
     private void Start()
     {
+        endCanva.SetActive(false);
+
         tasksLength = taskList.tasks.Length;
         progressRate = 100 / tasksLength;
+        TotalProgress = 0;
         for (int i = 0; i < tasksLength; i++)
         {
             // Set the toggle state based on the task index
@@ -59,14 +62,16 @@ public class TaskManager : MonoBehaviour
     // Call this function to complete a task programmatically by its GameObject name (which is the taskName)
     public void CompleteTaskByName(string taskName)
     {
+      
         foreach (Transform child in taskPanel)
         {
             // Check if the GameObject's name matches the task name
             if (child.gameObject.name == taskName)
             {
                 TaskItem taskItem = child.GetComponent<TaskItem>();
-                if (taskItem != null)
+                if (taskItem != null && !taskItem.toggle.isOn)
                 {
+                    upgradeProgress();
                     taskItem.CompleteTask(); // Mark task as completed
                     Debug.Log(taskName + " is completed.");
                 }
@@ -78,22 +83,25 @@ public class TaskManager : MonoBehaviour
     }
     public void upgradeProgress()
     {
+       
+        TotalProgress = TotalProgress + progressRate;
         progressUI.text = "progress " + TotalProgress + "%";
-        TotalProgress += progressRate;
+        Debug.Log(" TotalProgress: " + TotalProgress);
         if (TotalProgress == 100)
         {
-            endCanva.enabled = true;
+            endCanva.SetActive(true);
+            Debug.Log(" endCanva.enabled: ");
         }
     }
     public void Update()
     {
         if (InputBridge.Instance.XButtonDown)
         {
-            TaskCanva.enabled = true;
+            TaskCanva.SetActive(true) ;
         }
         if (InputBridge.Instance.XButtonUp)
         {
-            TaskCanva.enabled = false;
+            TaskCanva.SetActive(false);
         }
     }
 }

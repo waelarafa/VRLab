@@ -53,6 +53,7 @@ public class GameTask
     [SerializeField] private Task task;
     [SerializeField] private GameObject taskListItem;
     [SerializeField] private TaskBehaviour behaviourHolder;
+    public TaskBehaviour currentBehaviour => behaviourHolder;
     public GameEnd gameEnd;
     public string taskTitle;
     public void DisableTaskListItem()
@@ -64,13 +65,15 @@ public class GameTask
     public bool isDone { get; private set; }
     public void TaskDone()
     {
+        DisableTaskListItem();
         isDone = true;
         behaviourHolder.TaskDone();
-        PopupHandler.instance.TaskFinished(this);
+       // PopupHandler.instance.TaskFinished(this);
     }
     public void EnableBehaviour()
     {
         behaviourHolder?.gameObject.SetActive(true);
         behaviourHolder?.ConfigureGameTask(this);
+        behaviourHolder.onStart();
     }
 }

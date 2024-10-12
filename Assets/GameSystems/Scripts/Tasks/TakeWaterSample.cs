@@ -4,11 +4,11 @@ using UnityEngine.Events;
 public class TakeWaterSample : TaskBehaviour
 {
     [SerializeField] private GameObject worldCanvas;
-    [SerializeField] private GameObject waterBottle;
-    [SerializeField] private float waterBottleAnimationDelay;
-    private PlayerRef playerReference;
-    [SerializeField] private GameObject label;
-    [SerializeField] private WaterSampleBox box;
+    [SerializeField] private GameObject BottleLable;
+
+
+
+
     public Progress progress;
     public int progressIndex;
     public float toAdd;
@@ -17,61 +17,25 @@ public class TakeWaterSample : TaskBehaviour
     public UnityEvent doneEvent;
 
   
-    public void InteractionAction()
-    {
-        StartCoroutine(TaskCoroutine());
-    }
-    IEnumerator TaskCoroutine()
-    {
-        startEvent.Invoke();
-        waterBottle.SetActive(true);
-        taskDone = true;
-        yield return new WaitForSeconds(waterBottleAnimationDelay);
-        label.SetActive(true);
-        box.AddWaterBottle(waterBottle.transform.GetChild(0).gameObject);
-
-        CoolerManager.Instance.AddBottle();
-       // TaskHandler.instance.TaskDone(this);
-    }
+ // TaskHandler.instance.TaskDone(this);
+ 
     private void OnTriggerEnter(Collider other)
     {
-        if (taskDone) return;
-        if (playerReference == null)
-            if (other.TryGetComponent<PlayerRef>(out playerReference))
-            {
-                InputHandler.instance.EnterInteractionZone(true);
-                InputHandler.instance.InteractionEvent += InteractionAction;
-            }
-    }
-    private void OnTriggerStay(Collider other)
+    if (other.CompareTag("Bottle"))
     {
-        if (taskDone && playerReference)
-        {
-            playerReference = null;
-            InputHandler.instance.EnterInteractionZone(false);
-            InputHandler.instance.InteractionEvent -= InteractionAction;
+            BottleLable.SetActive(true);
+            other.transform.GetChild(0).gameObject.SetActive(true);  
+            other.transform.GetChild(1).gameObject.SetActive(true);
+
+
         }
-        if (taskDone) return;
-        if (playerReference == null)
-            if (other.TryGetComponent<PlayerRef>(out playerReference))
-            {
-                InputHandler.instance.EnterInteractionZone(true);
-                InputHandler.instance.InteractionEvent += InteractionAction;
-            }
+       
+
+
     }
-    private void OnTriggerExit(Collider other)
+    public void mouveNext()
     {
-        if (taskDone) return;
-        if (playerReference != null)
-            if (other.TryGetComponent<PlayerRef>(out PlayerRef player))
-            {
-                if (player == playerReference)
-                {
-                    playerReference = null;
-                    InputHandler.instance.EnterInteractionZone(false);
-                    InputHandler.instance.InteractionEvent -= InteractionAction;
-                }
-            }
+        TaskHandler.instance.TaskDone(this);
     }
 
     public override void TaskDone()
@@ -81,16 +45,16 @@ public class TakeWaterSample : TaskBehaviour
 
     public void TaskDoneFinal()
     {
-        TaskHandler.instance.TaskDone(this);
-        if (taskDone && playerReference)
-        {
-            playerReference = null;
-            InputHandler.instance.EnterInteractionZone(false);
-            InputHandler.instance.InteractionEvent -= InteractionAction;
-        }
+        
+    
         worldCanvas.gameObject.SetActive(false);
         gameObject.SetActive(false);
         progress.toAdd = toAdd;
         progress.AddToProgress(progressIndex);
+    }
+
+    public override void onStart()
+    {
+        throw new System.NotImplementedException();
     }
 }

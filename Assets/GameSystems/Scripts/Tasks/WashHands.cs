@@ -7,7 +7,6 @@ public class WashHands : TaskBehaviour
 {
     [SerializeField] private GameObject worldCanvas;
 
-    private PlayerRef playerReference;
     public Progress progress;
     public int progressIndex;
     public int toAdd;
@@ -25,42 +24,7 @@ public class WashHands : TaskBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (taskDone) return;
-        if (playerReference == null)
-            if (other.TryGetComponent<PlayerRef>(out playerReference))
-            {
-                InputHandler.instance.EnterInteractionZone(true);
-                InputHandler.instance.InteractionEvent += InteractionAction;
-            }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (taskDone && playerReference)
-        {
-            playerReference = null;
-            InputHandler.instance.EnterInteractionZone(false);
-            InputHandler.instance.InteractionEvent -= InteractionAction;
-        }
-        if (taskDone) return;
-        if (playerReference == null)
-            if (other.TryGetComponent<PlayerRef>(out playerReference))
-            {
-                InputHandler.instance.EnterInteractionZone(true);
-                InputHandler.instance.InteractionEvent += InteractionAction;
-            }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (taskDone) return;
-        if (playerReference != null)
-            if (other.TryGetComponent<PlayerRef>(out PlayerRef player))
-            {
-                if (player == playerReference)
-                {
-                    playerReference = null;
-                    InputHandler.instance.EnterInteractionZone(false);
-                    InputHandler.instance.InteractionEvent -= InteractionAction;
-                }
-            }
+
     }
     public override void TaskDone()
     {
@@ -68,5 +32,10 @@ public class WashHands : TaskBehaviour
         worldCanvas.gameObject.SetActive(false);
         progress.toAdd = toAdd;
         progress.AddToProgress(progressIndex);
+    }
+
+    public override void onStart()
+    {
+        throw new System.NotImplementedException();
     }
 }

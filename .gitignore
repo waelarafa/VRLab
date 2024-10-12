@@ -74,3 +74,7 @@ crashlytics-build.properties
 /[Aa]ssets/Animal pack deluxe v2
 /[Aa]ssets/AQUAS 2020
 /[Aa]ssets/_TerrainAutoUpgrade
+Assets/World.prefab
+Assets/Terrain.prefab
+Assets/Terrain.prefab.meta
+Assets/World.prefab

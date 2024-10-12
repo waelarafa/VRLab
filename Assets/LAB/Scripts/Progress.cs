@@ -7,7 +7,9 @@ using UnityEngine;
 public class Progress : MonoBehaviour
 {
     public static Progress Instance { get; set; }
-    
+
+    [SerializeField] private Transform[] AreasPosition;
+    [SerializeField] private GameObject AreasObjects;
     public float toAdd;
     public float[] progress;
     public TextMeshProUGUI[] text;
@@ -20,7 +22,10 @@ public class Progress : MonoBehaviour
             Instance = this;
     }
 
-
+    public void mouveToNextArea(int Index)
+    {
+        AreasObjects.transform.position = AreasPosition[Index].position;
+    }
     public void AddToProgress(int p)
     {
         progress[p] += toAdd;

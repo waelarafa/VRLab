@@ -9,5 +9,6 @@ public abstract class TaskBehaviour : MonoBehaviour
     {
         this.gameTask = gameTask;
     }
+    public abstract void onStart();
     public abstract void TaskDone();
 }

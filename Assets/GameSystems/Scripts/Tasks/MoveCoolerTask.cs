@@ -8,7 +8,7 @@ public class MoveCoolerTask : TaskBehaviour
     [SerializeField] private Transform interactionZone;
     [SerializeField] private GameObject worldCanvas;
 
-    private PlayerRef playerReference;
+   
 
     public Progress progress;
     public int progressIndex;
@@ -29,46 +29,25 @@ public class MoveCoolerTask : TaskBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (taskDone) return;
-        if (playerReference == null)
-            if (other.TryGetComponent<PlayerRef>(out playerReference))
-            {
-                InputHandler.instance.EnterInteractionZone(true);
-                InputHandler.instance.InteractionEvent += InteractionAction;
-            }
+       
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (taskDone && playerReference)
+        if (taskDone )
         {
-            playerReference = null;
-            InputHandler.instance.EnterInteractionZone(false);
-            InputHandler.instance.InteractionEvent -= InteractionAction;
+          
             GetComponent<Collider>().enabled = false;
         }
 
         if (taskDone) return;
-        if (playerReference == null)
-            if (other.TryGetComponent<PlayerRef>(out playerReference))
-            {
-                InputHandler.instance.EnterInteractionZone(true);
-                InputHandler.instance.InteractionEvent += InteractionAction;
-            }
+     
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (taskDone) return;
-        if (playerReference != null)
-            if (other.TryGetComponent<PlayerRef>(out PlayerRef player))
-            {
-                if (player == playerReference)
-                {
-                    playerReference = null;
-                    InputHandler.instance.EnterInteractionZone(false);
-                    InputHandler.instance.InteractionEvent -= InteractionAction;
-                }
-            }
+        
     }
 
     public override void TaskDone()
@@ -77,7 +56,11 @@ public class MoveCoolerTask : TaskBehaviour
         worldCanvas.gameObject.SetActive(false);
         progress.toAdd = toAdd;
         progress.AddToProgress(progressIndex);
-        InputHandler.instance.EnterInteractionZone(false);
-        InputHandler.instance.InteractionEvent -= InteractionAction;
+        
+    }
+
+    public override void onStart()
+    {
+        throw new System.NotImplementedException();
     }
 }
