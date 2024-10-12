@@ -374,6 +374,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950c4676fd78fe5429825996e07f7a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &120108041116404061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450567082602893801}
+  m_Layer: 0
+  m_Name: MouveNextArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1450567082602893801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120108041116404061}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4541134986120928490}
+  - {fileID: 4597478196039871011}
+  m_Father: {fileID: 7388787647846571018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &121524494075184699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3961,7 +3994,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 1958528087730029460}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -4555,6 +4588,8 @@ MonoBehaviour:
   taskDone: 0
   interactionZone: {fileID: 8805379589137172156}
   worldCanvas: {fileID: 4173843063700064269}
+  AreaObjects: {fileID: 0}
+  NextAreaPosition: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 25
@@ -5200,7 +5235,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 8908790207415741448}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -8066,6 +8101,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 9019019196244561839}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -10779,6 +10816,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 1405221804595099577}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -12436,7 +12475,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 4673978934518203353}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -12727,7 +12766,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 6455652887006275458}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -13191,6 +13230,8 @@ MonoBehaviour:
   taskDone: 0
   interactionZone: {fileID: 5707220883797549128}
   worldCanvas: {fileID: 9056250333500473073}
+  AreaObjects: {fileID: 0}
+  NextAreaPosition: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 25
@@ -14847,6 +14888,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 1347550442239498690}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 25
@@ -15161,6 +15204,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 1229949323211939480}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -16754,7 +16799,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 4136299268113341057}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 20
@@ -17127,6 +17172,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 4447070882660368029}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -18475,7 +18522,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 1526480795857747896}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -20998,6 +21045,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 6296932121563686102}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -22668,7 +22717,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 2604326581754009005}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 20
@@ -23233,6 +23282,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 6218145657423903550}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -27668,7 +27719,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 1986044150297633665}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -27819,7 +27870,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 6008539296598602585}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -28227,6 +28278,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 5016101651332594411}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 25
@@ -31421,7 +31474,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 1168222999783328931}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -31532,6 +31585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4d24b9ccffd514daed51ae1d0aa90b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AreasPosition: []
+  AreasObjects: {fileID: 0}
   toAdd: 0
   progress:
   - 0
@@ -31865,7 +31920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1799998838019623849
 Transform:
   m_ObjectHideFlags: 0
@@ -32521,6 +32576,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 6432449902266128733}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -33557,12 +33614,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6262374464567820721}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.1607007, y: 0.35000005, z: -0.3338999}
+  m_LocalScale: {x: 0.26443443, y: 3.6400003, z: 0.23010045}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5994315963914492694}
+  m_Father: {fileID: 1450567082602893801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6337018395143621550
 BoxCollider:
@@ -33606,6 +33663,8 @@ MonoBehaviour:
   taskDone: 0
   interactionZone: {fileID: 4597478196039871011}
   worldCanvas: {fileID: 8540791413077721666}
+  AreaObjects: {fileID: 0}
+  NextAreaPosition: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 25
@@ -33732,7 +33791,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 9011176526491589656}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -34190,6 +34249,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 4322914172960860008}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -35262,6 +35323,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 7210525738123442779}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 25
@@ -36758,7 +36821,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 6126424365805949730}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -37912,7 +37975,7 @@ Transform:
   - {fileID: 4502277859115096429}
   - {fileID: 831566293257167458}
   - {fileID: 1799998838019623849}
-  - {fileID: 5994315963914492694}
+  - {fileID: 1450567082602893801}
   m_Father: {fileID: 1345936151134143640}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &143149178480179711
@@ -43180,7 +43243,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 523392421079786670}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 20
@@ -44805,7 +44868,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 4319318183183992422}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -46851,7 +46914,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 5624239149723834449}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 4
   toAdd: 20
@@ -47112,16 +47175,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8540791413077721666}
   m_LocalRotation: {x: -0, y: 0.42900762, z: -0, w: 0.9033009}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.31970218, y: 0.4075177, z: 0.31088528}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3338999}
+  m_LocalScale: {x: 0.07794663, y: 1.4833645, z: 0.07794663}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6871934067864398828}
-  m_Father: {fileID: 5994315963914492694}
+  m_Father: {fileID: 1450567082602893801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.68}
+  m_AnchoredPosition: {x: 1.1607001, y: 2.8251998}
   m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1064838925916677257
@@ -47309,6 +47372,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 5457697876161198745}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 12.5
@@ -47340,7 +47405,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8983120335177757322}
   - component: {fileID: 4167353413061980650}
-  - component: {fileID: 6411691471480380561}
   - component: {fileID: 4815445542706514626}
   m_Layer: 0
   m_Name: TaskBehavour3
@@ -47395,27 +47459,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!135 &6411691471480380561
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8554317329283240956}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 7.64
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4815445542706514626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47440,6 +47483,8 @@ MonoBehaviour:
   oceanBuoy: {fileID: 6872501212454228009}
   AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
+  MultiparmeterResetUI: {fileID: 0}
+  ParemeterLocation: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 12.5
@@ -50438,7 +50483,7 @@ MonoBehaviour:
     taskTitle: 
   taskDone: 0
   worldCanvas: {fileID: 2218818684807361286}
-  bottleIndicator: {fileID: 0}
+  BottleLable: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 12.5
@@ -58498,113 +58543,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5e722e0b3b1287842b8cf40ab5e027b9,
     type: 3}
   m_PrefabInstance: {fileID: 3528677801956535981}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3683800111379170678
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7388787647846571018}
-    m_Modifications:
-    - target: {fileID: 6930875119406989888, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_Name
-      value: ClosedCoolerArea1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119406989888, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.26443443
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.23010044
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.1607
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.3339
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4541134986120928490}
-    - targetCorrespondingSourceObject: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4597478196039871011}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cc880574142099143b2408e21f156ea5, type: 3}
---- !u!4 &5994315963914492694 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
-    type: 3}
-  m_PrefabInstance: {fileID: 3683800111379170678}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3730820598355044384
 PrefabInstance:

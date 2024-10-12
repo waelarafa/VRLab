@@ -41,20 +41,16 @@ public class TakeWaterSample : TaskBehaviour
     public override void TaskDone()
     {
         doneEvent.Invoke();
-    }
-
-    public void TaskDoneFinal()
-    {
-        
-    
         worldCanvas.gameObject.SetActive(false);
         gameObject.SetActive(false);
         progress.toAdd = toAdd;
         progress.AddToProgress(progressIndex);
     }
 
+  
+
     public override void onStart()
     {
-        throw new System.NotImplementedException();
+   
     }
 }

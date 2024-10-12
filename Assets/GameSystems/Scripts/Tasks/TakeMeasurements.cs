@@ -9,10 +9,11 @@ public class TakeMeasurements : TaskBehaviour
     [SerializeField] private GameObject worldCanvas;
     [SerializeField] private GameObject measurementCanvas;
     [SerializeField] private GameObject oceanBuoy;
-    [SerializeField] private GameObject AreaCanvas;
+  
     [SerializeField] private GameObject MultiparameterTable;
-    [SerializeField] private GameObject TakeBackMultiparameter;
-    private Vector3 savedPosition;
+    [SerializeField] private GameObject MultiparmeterResetUI;
+    [SerializeField] private GameObject ParemeterLocation;
+   
     public Progress progress;
     public int progressIndex;
     public float toAdd;
@@ -29,14 +30,15 @@ public class TakeMeasurements : TaskBehaviour
            // oceanBuoy.transform.position = savedPosition;
            // oceanBuoy.SetActive(false);
             measurementCanvas.SetActive(true);
-            
-
+            MultiparmeterResetUI.SetActive(true);
+            ParemeterLocation.SetActive(true);
         }
     }
     public void MultiparameterBack()
     {
         measurementCanvas.SetActive(false);
-        
+        MultiparmeterResetUI.SetActive(false);
+
 
     }
   public void mouveNext()
@@ -47,8 +49,10 @@ public class TakeMeasurements : TaskBehaviour
     public override void TaskDone()
     {
         doneEvent.Invoke();
+        ParemeterLocation.SetActive(false);
         worldCanvas.gameObject.SetActive(false);
         measurementCanvas.SetActive(false);
+        gameObject.SetActive(false);
         progress.toAdd = toAdd;
         progress.AddToProgress(progressIndex);
         
@@ -56,6 +60,6 @@ public class TakeMeasurements : TaskBehaviour
 
     public override void onStart()
     {
-        savedPosition = transform.position;
+        
     }
 }
