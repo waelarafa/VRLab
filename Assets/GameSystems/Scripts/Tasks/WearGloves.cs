@@ -15,16 +15,17 @@ public class WearGloves : TaskBehaviour
 
     public UnityEvent startEvent;
     public UnityEvent doneEvent;
-
-
+    private bool clovesWeared=false;
    
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.name);
-        if (other.CompareTag("Hand"))
+        if (other.CompareTag("Hand") && !clovesWeared)
         {
-            
-          
+            clovesWeared = true;
+
+
             TaskHandler.instance.TaskDone(this);
         }
         

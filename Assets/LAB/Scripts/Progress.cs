@@ -34,6 +34,7 @@ public class Progress : MonoBehaviour
 
     public void PlayAudio(int p)
     {
+        Debug.Log("clip name is :"+clip[p].name);
         audsrc.clip = clip[p];
         audsrc.Play();
     }

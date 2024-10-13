@@ -5,10 +5,11 @@ using UnityEngine.Events;
 
 public class MoveCoolerTask : TaskBehaviour
 {
-    [SerializeField] private Transform interactionZone;
-    [SerializeField] private GameObject worldCanvas;
-
    
+ 
+    [SerializeField] private GameObject AreaObjects;
+    [SerializeField] private GameObject oldObjects;
+
 
     public Progress progress;
     public int progressIndex;
@@ -17,43 +18,16 @@ public class MoveCoolerTask : TaskBehaviour
     public UnityEvent startEvent;
     public UnityEvent doneEvent;
 
-    public void InteractionAction()
-    {
-        if (GameHUD.instance.isPaused) return;
-        taskDone = true;
-        TaskHandler.instance.TaskDone(this);
-        CoolerManager.Instance.MoveCooler();
-        
-    }
+  
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (taskDone) return;
-       
-    }
 
-    private void OnTriggerStay(Collider other)
-    {
-        if (taskDone )
-        {
-          
-            GetComponent<Collider>().enabled = false;
-        }
 
-        if (taskDone) return;
-     
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (taskDone) return;
-        
-    }
+ 
 
     public override void TaskDone()
     {
         doneEvent.Invoke();
-        worldCanvas.gameObject.SetActive(false);
+       
         progress.toAdd = toAdd;
         progress.AddToProgress(progressIndex);
         
@@ -61,6 +35,13 @@ public class MoveCoolerTask : TaskBehaviour
 
     public override void onStart()
     {
-        throw new System.NotImplementedException();
+        // Instead of transform.position, use MovePosition for Rigidbody objects
+
+        AreaObjects.SetActive(true);
+        oldObjects.SetActive(false);
+        TaskHandler.instance.TaskDone(this);
+        // Store the children
+
+
     }
 }

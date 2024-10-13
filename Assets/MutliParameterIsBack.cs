@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class MutliParameterIsBack : MonoBehaviour
 {
-    TakeMeasurements Measerment;
+  
+    public GameObject MeasurementBack;
     public void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("Multiparameter")){
-            Measerment.mouveNext();
+            MeasurementBack.SetActive(false);
+            TaskHandler.instance.TaskDone(TaskHandler.instance.currentTask.currentBehaviour);
 
 
         }
