@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 [System.Serializable]
 public class TriggerConfig
@@ -8,6 +9,11 @@ public class TriggerConfig
     public string taskNameToComplete;          // Task to complete when triggered
     public string tag;                         // Tag to compare when trigger is entered
     public GameObject[] objectsToManipulate;   // The objects that will be manipulated
+    public float waitTime = 1f;                // Time to wait before completing the task
+
+    // Switches to determine if pre/post completion logic should be executed
+    public bool usePreCompletionLogic = false; // Whether to use pre-completion logic
+    public bool usePostCompletionLogic = false; // Whether to use post-completion logic
 }
 
 public class TaskManager2 : MonoBehaviour
@@ -70,91 +76,130 @@ public class TaskManager2 : MonoBehaviour
     // Method that handles the task completion when the trigger is activated
     public void HandleTaskTrigger(TaskTrigger trigger)
     {
-        // Determine which task to complete based on the trigger
+        // Find the corresponding TriggerConfig
         foreach (var config in triggerConfigs)
         {
             if (config.trigger == trigger)
             {
-                // Handle the task completion logic based on the task name
-                HandleTaskCompletionLogic(config.taskNameToComplete, config.objectsToManipulate);
-
-                Debug.Log("Completed task through trigger: " + config.taskNameToComplete);
-                return;
+                // Check if the task name matches the current task
+                if (IsCurrentTask(config.taskNameToComplete))
+                {
+                    StartCoroutine(CompleteTaskAfterDelay(config));
+                    return;
+                }
             }
         }
 
         Debug.LogWarning("No handler for trigger: " + trigger);
     }
 
-    // Switch statement to handle different task completion logic
-    private void HandleTaskCompletionLogic(string taskName, GameObject[] objectsToManipulate)
+    // Coroutine to handle task completion logic after a delay
+    private IEnumerator CompleteTaskAfterDelay(TriggerConfig triggerConfig)
     {
-        // Manipulate objects based on the task before completing
-        foreach (var obj in objectsToManipulate)
+        // Pre-completion logic here
+        if (triggerConfig.usePreCompletionLogic)
         {
-            ManipulateObject(obj);
+            PreCompletionLogic(triggerConfig);
         }
 
-        switch (taskName)
+        // Wait for the specified time defined in TriggerConfig
+        yield return new WaitForSeconds(triggerConfig.waitTime); // Use the waitTime from TriggerConfig
+
+        // Mark the task as complete
+        CompleteCurrentTask();
+
+        // Post-completion logic here
+        if (triggerConfig.usePostCompletionLogic)
         {
-            case "Task1":
-                CompleteTask1();
+            PostCompletionLogic(triggerConfig);
+        }
+
+    }
+
+    private void PreCompletionLogic(TriggerConfig triggerConfig)
+    {
+        switch (triggerConfig.taskNameToComplete)
+        {
+            case "Task 1":
+                CompleteTask1_PreLogic();
                 break;
 
-            case "Task2":
-                CompleteTask2();
+            case "Task 2":
+                CompleteTask2_PreLogic();
                 break;
 
-            case "Task3":
-                CompleteTask3();
+            case "Task 3":
+                CompleteTask3_PreLogic();
                 break;
 
             // Add more cases for additional tasks as needed
 
             default:
-                Debug.LogWarning("No specific logic defined for task: " + taskName);
-                CompleteCurrentTask();  // Complete the current task by default
+                Debug.LogWarning("No specific pre-completion logic defined for task: " + triggerConfig.taskNameToComplete);
                 break;
         }
     }
 
-    // Manipulate the specified GameObject (custom logic can be added here)
-    private void ManipulateObject(GameObject obj)
+    private void PostCompletionLogic(TriggerConfig triggerConfig)
     {
-        if (obj != null)
+        switch (triggerConfig.taskNameToComplete)
         {
-            // Example manipulation: Change position, scale, or perform other actions
-            obj.transform.position += Vector3.up; // Move the object up for demonstration
-            Debug.Log("Manipulated object: " + obj.name);
+            case "Task 1":
+                CompleteTask1_PostLogic();
+                break;
+
+            case "Task 2":
+                CompleteTask2_PostLogic();
+                break;
+
+            case "Task 3":
+                CompleteTask3_PostLogic();
+                break;
+
+            // Add more cases for additional tasks as needed
+
+            default:
+                Debug.LogWarning("No specific post-completion logic defined for task: " + triggerConfig.taskNameToComplete);
+                break;
         }
-        else
-        {
-            Debug.LogWarning("Object to manipulate is null.");
-        }
     }
 
-    // Custom logic for Task1 completion
-    private void CompleteTask1()
+    // Example methods for specific pre-completion logic
+    private void CompleteTask1_PreLogic()
     {
-        // Task1-specific logic here
-        Debug.Log("Handling completion for Task1");
-        CompleteCurrentTask();
+        // Logic specific to Task1 pre-completion
+        Debug.Log("Pre-completion logic for Task1 executed.");
     }
 
-    // Custom logic for Task2 completion
-    private void CompleteTask2()
+    private void CompleteTask2_PreLogic()
     {
-        // Task2-specific logic here
-        Debug.Log("Handling completion for Task2");
-        CompleteCurrentTask();
+        // Logic specific to Task2 pre-completion
+        Debug.Log("Pre-completion logic for Task2 executed.");
     }
 
-    // Custom logic for Task3 completion
-    private void CompleteTask3()
+    private void CompleteTask3_PreLogic()
     {
-        // Task3-specific logic here
-        Debug.Log("Handling completion for Task3");
-        CompleteCurrentTask();
+        // Logic specific to Task3 pre-completion
+        Debug.Log("Pre-completion logic for Task3 executed.");
+    }
+
+    // Example methods for post completion logic
+    private void CompleteTask1_PostLogic()
+    {
+        // Logic specific to Task1 post-completion
+        Debug.Log("Post-completion logic for Task1 executed.");
+    }
+
+    private void CompleteTask2_PostLogic()
+    {
+        // Logic specific to Task2 post-completion
+        Debug.Log("Post-completion logic for Task2 executed.");
+    }
+
+    private void CompleteTask3_PostLogic()
+    {
+        // Logic specific to Task3 post-completion
+        Debug.Log("Post-completion logic for Task3 executed.");
     }
 
     // Complete the current task and move to the next one

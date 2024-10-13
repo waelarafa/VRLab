@@ -900,6 +900,9 @@ MonoBehaviour:
     taskNameToComplete: Task 2
     tag: Flask
     objectsToManipulate: []
+    waitTime: 5.01
+    usePreCompletionLogic: 1
+    usePostCompletionLogic: 0
 --- !u!4 &448375135
 Transform:
   m_ObjectHideFlags: 0
