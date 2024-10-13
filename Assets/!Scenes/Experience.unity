@@ -900,10 +900,6 @@ MonoBehaviour:
     taskNameToComplete: Task 2
     tag: Flask
     objectsToManipulate: []
-  - trigger: {fileID: 454636105}
-    taskNameToComplete: Task 3
-    tag: Flask
-    objectsToManipulate: []
 --- !u!4 &448375135
 Transform:
   m_ObjectHideFlags: 0
