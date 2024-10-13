@@ -8,7 +8,8 @@ public class MoveCoolerTask : TaskBehaviour
    
  
     [SerializeField] private GameObject AreaObjects;
-    [SerializeField] private Transform NextAreaPosition;
+    [SerializeField] private GameObject oldObjects;
+
 
     public Progress progress;
     public int progressIndex;
@@ -34,6 +35,13 @@ public class MoveCoolerTask : TaskBehaviour
 
     public override void onStart()
     {
-        AreaObjects.transform.position = NextAreaPosition.position;
+        // Instead of transform.position, use MovePosition for Rigidbody objects
+
+        AreaObjects.SetActive(true);
+        oldObjects.SetActive(false);
+        TaskHandler.instance.TaskDone(this);
+        // Store the children
+
+
     }
 }

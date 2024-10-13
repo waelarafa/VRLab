@@ -4586,10 +4586,8 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  interactionZone: {fileID: 8805379589137172156}
-  worldCanvas: {fileID: 4173843063700064269}
   AreaObjects: {fileID: 0}
-  NextAreaPosition: {fileID: 0}
+  oldObjects: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 3
   toAdd: 25
@@ -8099,7 +8097,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 7764636622698577896}
   measurementCanvas: {fileID: 4118476245370410234}
   oceanBuoy: {fileID: 9019019196244561839}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -10814,7 +10811,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 2108372321779972303}
   measurementCanvas: {fileID: 4496229479145502338}
   oceanBuoy: {fileID: 1405221804595099577}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -13228,10 +13224,8 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  interactionZone: {fileID: 5707220883797549128}
-  worldCanvas: {fileID: 9056250333500473073}
   AreaObjects: {fileID: 0}
-  NextAreaPosition: {fileID: 0}
+  oldObjects: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 2
   toAdd: 25
@@ -14886,7 +14880,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 4052282403081868263}
   measurementCanvas: {fileID: 3482694592528066932}
   oceanBuoy: {fileID: 1347550442239498690}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -15202,7 +15195,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 3746807598674435749}
   measurementCanvas: {fileID: 488982992383023512}
   oceanBuoy: {fileID: 1229949323211939480}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -17170,7 +17162,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 119220809181055054}
   measurementCanvas: {fileID: 249055982499315195}
   oceanBuoy: {fileID: 4447070882660368029}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -21043,7 +21034,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 4648818922306307906}
   measurementCanvas: {fileID: 5177019708543348326}
   oceanBuoy: {fileID: 6296932121563686102}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -23280,7 +23270,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 2267340462392184627}
   measurementCanvas: {fileID: 5059958256287544141}
   oceanBuoy: {fileID: 6218145657423903550}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -28276,7 +28265,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 6993835402877240684}
   measurementCanvas: {fileID: 2843520360763075877}
   oceanBuoy: {fileID: 5016101651332594411}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -32574,7 +32562,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 6526008139012662223}
   measurementCanvas: {fileID: 9178008925821573126}
   oceanBuoy: {fileID: 6432449902266128733}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -33661,10 +33648,8 @@ MonoBehaviour:
     gameEnd: {fileID: 0}
     taskTitle: 
   taskDone: 0
-  interactionZone: {fileID: 4597478196039871011}
-  worldCanvas: {fileID: 8540791413077721666}
   AreaObjects: {fileID: 0}
-  NextAreaPosition: {fileID: 0}
+  oldObjects: {fileID: 0}
   progress: {fileID: 6439358262856386939}
   progressIndex: 1
   toAdd: 25
@@ -34149,7 +34134,6 @@ GameObject:
   m_Component:
   - component: {fileID: 823944705744540968}
   - component: {fileID: 5507358273287967360}
-  - component: {fileID: 8518806072479490368}
   - component: {fileID: 8087190790577896331}
   m_Layer: 0
   m_Name: TaskBehavour1
@@ -34204,27 +34188,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!135 &8518806072479490368
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6305867183639929875}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 7.64
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8087190790577896331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34247,7 +34210,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 3658628016229804636}
   measurementCanvas: {fileID: 6188113056459325957}
   oceanBuoy: {fileID: 4322914172960860008}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -35321,7 +35283,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 49856681830977936}
   measurementCanvas: {fileID: 8222127288219270550}
   oceanBuoy: {fileID: 7210525738123442779}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -47370,7 +47331,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 704371951504755202}
   measurementCanvas: {fileID: 6754381195940742986}
   oceanBuoy: {fileID: 5457697876161198745}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}
@@ -47481,7 +47441,6 @@ MonoBehaviour:
   worldCanvas: {fileID: 3205883374522146931}
   measurementCanvas: {fileID: 3965809613938524043}
   oceanBuoy: {fileID: 6872501212454228009}
-  AreaCanvas: {fileID: 0}
   MultiparameterTable: {fileID: 0}
   MultiparmeterResetUI: {fileID: 0}
   ParemeterLocation: {fileID: 0}

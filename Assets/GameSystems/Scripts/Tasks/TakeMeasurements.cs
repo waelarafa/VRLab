@@ -27,6 +27,7 @@ public class TakeMeasurements : TaskBehaviour
         Debug.Log("takeMeaserment collider trigred :" + other.gameObject.name);
         if (other.CompareTag("Multiparameter"))
         {
+            Debug.Log("Multiparameter collider trigred :");
            // oceanBuoy.transform.position = savedPosition;
            // oceanBuoy.SetActive(false);
             measurementCanvas.SetActive(true);
