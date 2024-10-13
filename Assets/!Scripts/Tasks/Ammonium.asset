@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8471440008c7cdf43be8b04bd3aa9eb0, type: 3}
+  m_Name: Ammonium
+  m_EditorClassIdentifier: 
+  tasks:
+  - taskName: Task 1
+    taskDescription: Take 50 ml of water sample into the beaker.
+  - taskName: Task 2
+    taskDescription: "Add 0.5 ml of Alkaline solution.\r"
+  - taskName: Task 3
+    taskDescription: Add 0.5 ml of Phenol Nitroprusside.
+  - taskName: Task 4
+    taskDescription: "Put the magnetic bar into the beaker.\r"
+  - taskName: Task 5
+    taskDescription: Move the solution to the magnetic stirrer
+  - taskName: Task 6
+    taskDescription: Press the button to activate it for homogeneous mixing.
+  - taskName: Task 8
+    taskDescription: Pour the solution into the volumetric flask and close it.
+  - taskName: Task 9
+    taskDescription: Put the volumetric flask in the cardboard box and close it.
+  - taskName: Task 10
+    taskDescription: After a while, open the cardboard box
+  - taskName: Task 11
+    taskDescription: Set the spectrophotometer wavelength to 630 nm.
+  - taskName: Task 12
+    taskDescription: Open the spectrophotometer cover
+  - taskName: Task 13
+    taskDescription: Fill the test tube with the solution
+  - taskName: Task 14
+    taskDescription: " Put the tube in the spectrophotometer and close the cover.\r"
+  - taskName: Task 15
+    taskDescription: Perform the reading.

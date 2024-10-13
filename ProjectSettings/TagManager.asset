@@ -9,6 +9,7 @@ TagManager:
   - Bottle
   - Multiparameter
   - Box
+  - Flask
   layers:
   - Default
   - TransparentFX
