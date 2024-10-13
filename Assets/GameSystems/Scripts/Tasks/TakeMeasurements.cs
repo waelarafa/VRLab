@@ -13,7 +13,7 @@ public class TakeMeasurements : TaskBehaviour
     [SerializeField] private GameObject MultiparameterTable;
     [SerializeField] private GameObject MultiparmeterResetUI;
     [SerializeField] private GameObject ParemeterLocation;
-   
+    private bool MutiparameterIn=false;
     public Progress progress;
     public int progressIndex;
     public float toAdd;
@@ -25,11 +25,12 @@ public class TakeMeasurements : TaskBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("takeMeaserment collider trigred :" + other.gameObject.name);
-        if (other.CompareTag("Multiparameter"))
+        if (other.CompareTag("Multiparameter") && !MutiparameterIn)
         {
             Debug.Log("Multiparameter collider trigred :");
-           // oceanBuoy.transform.position = savedPosition;
-           // oceanBuoy.SetActive(false);
+            // oceanBuoy.transform.position = savedPosition;
+            // oceanBuoy.SetActive(false);
+            MutiparameterIn = true;
             measurementCanvas.SetActive(true);
             MultiparmeterResetUI.SetActive(true);
             ParemeterLocation.SetActive(true);
