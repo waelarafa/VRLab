@@ -5138,7 +5138,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7228217027070249469}
   - component: {fileID: 3668570771719182605}
-  - component: {fileID: 4138341429968404139}
   - component: {fileID: 2751507722153860634}
   m_Layer: 0
   m_Name: TaskBehavour4
@@ -5192,27 +5191,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!135 &4138341429968404139
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005054646248429448}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2.75
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &2751507722153860634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7999,7 +7977,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2061550496757856294}
   - component: {fileID: 3473694484974844434}
-  - component: {fileID: 3460130741337502210}
   - component: {fileID: 594230952290079254}
   m_Layer: 0
   m_Name: TaskBehavour5
@@ -8054,27 +8031,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!135 &3460130741337502210
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757589073386355116}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 7.64
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &594230952290079254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27764,7 +27720,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5555926593818774250}
   - component: {fileID: 4964786617589304084}
-  - component: {fileID: 4618542345910809318}
   - component: {fileID: 3256575797400048668}
   m_Layer: 0
   m_Name: TaskBehavour6
@@ -27818,27 +27773,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!135 &4618542345910809318
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5123242489948422883}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2.75
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &3256575797400048668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31367,7 +31301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5757442010709763790}
   - component: {fileID: 8445334216889941731}
-  - component: {fileID: 718577944827254190}
   - component: {fileID: 136280882977400234}
   m_Layer: 0
   m_Name: TaskBehavour6
@@ -31421,27 +31354,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!135 &718577944827254190
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5775068415476703471}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 2.75
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!114 &136280882977400234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32464,7 +32376,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6293623049552733199}
   - component: {fileID: 6059435783497619297}
-  - component: {fileID: 7319414926379962494}
   - component: {fileID: 6087296565106472778}
   m_Layer: 0
   m_Name: TaskBehavour5
@@ -32519,27 +32430,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!135 &7319414926379962494
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6064187341884317980}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 7.64
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6087296565106472778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59993,7 +59883,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 265885726867395794, guid: cc880574142099143b2408e21f156ea5, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6930875119407423072, guid: cc880574142099143b2408e21f156ea5,
