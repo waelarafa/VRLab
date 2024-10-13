@@ -4,22 +4,24 @@ using UnityEngine.UI;
 [System.Serializable]
 public class TriggerConfig
 {
-    public TaskTrigger trigger;         // Reference to the TaskTrigger
-    public string taskNameToComplete;   // Task to complete when triggered
-    public string tag;                  // Tag to compare when trigger is entered
+    public TaskTrigger trigger;                // Reference to the TaskTrigger
+    public string taskNameToComplete;          // Task to complete when triggered
+    public string tag;                         // Tag to compare when trigger is entered
+    public GameObject[] objectsToManipulate;   // The objects that will be manipulated
 }
 
 public class TaskManager2 : MonoBehaviour
 {
-    public GameObject taskPrefab;        // Task prefab for UI
-    public Transform taskPanel;          // UI panel to display tasks
-    public TaskList taskList;            // Reference to the ScriptableObject task list
-    public Color taskTextColor;          // Color for task text in UI
+    public GameObject taskPrefab;              // Task prefab for UI
+    public Transform taskPanel;                // UI panel to display tasks
+    public TaskList taskList;                  // Reference to the ScriptableObject task list
+    public Color taskTextColor;                // Color for task text in UI
+    public AudioSource audioSource;            // AudioSource to play task sounds
 
-    private int currentTaskIndex = 1;    // Tracks current task being worked on
+    private int currentTaskIndex = 1;          // Tracks current task being worked on
 
     [Header("Trigger Configurations")]
-    public TriggerConfig[] triggerConfigs; // Array of triggers and their settings
+    public TriggerConfig[] triggerConfigs;      // Array of triggers and their settings
 
     private void Start()
     {
@@ -68,8 +70,91 @@ public class TaskManager2 : MonoBehaviour
     // Method that handles the task completion when the trigger is activated
     public void HandleTaskTrigger(TaskTrigger trigger)
     {
-        CompleteCurrentTask();  // Complete the current task in the sequence
-        Debug.Log("Task completed through trigger: " + trigger.taskNameToComplete);
+        // Determine which task to complete based on the trigger
+        foreach (var config in triggerConfigs)
+        {
+            if (config.trigger == trigger)
+            {
+                // Handle the task completion logic based on the task name
+                HandleTaskCompletionLogic(config.taskNameToComplete, config.objectsToManipulate);
+
+                Debug.Log("Completed task through trigger: " + config.taskNameToComplete);
+                return;
+            }
+        }
+
+        Debug.LogWarning("No handler for trigger: " + trigger);
+    }
+
+    // Switch statement to handle different task completion logic
+    private void HandleTaskCompletionLogic(string taskName, GameObject[] objectsToManipulate)
+    {
+        // Manipulate objects based on the task before completing
+        foreach (var obj in objectsToManipulate)
+        {
+            ManipulateObject(obj);
+        }
+
+        switch (taskName)
+        {
+            case "Task1":
+                CompleteTask1();
+                break;
+
+            case "Task2":
+                CompleteTask2();
+                break;
+
+            case "Task3":
+                CompleteTask3();
+                break;
+
+            // Add more cases for additional tasks as needed
+
+            default:
+                Debug.LogWarning("No specific logic defined for task: " + taskName);
+                CompleteCurrentTask();  // Complete the current task by default
+                break;
+        }
+    }
+
+    // Manipulate the specified GameObject (custom logic can be added here)
+    private void ManipulateObject(GameObject obj)
+    {
+        if (obj != null)
+        {
+            // Example manipulation: Change position, scale, or perform other actions
+            obj.transform.position += Vector3.up; // Move the object up for demonstration
+            Debug.Log("Manipulated object: " + obj.name);
+        }
+        else
+        {
+            Debug.LogWarning("Object to manipulate is null.");
+        }
+    }
+
+    // Custom logic for Task1 completion
+    private void CompleteTask1()
+    {
+        // Task1-specific logic here
+        Debug.Log("Handling completion for Task1");
+        CompleteCurrentTask();
+    }
+
+    // Custom logic for Task2 completion
+    private void CompleteTask2()
+    {
+        // Task2-specific logic here
+        Debug.Log("Handling completion for Task2");
+        CompleteCurrentTask();
+    }
+
+    // Custom logic for Task3 completion
+    private void CompleteTask3()
+    {
+        // Task3-specific logic here
+        Debug.Log("Handling completion for Task3");
+        CompleteCurrentTask();
     }
 
     // Complete the current task and move to the next one
@@ -88,6 +173,10 @@ public class TaskManager2 : MonoBehaviour
                     {
                         taskItem.CompleteTask();  // Mark task as complete
                         Debug.Log(taskName + " is completed.");
+
+                        // Play the task completion sound
+                        PlayTaskSound(taskList.tasks[currentTaskIndex].taskSound);
+
                         currentTaskIndex++;  // Move to the next task
                     }
                     return;
@@ -98,33 +187,15 @@ public class TaskManager2 : MonoBehaviour
         }
     }
 
-
-    // Update the next task in the sequence and mark it as active
-    //void UpdateNextTask()
-    //{
-    //    if (currentTaskIndex < taskList.tasks.Length)
-    //    {
-    //        string nextTaskName = taskList.tasks[currentTaskIndex].taskName;
-
-    //        foreach (Transform child in taskPanel)
-    //        {
-    //            if (child.gameObject.name == nextTaskName)
-    //            {
-    //                TaskItem taskItem = child.GetComponent<TaskItem>();
-    //                if (taskItem != null)
-    //                {
-    //                    taskItem.toggle.isOn = true;  // Mark next task as active
-    //                    Debug.Log("Next task activated: " + nextTaskName);
-    //                }
-    //                return;
-    //            }
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("All tasks completed!");
-    //    }
-    //}
+    // Play the task's associated sound
+    private void PlayTaskSound(AudioClip taskSound)
+    {
+        if (audioSource != null && taskSound != null)
+        {
+            audioSource.clip = taskSound;
+            audioSource.Play();
+        }
+    }
 
     // Check if the taskName matches the current task in the sequence
     public bool IsCurrentTask(string taskName)

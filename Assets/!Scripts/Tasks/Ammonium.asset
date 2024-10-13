@@ -15,29 +15,43 @@ MonoBehaviour:
   tasks:
   - taskName: Task 1
     taskDescription: Take 50 ml of water sample into the beaker.
+    taskSound: {fileID: 8300000, guid: 373675692ed197d409fb8e4b63f9453b, type: 3}
   - taskName: Task 2
     taskDescription: "Add 0.5 ml of Alkaline solution.\r"
+    taskSound: {fileID: 8300000, guid: 1dac4664a5f85ff45968dee6682ad2b9, type: 3}
   - taskName: Task 3
     taskDescription: Add 0.5 ml of Phenol Nitroprusside.
+    taskSound: {fileID: 8300000, guid: 5e79361f222637a4fae70e51e847e139, type: 3}
   - taskName: Task 4
     taskDescription: "Put the magnetic bar into the beaker.\r"
+    taskSound: {fileID: 0}
   - taskName: Task 5
     taskDescription: Move the solution to the magnetic stirrer
+    taskSound: {fileID: 0}
   - taskName: Task 6
     taskDescription: Press the button to activate it for homogeneous mixing.
+    taskSound: {fileID: 0}
   - taskName: Task 8
     taskDescription: Pour the solution into the volumetric flask and close it.
+    taskSound: {fileID: 0}
   - taskName: Task 9
     taskDescription: Put the volumetric flask in the cardboard box and close it.
+    taskSound: {fileID: 0}
   - taskName: Task 10
     taskDescription: After a while, open the cardboard box
+    taskSound: {fileID: 0}
   - taskName: Task 11
     taskDescription: Set the spectrophotometer wavelength to 630 nm.
+    taskSound: {fileID: 0}
   - taskName: Task 12
     taskDescription: Open the spectrophotometer cover
+    taskSound: {fileID: 0}
   - taskName: Task 13
     taskDescription: Fill the test tube with the solution
+    taskSound: {fileID: 0}
   - taskName: Task 14
     taskDescription: " Put the tube in the spectrophotometer and close the cover.\r"
+    taskSound: {fileID: 0}
   - taskName: Task 15
     taskDescription: Perform the reading.
+    taskSound: {fileID: 0}
