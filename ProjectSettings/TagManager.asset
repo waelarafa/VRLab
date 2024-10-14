@@ -10,6 +10,17 @@ TagManager:
   - Multiparameter
   - Box
   - Flask
+  - Mixer
+  - New tag
+  - Magnetic
+  - Flask 2
+  - Magantic
+  - Close
+  - volumetric
+  - TestTube
+  - spect
+  - putme
+  - spectTube
   layers:
   - Default
   - TransparentFX

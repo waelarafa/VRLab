@@ -156,6 +156,10 @@ public class TaskManager2 : MonoBehaviour
                 CompleteTask3_PostLogic();
                 break;
 
+            case "Task 5":
+                CompleteTask5_PostLogic(triggerConfig.objectsToManipulate[0]);
+                break;
+
             // Add more cases for additional tasks as needed
 
             default:
@@ -182,7 +186,46 @@ public class TaskManager2 : MonoBehaviour
         // Logic specific to Task3 pre-completion
         Debug.Log("Pre-completion logic for Task3 executed.");
     }
+    private void CompleteTask5_PostLogic(GameObject magnet)
+    {
+        StartCoroutine(RotateMagnetMultipleTimes(magnet, 5));
+     
+    }
+    // Coroutine to rotate the magnet for a given number of rotations
+    private IEnumerator RotateMagnetMultipleTimes(GameObject magnet, int numberOfRotations)
+    {
+        float duration = 2.0f; // Duration of one full rotation
+        int currentRotationCount = 0; // Track the number of completed rotations
 
+        while (currentRotationCount < numberOfRotations)
+        {
+            // Call a method to perform one full rotation (360 degrees)
+            yield return StartCoroutine(RotateMagnet(magnet, duration));
+            currentRotationCount++; // Increment the count after each full rotation
+        }
+
+        // If you want to continue rotating indefinitely, remove the condition and use a loop:
+        // while (true) { yield return StartCoroutine(RotateMagnet(magnet, duration)); }
+    }
+    // Coroutine to rotate the magnet over time
+    // Coroutine to rotate the magnet once (360 degrees) over a duration
+    private IEnumerator RotateMagnet(GameObject magnet, float duration)
+    {
+        float timeElapsed = 0f;
+        Quaternion startRotation = magnet.transform.rotation;
+        Quaternion endRotation = startRotation * Quaternion.Euler(0, 360, 0); // Rotate 360 degrees around the Y axis
+
+        while (timeElapsed < duration)
+        {
+            // Lerp the rotation over time
+            magnet.transform.rotation = Quaternion.Lerp(startRotation, endRotation, timeElapsed / duration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure it finishes at exactly 360 degrees
+        magnet.transform.rotation = endRotation;
+    }
     // Example methods for post completion logic
     private void CompleteTask1_PostLogic()
     {
