@@ -8,9 +8,6 @@ public class SpectoUIManager : MonoBehaviour
 {
     public static SpectoUIManager Instance { get; private set; }
 
-    [SerializeField] public TextMeshProUGUI phenolphthaleinVolume;
-
-
     [SerializeField] private TMP_Text resultText;
     [SerializeField] private GameObject resultTextGameObject;
     [SerializeField] private TMP_Text initialText;

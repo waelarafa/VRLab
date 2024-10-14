@@ -2,13 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class SpectoLabManager : MonoBehaviour
 {
     public static SpectoLabManager Instance { get; private set; }
-
-    public TaskManager taskManager;
 
     public event EventHandler OnExperienceStateChanged;
     
@@ -56,11 +53,10 @@ public class SpectoLabManager : MonoBehaviour
     public void AddAcidDrop()
     {
         
+
         experienceState = SpectoExperienceState.AddingCombinedReagent;
 
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 2");
-
     }
 
 
@@ -69,8 +65,6 @@ public class SpectoLabManager : MonoBehaviour
         experienceState = SpectoExperienceState.PouringTheSolution;
     
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 3");
-
     }
 
 
@@ -78,16 +72,12 @@ public class SpectoLabManager : MonoBehaviour
     {
         experienceState = SpectoExperienceState.MovingTheSolutionToTheMixer;
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 4");
-
     }
 
     public void MoveSolutionToTheMixer()
     {
         experienceState = SpectoExperienceState.TurningOnTheMixer;
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 5");
-
     }
 
 
@@ -104,8 +94,6 @@ public class SpectoLabManager : MonoBehaviour
         yield return new WaitForSeconds(5);
         experienceState = SpectoExperienceState.MovingTheSolutionToTheRack;
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 6");
-
     }
 
 
@@ -113,7 +101,6 @@ public class SpectoLabManager : MonoBehaviour
     {
         experienceState = SpectoExperienceState.RestingTheSolution;
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-
         RestingTheSolution();
     }
 
@@ -129,8 +116,6 @@ public class SpectoLabManager : MonoBehaviour
         yield return new WaitForSeconds(20);
         experienceState = SpectoExperienceState.SettingTheWavelength;
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 7");
-
     }
 
 
@@ -138,38 +123,29 @@ public class SpectoLabManager : MonoBehaviour
     {
         experienceState = SpectoExperienceState.OpeningTheSpectoPhotometer;
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 8");
-
     }
 
     public void OpeningTheSpectoPhotometer()
     {
         experienceState = SpectoExperienceState.FillingTheTube;
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 9");
-
     }
 
     public void FillingTheTube()
     {
         experienceState = SpectoExperienceState.MovingTheTube;
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 10");
-
     }
 
     public void MovingTheTube()
     {
         experienceState = SpectoExperienceState.ClosingTheSpectoPhotometer;
         OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-        taskManager.CompleteTaskByName("Task 11");
-
     }
 
     public void ClosingThePhotometer()
     {
         experienceState = SpectoExperienceState.ShowcasingResults;
-        taskManager.CompleteTaskByName("Task 12");
         StartCoroutine(WaitingForResults()); 
     }
     
@@ -177,8 +153,8 @@ public class SpectoLabManager : MonoBehaviour
         {
             yield return new WaitForSeconds(4);
             OnExperienceStateChanged?.Invoke(this, EventArgs.Empty);
-         }
-
+        }
+    
 
     public SpectoExperienceState ExperienceState
     {
