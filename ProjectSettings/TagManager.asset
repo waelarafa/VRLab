@@ -24,6 +24,7 @@ TagManager:
   - MixerButton
   - SpectroNano
   - flask 3
+  - Magnet
   layers:
   - Default
   - TransparentFX
