@@ -21,6 +21,9 @@ TagManager:
   - spect
   - putme
   - spectTube
+  - MixerButton
+  - SpectroNano
+  - flask 3
   layers:
   - Default
   - TransparentFX

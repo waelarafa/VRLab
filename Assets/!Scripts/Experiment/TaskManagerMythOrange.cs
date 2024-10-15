@@ -2,21 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-[System.Serializable]
-public class TriggerConfig
-{
-    public TaskTrigger trigger;                // Reference to the TaskTrigger
-    public string taskNameToComplete;          // Task to complete when triggered
-    public string tag;                         // Tag to compare when trigger is entered
-    public GameObject[] objectsToManipulate;   // The objects that will be manipulated
-    public float waitTime = 1f;                // Time to wait before completing the task
 
-    // Switches to determine if pre/post completion logic should be executed
-    public bool usePreCompletionLogic = false; // Whether to use pre-completion logic
-    public bool usePostCompletionLogic = false; // Whether to use post-completion logic
-}
 
-public class TaskManager2 : MonoBehaviour
+public class TaskManagerMythOrange : MonoBehaviour
 {
     public GameObject taskPrefab;              // Task prefab for UI
     public Transform taskPanel;                // UI panel to display tasks
