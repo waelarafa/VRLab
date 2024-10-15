@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 [System.Serializable]
-public class TriggerConfigMyth
+public class TriggerConfigNitr
 {
-    public TaskTriggerMyth trigger;                // Reference to the TaskTrigger
+    public TaskTriggerNitr trigger;                // Reference to the TaskTrigger
     public string taskNameToComplete;          // Task to complete when triggered
     public string tag;                         // Tag to compare when trigger is entered
     public GameObject[] objectsToManipulate;   // The objects that will be manipulated
@@ -16,7 +16,7 @@ public class TriggerConfigMyth
 }
 
 
-public class TaskManagerMythOrange : MonoBehaviour
+public class TaskManagerNitr : MonoBehaviour
 {
     public GameObject taskPrefab;              // Task prefab for UI
     public Transform taskPanel;                // UI panel to display tasks
@@ -27,7 +27,7 @@ public class TaskManagerMythOrange : MonoBehaviour
     private int currentTaskIndex = 1;          // Tracks current task being worked on
 
     [Header("Trigger Configurations")]
-    public TriggerConfigMyth[] triggerConfigs;      // Array of triggers and their settings
+    public TriggerConfigNitr[] triggerConfigs;      // Array of triggers and their settings
 
     private void Start()
     {
@@ -74,7 +74,7 @@ public class TaskManagerMythOrange : MonoBehaviour
     }
 
     // Method that handles the task completion when the trigger is activated
-    public void HandleTaskTrigger(TaskTriggerMyth trigger)
+    public void HandleTaskTrigger(TaskTriggerNitr trigger)
     {
         // Find the corresponding TriggerConfig
         foreach (var config in triggerConfigs)
@@ -94,7 +94,7 @@ public class TaskManagerMythOrange : MonoBehaviour
     }
 
     // Coroutine to handle task completion logic after a delay
-    private IEnumerator CompleteTaskAfterDelay(TriggerConfigMyth triggerConfig)
+    private IEnumerator CompleteTaskAfterDelay(TriggerConfigNitr triggerConfig)
     {
         // Pre-completion logic here
         if (triggerConfig.usePreCompletionLogic)
@@ -116,7 +116,7 @@ public class TaskManagerMythOrange : MonoBehaviour
 
     }
 
-    private void PreCompletionLogic(TriggerConfigMyth triggerConfig)
+    private void PreCompletionLogic(TriggerConfigNitr triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)
         {
@@ -138,7 +138,7 @@ public class TaskManagerMythOrange : MonoBehaviour
         }
     }
 
-    private void PostCompletionLogic(TriggerConfigMyth triggerConfig)
+    private void PostCompletionLogic(TriggerConfigNitr triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)
         {
