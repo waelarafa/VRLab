@@ -131,6 +131,9 @@ public class TaskManager2 : MonoBehaviour
             case "Task 4":
                 CompleteTask4_PreLogic(triggerConfig);
                 break;
+            case "Task 6":
+                CompleteTask6_PreLogic(triggerConfig);
+                break;
 
             // Add more cases for additional tasks as needed
 
@@ -165,8 +168,14 @@ public class TaskManager2 : MonoBehaviour
             case "Task 10":
                 CompleteTask10_PostLogic(triggerConfig);
                 break;
+            case "Task 11":
+                CompleteTask11_PostLogic(triggerConfig);
+                break;
             case "Task 12":
                 CompleteTask12_PostLogic(triggerConfig);
+                break;
+            case "Task 9":
+                CompleteTask9_PostLogic(triggerConfig);
                 break;
 
             // Add more cases for additional tasks as needed
@@ -176,9 +185,29 @@ public class TaskManager2 : MonoBehaviour
                 break;
         }
     }
+    private void CompleteTask9_PostLogic(TriggerConfig triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+    }
+    private void CompleteTask6_PreLogic(TriggerConfig triggerConfig)
+    {
+        GameObject ob = triggerConfig.objectsToManipulate[0];
+        if(ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Spin");
+        
+    }
+    private void CompleteTask11_PostLogic(TriggerConfig triggerConfig)
+    {
+
+        GameObject ob = triggerConfig.objectsToManipulate[0];
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Open");
+    }
     private void CompleteTask12_PostLogic(TriggerConfig triggerConfig)
     {
-        triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
+        GameObject ob = triggerConfig.objectsToManipulate[0];
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Close");
     }
     private void CompleteTask4_PreLogic(TriggerConfig triggerConfig)
     {
