@@ -17,6 +17,10 @@ MonoBehaviour:
     taskDescription: Take 50 ml of water sample into the beaker.
     taskSound: {fileID: 0}
     IsShowenInUI: 1
+  - taskName: Task 1.2
+    taskDescription: Fill the dropper with Alkaline solution.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 0
   - taskName: Task 2
     taskDescription: Add 0.5 ml of Alkaline solution.
     taskSound: {fileID: 8300000, guid: 1dac4664a5f85ff45968dee6682ad2b9, type: 3}
