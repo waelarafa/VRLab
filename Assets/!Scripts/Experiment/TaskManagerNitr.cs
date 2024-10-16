@@ -41,7 +41,8 @@ public class TaskManagerNitr : MonoBehaviour
         for (int i = 0; i < taskList.tasks.Length; i++)
         {
             bool isChecked = (i == 0);  // The first task is checked (active) by default
-            CreateTask(taskList.tasks[i].taskName, taskList.tasks[i].taskDescription, isChecked);
+            if (taskList.tasks[i].IsShowenInUI)
+                CreateTask(taskList.tasks[i].taskName, taskList.tasks[i].taskDescription, isChecked);
         }
     }
 
