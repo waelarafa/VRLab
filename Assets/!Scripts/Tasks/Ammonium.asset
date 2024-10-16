@@ -25,6 +25,10 @@ MonoBehaviour:
     taskDescription: Add 0.5 ml of Alkaline solution.
     taskSound: {fileID: 8300000, guid: 1dac4664a5f85ff45968dee6682ad2b9, type: 3}
     IsShowenInUI: 1
+  - taskName: Task 2.1
+    taskDescription: Fill the dropper with Phenol Nitroprusside.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 0
   - taskName: Task 3
     taskDescription: Add 0.5 ml of Phenol Nitroprusside.
     taskSound: {fileID: 8300000, guid: 0b51892951d0be94385d8ad01ce4a1f4, type: 3}
@@ -62,14 +66,10 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: 43f98105f52c7cd4db0facd28555dba9, type: 3}
     IsShowenInUI: 1
   - taskName: Task 12
-    taskDescription: Fill the test tube with the solution
+    taskDescription: Put the tube in the spectrophotometer and close the cover.
     taskSound: {fileID: 0}
     IsShowenInUI: 1
   - taskName: Task 13
-    taskDescription: " Put the tube in the spectrophotometer and close the cover.\r"
-    taskSound: {fileID: 0}
-    IsShowenInUI: 1
-  - taskName: Task 14
-    taskDescription: Perform the reading.
+    taskDescription: "Perform the reading\r"
     taskSound: {fileID: 0}
     IsShowenInUI: 1

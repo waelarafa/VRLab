@@ -42923,8 +42923,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7885185172252937371}
-  - {fileID: 3719865057063539130}
   - {fileID: 7648475616930232351}
+  - {fileID: 3719865057063539130}
   - {fileID: 1499164739934694189}
   - {fileID: 6791623270841696367}
   - {fileID: 5741998780325667281}
@@ -64813,8 +64813,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9189487249174790976}
-  - {fileID: 3719865057960867376}
   - {fileID: 8438680223744743465}
+  - {fileID: 3719865057960867376}
   - {fileID: 5662867869597713717}
   - {fileID: 2090996047450101451}
   - {fileID: 1534868306721015652}
@@ -69196,6 +69196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Green Gloves Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 7561735844013006471, guid: c2ba382097f06114c8ca184c7f00afaf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7601612243377398142, guid: c2ba382097f06114c8ca184c7f00afaf,
         type: 3}

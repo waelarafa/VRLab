@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.UIElements;
 
 [System.Serializable]
 public class TriggerConfig
@@ -123,11 +124,15 @@ public class TaskManager2 : MonoBehaviour
         switch (triggerConfig.taskNameToComplete)
         {
             case "Task 1":
-                CompleteTask1_PreLogic();
+            
                 break;
 
             case "Task 2":
-                CompleteTask2_PreLogic();
+                CompleteTask2_PreLogic(triggerConfig.objectsToManipulate[0]);
+                break;
+
+            case "Task 3":
+                CompleteTask2_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
 
             case "Task 4":
@@ -218,12 +223,21 @@ public class TaskManager2 : MonoBehaviour
 
     }
     // Example methods for specific pre-completion logic
-    private void CompleteTask1_PreLogic()
+    private void CompleteTask2_PreLogic(GameObject ob )
     {
+        
+        StartCoroutine(DropReset(ob));
         // Logic specific to Task1 pre-completion
         Debug.Log("Pre-completion logic for Task1 executed.");
     }
-
+    IEnumerator DropReset(GameObject drop)
+    {
+        Transform initialTran = drop.transform;
+        drop.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        drop.SetActive(false);
+        drop.transform.position = initialTran.position;
+    }
     private void CompleteTask2_PreLogic()
     {
         // Logic specific to Task2 pre-completion
