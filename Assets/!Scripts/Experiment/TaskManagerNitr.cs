@@ -95,7 +95,7 @@ public class TaskManagerNitr : MonoBehaviour
     }
 
     // Coroutine to handle task completion logic after a delay
-    private IEnumerator CompleteTaskAfterDelay(TriggerConfigNitr triggerConfig)
+    private IEnumerator CompleteTask    AfterDelay(TriggerConfigNitr triggerConfig)
     {
         // Pre-completion logic here
         if (triggerConfig.usePreCompletionLogic)
