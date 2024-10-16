@@ -25,6 +25,8 @@ TagManager:
   - SpectroNano
   - flask 3
   - Magnet
+  - FillDropper
+  - Drop
   layers:
   - Default
   - TransparentFX
