@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Unity.VisualScripting;
 [System.Serializable]
 public class TriggerConfigNitr
 {
@@ -95,7 +96,7 @@ public class TaskManagerNitr : MonoBehaviour
     }
 
     // Coroutine to handle task completion logic after a delay
-    private IEnumerator CompleteTask    AfterDelay(TriggerConfigNitr triggerConfig)
+    private IEnumerator CompleteTaskAfterDelay(TriggerConfigNitr triggerConfig)
     {
         // Pre-completion logic here
         if (triggerConfig.usePreCompletionLogic)
@@ -126,10 +127,13 @@ public class TaskManagerNitr : MonoBehaviour
                 break;
 
             case "Task 2":
-                CompleteTask2_PreLogic();
+                CompleteTask2_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
+            case "Task 3":
+                CompleteTask3_PreLogic(triggerConfig.objectsToManipulate[0]);
+                break;
+               
 
-          
 
             // Add more cases for additional tasks as needed
 
@@ -148,7 +152,7 @@ public class TaskManagerNitr : MonoBehaviour
                 break;
 
             case "Task 2":
-                CompleteTask2_PostLogic();
+                CompleteTask2_PostLogic(triggerConfig);
                 break;
 
             case "Task 3":
@@ -171,7 +175,9 @@ public class TaskManagerNitr : MonoBehaviour
     private void CompleteTask4_PreLogic(TriggerConfig triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].gameObject.SetActive(false);
+        triggerConfig.objectsToManipulate[2].gameObject.SetActive(false);
         triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
+        
 
     }
     // Example methods for specific pre-completion logic
@@ -181,16 +187,15 @@ public class TaskManagerNitr : MonoBehaviour
         Debug.Log("Pre-completion logic for Task1 executed.");
     }
 
-    private void CompleteTask2_PreLogic()
+    private void CompleteTask2_PreLogic(GameObject OB)
     {
         // Logic specific to Task2 pre-completion
-        Debug.Log("Pre-completion logic for Task2 executed.");
+        OB.gameObject.SetActive(true);
     }
 
-    private void CompleteTask3_PreLogic()
+    private void CompleteTask3_PreLogic(GameObject OB)
     {
-        // Logic specific to Task3 pre-completion
-        Debug.Log("Pre-completion logic for Task3 executed.");
+        OB.gameObject.SetActive(true);
     }
     private void CompleteTask5_PostLogic(GameObject magnet)
     {
@@ -220,8 +225,10 @@ public class TaskManagerNitr : MonoBehaviour
        
 
     }
-    private void CompleteTask2_PostLogic()
+    private void CompleteTask2_PostLogic(TriggerConfigNitr triggerConfig)
     {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
         // Logic specific to Task2 post-completion
         Debug.Log("Post-completion logic for Task2 executed.");
     }
@@ -238,24 +245,32 @@ public class TaskManagerNitr : MonoBehaviour
         if (currentTaskIndex < taskList.tasks.Length)
         {
             string taskName = taskList.tasks[currentTaskIndex].taskName;
-
-            foreach (Transform child in taskPanel)
+            if (taskList.tasks[currentTaskIndex].IsShowenInUI)
             {
-                if (child.gameObject.name == taskName)
+                foreach (Transform child in taskPanel)
                 {
-                    TaskItem taskItem = child.GetComponent<TaskItem>();
-                    if (taskItem != null)
+                    if (child.gameObject.name == taskName)
                     {
-                        taskItem.CompleteTask();  // Mark task as complete
-                        Debug.Log(taskName + " is completed.");
+                        TaskItem taskItem = child.GetComponent<TaskItem>();
+                        if (taskItem != null)
+                        {
+                            taskItem.CompleteTask();  // Mark task as complete
+                            Debug.Log(taskName + " is completed.");
 
-                        // Play the task completion sound
-                        PlayTaskSound(taskList.tasks[currentTaskIndex].taskSound);
+                            // Play the task completion sound
+                            PlayTaskSound(taskList.tasks[currentTaskIndex].taskSound);
 
-                        currentTaskIndex++;  // Move to the next task
+                            currentTaskIndex++;  // Move to the next task
+                        }
+                        return;
                     }
-                    return;
                 }
+            }
+            else
+            {
+                Debug.Log(taskName + " is completed.");
+                currentTaskIndex++;
+                return;
             }
 
             Debug.LogError("Task not found: " + taskName);
