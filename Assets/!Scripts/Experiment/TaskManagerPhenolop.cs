@@ -238,24 +238,32 @@ public class TaskManagerPhenolop : MonoBehaviour
         if (currentTaskIndex < taskList.tasks.Length)
         {
             string taskName = taskList.tasks[currentTaskIndex].taskName;
-
-            foreach (Transform child in taskPanel)
+            if (taskList.tasks[currentTaskIndex].IsShowenInUI)
             {
-                if (child.gameObject.name == taskName)
+                foreach (Transform child in taskPanel)
                 {
-                    TaskItem taskItem = child.GetComponent<TaskItem>();
-                    if (taskItem != null)
+                    if (child.gameObject.name == taskName)
                     {
-                        taskItem.CompleteTask();  // Mark task as complete
-                        Debug.Log(taskName + " is completed.");
+                        TaskItem taskItem = child.GetComponent<TaskItem>();
+                        if (taskItem != null)
+                        {
+                            taskItem.CompleteTask();  // Mark task as complete
+                            Debug.Log(taskName + " is completed.");
 
-                        // Play the task completion sound
-                        PlayTaskSound(taskList.tasks[currentTaskIndex].taskSound);
+                            // Play the task completion sound
+                            PlayTaskSound(taskList.tasks[currentTaskIndex].taskSound);
 
-                        currentTaskIndex++;  // Move to the next task
+                            currentTaskIndex++;  // Move to the next task
+                        }
+                        return;
                     }
-                    return;
                 }
+            }
+            else
+            {
+                Debug.Log(taskName + " is completed.");
+                currentTaskIndex++;
+                return;
             }
 
             Debug.LogError("Task not found: " + taskName);

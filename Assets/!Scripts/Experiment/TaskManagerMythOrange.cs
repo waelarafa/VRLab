@@ -128,9 +128,15 @@ public class TaskManagerMythOrange : MonoBehaviour
             case "Task 2":
                 CompleteTask2_PreLogic();
                 break;
-
-          
-
+            case "Task 4.2":
+                CompleteTask4_2_PreLogic(triggerConfig.objectsToManipulate[0]);
+                break;
+            case "Task 5":
+                CompleteTask5_PreLogic(triggerConfig.objectsToManipulate[0]);
+                break;
+            case "Task 8":
+                CompleteTask8_PreLogic(triggerConfig.objectsToManipulate[0]);
+            break;
             // Add more cases for additional tasks as needed
 
             default:
@@ -143,8 +149,8 @@ public class TaskManagerMythOrange : MonoBehaviour
     {
         switch (triggerConfig.taskNameToComplete)
         {
-            case "Task 1":
-                CompleteTask1_PostLogic();
+            case "Task 2.1":
+                CompleteTask1_PostLogic(triggerConfig.objectsToManipulate[0]);
                 break;
 
             case "Task 2":
@@ -154,8 +160,10 @@ public class TaskManagerMythOrange : MonoBehaviour
             case "Task 3":
                 CompleteTask3_PostLogic();
                 break;
+            case "Task 8":
+                CompleteTask8_PostLogic(triggerConfig);
+                break;
 
-          
 
             // Add more cases for additional tasks as needed
 
@@ -163,6 +171,29 @@ public class TaskManagerMythOrange : MonoBehaviour
                 Debug.LogWarning("No specific post-completion logic defined for task: " + triggerConfig.taskNameToComplete);
                 break;
         }
+    }
+    private void CompleteTask4_2_PreLogic(GameObject ob)
+    {
+        ob.SetActive(true);
+    }
+    private void CompleteTask5_PreLogic(GameObject ob)
+    {
+        ob.SetActive(true);
+    }
+    private void CompleteTask8_PreLogic(GameObject ob)
+    {
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Spin");
+    }
+    private void CompleteTask8_PostLogic(TriggerConfigMyth ob)
+    {
+        
+        ob.objectsToManipulate[1].SetActive(true);
+        ob.objectsToManipulate[2].SetActive(true);
+        ob.objectsToManipulate[3].SetActive(true);
+        ob.objectsToManipulate[4].SetActive(true);
+        ob.objectsToManipulate[5].SetActive(true);
+        ob.objectsToManipulate[6].SetActive(true);
     }
     private void CompleteTask12_PostLogic(TriggerConfig triggerConfig)
     {
@@ -203,8 +234,14 @@ public class TaskManagerMythOrange : MonoBehaviour
     // Coroutine to rotate the magnet once (360 degrees) over a duration
 
     // Example methods for post completion logic
-    private void CompleteTask1_PostLogic()
+
+    private void CompleteTask1_PostLogic(GameObject OB)
     {
+
+
+        OB.SetActive(false);   
+
+
         // Logic specific to Task1 post-completion
         Debug.Log("Post-completion logic for Task1 executed.");
     }
