@@ -15,7 +15,7 @@ MonoBehaviour:
   tasks:
   - taskName: Task 1
     taskDescription: Take 50 ml of water sample into the beaker.
-    taskSound: {fileID: 8300000, guid: 968a526d2e306434aa8ca406001d8866, type: 3}
+    taskSound: {fileID: 0}
     IsShowenInUI: 1
   - taskName: Task 1.2
     taskDescription: "Take  0.5 ml of Alkaline solution.\r"
@@ -26,46 +26,34 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: 02a711dba3951584d9140186f49bb8c4, type: 3}
     IsShowenInUI: 1
   - taskName: Task 3
-    taskDescription: Add 0.5 ml of Phenol Nitroprusside.
-    taskSound: {fileID: 8300000, guid: 0b51892951d0be94385d8ad01ce4a1f4, type: 3}
+    taskDescription: Pure the solution into the test tube
+    taskSound: {fileID: 8300000, guid: 235e5931dea918b459de603d3c67ac8d, type: 3}
     IsShowenInUI: 1
   - taskName: Task 4
-    taskDescription: "Put the magnetic bar into the beaker.\r"
-    taskSound: {fileID: 8300000, guid: c8647890d841cac4b989075eaca027a4, type: 3}
+    taskDescription: "Put the solution into the mixer \r"
+    taskSound: {fileID: 0}
     IsShowenInUI: 1
   - taskName: Task 5
-    taskDescription: Move the solution to the magnetic stirrer
-    taskSound: {fileID: 0}
+    taskDescription: Turn on the mixer
+    taskSound: {fileID: 8300000, guid: 4f67097e22572de43bd8ecd58a84827b, type: 3}
     IsShowenInUI: 1
   - taskName: Task 6
-    taskDescription: Press the button to activate it for homogeneous mixing.
-    taskSound: {fileID: 8300000, guid: 8d799860ea27f314389fa570a00ed79c, type: 3}
+    taskDescription: Move the solution to the rack
+    taskSound: {fileID: 8300000, guid: 390290af9113c76439457f7e21fd2c70, type: 3}
     IsShowenInUI: 1
   - taskName: Task 7
-    taskDescription: Pour the solution into the volumetric flask and close it.
-    taskSound: {fileID: 8300000, guid: 8490900e558ca604f944edc32fcd3104, type: 3}
+    taskDescription: Set the spectrophotometer to 537 nanometer
+    taskSound: {fileID: 8300000, guid: 68c9ba0604fbee449afa09a3b529b4c8, type: 3}
     IsShowenInUI: 1
   - taskName: Task 8
-    taskDescription: Put the volumetric flask in the cardboard box and close it.
-    taskSound: {fileID: 0}
+    taskDescription: Fill the tube with the solution
+    taskSound: {fileID: 8300000, guid: cb871dc0d88e2d146936220a1f138015, type: 3}
     IsShowenInUI: 1
   - taskName: Task 9
-    taskDescription: After a while, open the cardboard box
-    taskSound: {fileID: 8300000, guid: 7225a947196078a448293e77679d9f98, type: 3}
+    taskDescription: Put the tube in the spectrophotometer
+    taskSound: {fileID: 8300000, guid: 68c9ba0604fbee449afa09a3b529b4c8, type: 3}
     IsShowenInUI: 1
   - taskName: Task 10
-    taskDescription: Set the spectrophotometer wavelength to 630 nm.
-    taskSound: {fileID: 8300000, guid: e669449562d5afc4d9d3c899c69054d1, type: 3}
-    IsShowenInUI: 1
-  - taskName: Task 11
-    taskDescription: Open the spectrophotometer cover
-    taskSound: {fileID: 8300000, guid: 43f98105f52c7cd4db0facd28555dba9, type: 3}
-    IsShowenInUI: 1
-  - taskName: Task 12
-    taskDescription: Fill the test tube with the solution
-    taskSound: {fileID: 0}
-    IsShowenInUI: 1
-  - taskName: Task 13
-    taskDescription: " Put the tube in the spectrophotometer and close the cover.\r"
-    taskSound: {fileID: 0}
+    taskDescription: Put the volumetric flask in the cardboard box and close it.
+    taskSound: {fileID: 8300000, guid: cb871dc0d88e2d146936220a1f138015, type: 3}
     IsShowenInUI: 1

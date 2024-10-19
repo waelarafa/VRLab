@@ -122,18 +122,20 @@ public class TaskManagerNitr : MonoBehaviour
     {
         switch (triggerConfig.taskNameToComplete)
         {
-            case "Task 1":
-                CompleteTask1_PreLogic();
-                break;
+            
 
             case "Task 2":
-                CompleteTask2_PreLogic(triggerConfig.objectsToManipulate[0]);
+                CompleteTask2_PreLogic(triggerConfig);
                 break;
             case "Task 3":
                 CompleteTask3_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
-               
-
+            case "Task 5":
+                CompleteTask5_PreLogic(triggerConfig.objectsToManipulate[0]);
+                break;
+            case "Task 8":
+                CompleteTask8_PreLogic(triggerConfig);
+                 break;
 
             // Add more cases for additional tasks as needed
 
@@ -158,9 +160,9 @@ public class TaskManagerNitr : MonoBehaviour
             case "Task 3":
                 CompleteTask3_PostLogic();
                 break;
-
-          
-
+            case "Task 7":
+                CompleteTask7_PostLogic(triggerConfig.objectsToManipulate[0]);
+            break;
             // Add more cases for additional tasks as needed
 
             default:
@@ -181,29 +183,40 @@ public class TaskManagerNitr : MonoBehaviour
 
     }
     // Example methods for specific pre-completion logic
-    private void CompleteTask1_PreLogic()
+    private void CompleteTask8_PreLogic(TriggerConfigNitr triggerConfig)
     {
-        // Logic specific to Task1 pre-completion
-        Debug.Log("Pre-completion logic for Task1 executed.");
+        GameObject ob = triggerConfig.objectsToManipulate[0];
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Spin");
+
     }
 
-    private void CompleteTask2_PreLogic(GameObject OB)
+    private void CompleteTask2_PreLogic(TriggerConfigNitr OB)
     {
         // Logic specific to Task2 pre-completion
-        OB.gameObject.SetActive(true);
+        OB.objectsToManipulate[0].gameObject.SetActive(true);
+        OB.objectsToManipulate[1].gameObject.SetActive(true);
+        OB.objectsToManipulate[2].gameObject.SetActive(false);
     }
 
     private void CompleteTask3_PreLogic(GameObject OB)
     {
         OB.gameObject.SetActive(true);
     }
-    private void CompleteTask5_PostLogic(GameObject magnet)
+    private void CompleteTask5_PreLogic(GameObject OB)
     {
-        magnet.SetActive(true);
+        OB.GetComponent<Animator>().SetTrigger("Tube");
+    }
+    private void CompleteTask7_PostLogic(GameObject ob)
+    {
+        
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Open");
+
 
     }
     // Coroutine to rotate the magnet for a given number of rotations
-  
+
     // Coroutine to rotate the magnet over time
     // Coroutine to rotate the magnet once (360 degrees) over a duration
 
