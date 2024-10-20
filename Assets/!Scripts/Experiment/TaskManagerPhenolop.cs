@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 [System.Serializable]
 public class TriggerConfigPhenolop
 {
@@ -23,7 +24,8 @@ public class TaskManagerPhenolop : MonoBehaviour
     public TaskList taskList;                  // Reference to the ScriptableObject task list
     public Color taskTextColor;                // Color for task text in UI
     public AudioSource audioSource;            // AudioSource to play task sounds
-
+    public GameObject canvas;
+    public GameObject EndCanvas;
     private int currentTaskIndex = 1;          // Tracks current task being worked on
 
     [Header("Trigger Configurations")]
@@ -31,10 +33,14 @@ public class TaskManagerPhenolop : MonoBehaviour
 
     private void Start()
     {
+        InitializeTasksUI();
         InitializeTasks();     // Initialize tasks on the UI
         InitializeTriggers();  // Initialize trigger settings
     }
-
+    void InitializeTasksUI()
+    {
+        canvas.SetActive(true);
+    }
     // Initializes the tasks in the task list at the start
     void InitializeTasks()
     {
@@ -121,15 +127,21 @@ public class TaskManagerPhenolop : MonoBehaviour
     {
         switch (triggerConfig.taskNameToComplete)
         {
-            case "Task 1":
-                CompleteTask1_PreLogic();
+            case "Task 1.8":
+                CompleteTask1_PreLogic(triggerConfig);
                 break;
 
             case "Task 2":
                 CompleteTask2_PreLogic();
                 break;
+            case "Task 5":
+                CompleteTask5_PreLogic(triggerConfig);
+                break;
+            case "Task 7":
+                CompleteTask7_PreLogic(triggerConfig);
+                break;
 
-          
+
 
             // Add more cases for additional tasks as needed
 
@@ -138,7 +150,22 @@ public class TaskManagerPhenolop : MonoBehaviour
                 break;
         }
     }
-
+    private void CompleteTask7_PreLogic(TriggerConfigPhenolop triggerConfig)
+    {
+ 
+       GameObject ob = triggerConfig.objectsToManipulate[0];
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Spin");
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+        EndCanvas.SetActive(true);
+        triggerConfig.objectsToManipulate[2].GetComponent<TMP_InputField>().text = "11 ml";
+        triggerConfig.objectsToManipulate[3].GetComponent<TMP_InputField>().text = "8.3";
+    }
+    private void CompleteTask5_PreLogic(TriggerConfigPhenolop triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[0].SetActive(true);
+    }
     private void PostCompletionLogic(TriggerConfigPhenolop triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)
@@ -175,8 +202,11 @@ public class TaskManagerPhenolop : MonoBehaviour
 
     }
     // Example methods for specific pre-completion logic
-    private void CompleteTask1_PreLogic()
+    private void CompleteTask1_PreLogic(TriggerConfigPhenolop triggerConfig)
     {
+        canvas.SetActive(false);
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
         // Logic specific to Task1 pre-completion
         Debug.Log("Pre-completion logic for Task1 executed.");
     }

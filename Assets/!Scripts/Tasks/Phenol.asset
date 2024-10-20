@@ -42,30 +42,30 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: 8490900e558ca604f944edc32fcd3104, type: 3}
     IsShowenInUI: 0
   - taskName: Task 1.8
-    taskDescription: Put the volumetric flask in the cardboard box and close it.
+    taskDescription: Add 3 drop of PhPh 1%.
     taskSound: {fileID: 8300000, guid: c3a90642b820c1246ab9f3e357816380, type: 3}
     IsShowenInUI: 1
   - taskName: Task 2
-    taskDescription: After a while, open the cardboard box
+    taskDescription: 'Pur the solution into the flask '
     taskSound: {fileID: 8300000, guid: 4ee9c898fa0cd1440b4be01658c3e229, type: 3}
     IsShowenInUI: 1
   - taskName: Task 3
-    taskDescription: Set the spectrophotometer wavelength to 630 nm.
+    taskDescription: 
+    taskSound: {fileID: 0}
+    IsShowenInUI: 0
+  - taskName: Task 4
+    taskDescription: 'Fil the burrete with 0.5 HCL solution '
     taskSound: {fileID: 8300000, guid: 390c37acbcaf89d4db438b6f2498f5f0, type: 3}
     IsShowenInUI: 1
-  - taskName: Task 4
-    taskDescription: Open the spectrophotometer cover
+  - taskName: Task 5
+    taskDescription: 'Add the magnettic bar to the flask. '
     taskSound: {fileID: 8300000, guid: 2e67af1784da40041aa3c966add058f7, type: 3}
     IsShowenInUI: 1
-  - taskName: Task 5
-    taskDescription: Fill the test tube with the solution
-    taskSound: {fileID: 0}
-    IsShowenInUI: 1
   - taskName: Task 6
-    taskDescription: " Put the tube in the spectrophotometer and close the cover.\r"
+    taskDescription: " Put the flask on the magnetic stirr.\r"
     taskSound: {fileID: 8300000, guid: ea57cf46f2c52d140ba54e22c31a7797, type: 3}
     IsShowenInUI: 1
   - taskName: Task 7
-    taskDescription: Perform the reading.
+    taskDescription: Click the button to turn on the stirr.
     taskSound: {fileID: 8300000, guid: 9ccab1d563f43d04aa598dde9dc8a7df, type: 3}
     IsShowenInUI: 1

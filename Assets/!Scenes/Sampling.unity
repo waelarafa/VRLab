@@ -15060,7 +15060,7 @@ Transform:
   m_GameObject: {fileID: 374182622}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29, y: -1.25, z: -49.529995}
+  m_LocalPosition: {x: 3.87, y: -1.1, z: -49.529995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26444,12 +26444,12 @@ PrefabInstance:
     - target: {fileID: 6264228565720201549, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.949001
+      value: -13.15
       objectReference: {fileID: 0}
     - target: {fileID: 6264228565720201549, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.81
+      value: -8.54
       objectReference: {fileID: 0}
     - target: {fileID: 6264228565720201549, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -26620,12 +26620,12 @@ PrefabInstance:
     - target: {fileID: 6670620332695255191, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.77
+      value: -11.97105
       objectReference: {fileID: 0}
     - target: {fileID: 6670620332695255191, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.8
+      value: -8.53
       objectReference: {fileID: 0}
     - target: {fileID: 6670620332695255191, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -88149,7 +88149,7 @@ PrefabInstance:
     - target: {fileID: 2683195716791022646, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 761.68
+      value: 768.17
       objectReference: {fileID: 0}
     - target: {fileID: 2683195716791022646, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
@@ -88159,7 +88159,7 @@ PrefabInstance:
     - target: {fileID: 2683195716791022646, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 723.2
+      value: 720.57
       objectReference: {fileID: 0}
     - target: {fileID: 2683195716791022646, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}

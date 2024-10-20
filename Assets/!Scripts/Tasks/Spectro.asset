@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8471440008c7cdf43be8b04bd3aa9eb0, type: 3}
-  m_Name: Nitrites
+  m_Name: Spectro
   m_EditorClassIdentifier: 
   tasks:
   - taskName: Task 1
@@ -19,15 +19,23 @@ MonoBehaviour:
     IsShowenInUI: 1
   - taskName: Task 1.2
     taskDescription: "Take  0.5 ml of Alkaline solution.\r"
-    taskSound: {fileID: 0}
+    taskSound: {fileID: 8300000, guid: 92f1078e2ccc69d40a7047790d3fc48c, type: 3}
     IsShowenInUI: 0
   - taskName: Task 2
-    taskDescription: add   0.5 ml of Diazotization Reagent.
-    taskSound: {fileID: 8300000, guid: 02a711dba3951584d9140186f49bb8c4, type: 3}
+    taskDescription: Add  0.5 ml of  Ascorbic Acid.
+    taskSound: {fileID: 8300000, guid: 95c28988694a70248a5f95ee9b98bf26, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 2.1
+    taskDescription: Put the volumetric flask in the cardboard box and close it.
+    taskSound: {fileID: 8300000, guid: cb871dc0d88e2d146936220a1f138015, type: 3}
+    IsShowenInUI: 0
+  - taskName: Task 2.2
+    taskDescription: add   0.5 ml of  Reagent Flask.
+    taskSound: {fileID: 8300000, guid: 4a65f4f6da1c16c41af0108457b7a127, type: 3}
     IsShowenInUI: 1
   - taskName: Task 3
     taskDescription: Pure the solution into the test tube
-    taskSound: {fileID: 8300000, guid: 235e5931dea918b459de603d3c67ac8d, type: 3}
+    taskSound: {fileID: 8300000, guid: 5c31ad76cdbaeca4194e5625d11ba810, type: 3}
     IsShowenInUI: 1
   - taskName: Task 4
     taskDescription: "Put the solution into the mixer \r"
@@ -35,21 +43,21 @@ MonoBehaviour:
     IsShowenInUI: 1
   - taskName: Task 5
     taskDescription: Turn on the mixer
-    taskSound: {fileID: 8300000, guid: 4f67097e22572de43bd8ecd58a84827b, type: 3}
+    taskSound: {fileID: 8300000, guid: 8bc62e807c655334a8863dd45bde1298, type: 3}
     IsShowenInUI: 1
   - taskName: Task 6
     taskDescription: Move the solution to the rack
-    taskSound: {fileID: 8300000, guid: 390290af9113c76439457f7e21fd2c70, type: 3}
+    taskSound: {fileID: 8300000, guid: 2d10d3ac9bb3bc1419f9bdc469361e43, type: 3}
     IsShowenInUI: 1
   - taskName: Task 7
     taskDescription: Set the spectrophotometer to 537 nanometer
-    taskSound: {fileID: 8300000, guid: 68c9ba0604fbee449afa09a3b529b4c8, type: 3}
+    taskSound: {fileID: 8300000, guid: b0e9ff9689e961342baebb303addce7f, type: 3}
     IsShowenInUI: 1
   - taskName: Task 8
     taskDescription: Fill the tube with the solution
-    taskSound: {fileID: 8300000, guid: cb871dc0d88e2d146936220a1f138015, type: 3}
+    taskSound: {fileID: 8300000, guid: fac1cf1d709ba1741a42cc2bdc3a52eb, type: 3}
     IsShowenInUI: 1
   - taskName: Task 17
-    taskDescription: Put the tube in the spectrophotometer
-    taskSound: {fileID: 8300000, guid: fa0ec3f08b7b9b2448cefc2983a6934d, type: 3}
+    taskDescription: Put the tube in the spectrophotometer and close the cover
+    taskSound: {fileID: 8300000, guid: 7f428ba3ff734d44bbb54243d69768a7, type: 3}
     IsShowenInUI: 1

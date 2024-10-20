@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 [System.Serializable]
 public class TriggerConfigMyth
 {
@@ -23,16 +24,23 @@ public class TaskManagerMythOrange : MonoBehaviour
     public TaskList taskList;                  // Reference to the ScriptableObject task list
     public Color taskTextColor;                // Color for task text in UI
     public AudioSource audioSource;            // AudioSource to play task sounds
-
+    public GameObject canvas;
     private int currentTaskIndex = 1;          // Tracks current task being worked on
-
+   
+  
     [Header("Trigger Configurations")]
     public TriggerConfigMyth[] triggerConfigs;      // Array of triggers and their settings
 
     private void Start()
     {
+   
+        InitializeTasksUI();
         InitializeTasks();     // Initialize tasks on the UI
         InitializeTriggers();  // Initialize trigger settings
+    }
+    void InitializeTasksUI()
+    {
+        canvas.SetActive(true);
     }
 
     // Initializes the tasks in the task list at the start
@@ -132,10 +140,10 @@ public class TaskManagerMythOrange : MonoBehaviour
                 CompleteTask4_2_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
             case "Task 5":
-                CompleteTask5_PreLogic(triggerConfig.objectsToManipulate[0]);
+                CompleteTask5_PreLogic(triggerConfig);
                 break;
             case "Task 8":
-                CompleteTask8_PreLogic(triggerConfig.objectsToManipulate[0]);
+                CompleteTask8_PreLogic(triggerConfig);
             break;
             // Add more cases for additional tasks as needed
 
@@ -160,6 +168,9 @@ public class TaskManagerMythOrange : MonoBehaviour
             case "Task 3":
                 CompleteTask3_PostLogic();
                 break;
+            case "Task 6":
+                CompleteTask6_PostLogic(triggerConfig);
+                break;
             case "Task 8":
                 CompleteTask8_PostLogic(triggerConfig);
                 break;
@@ -172,28 +183,40 @@ public class TaskManagerMythOrange : MonoBehaviour
                 break;
         }
     }
+    private void CompleteTask6_PostLogic(TriggerConfigMyth triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+    }
     private void CompleteTask4_2_PreLogic(GameObject ob)
     {
         ob.SetActive(true);
     }
-    private void CompleteTask5_PreLogic(GameObject ob)
+    private void CompleteTask5_PreLogic(TriggerConfigMyth ob)
     {
-        ob.SetActive(true);
+        ob.objectsToManipulate[0].SetActive(true);
+        ob.objectsToManipulate[1].GetComponent<TextMeshPro>().text = "3";
     }
-    private void CompleteTask8_PreLogic(GameObject ob)
+    private void CompleteTask8_PreLogic(TriggerConfigMyth ob)
     {
-        if (ob.GetComponent<Animator>())
-            ob.GetComponent<Animator>().SetTrigger("Spin");
-    }
-    private void CompleteTask8_PostLogic(TriggerConfigMyth ob)
-    {
-        
+        if (ob.objectsToManipulate[0].GetComponent<Animator>())
+            ob.objectsToManipulate[0].GetComponent<Animator>().SetTrigger("Spin");
         ob.objectsToManipulate[1].SetActive(true);
         ob.objectsToManipulate[2].SetActive(true);
         ob.objectsToManipulate[3].SetActive(true);
         ob.objectsToManipulate[4].SetActive(true);
         ob.objectsToManipulate[5].SetActive(true);
         ob.objectsToManipulate[6].SetActive(true);
+        ob.objectsToManipulate[7].GetComponent<TMP_InputField>().text = "23 ml";
+        ob.objectsToManipulate[8].GetComponent<TMP_InputField>().text = "4.5";
+    }
+    private void CompleteTask8_PostLogic(TriggerConfigMyth ob)
+    {
+
+        ob.objectsToManipulate[7].SetActive(false);
+        ob.objectsToManipulate[8].SetActive(true);
+        ob.objectsToManipulate[8].SetActive(true);
+
     }
     private void CompleteTask12_PostLogic(TriggerConfig triggerConfig)
     {
@@ -239,8 +262,8 @@ public class TaskManagerMythOrange : MonoBehaviour
     {
 
 
-        OB.SetActive(false);   
-
+        OB.SetActive(false);
+        canvas.SetActive(false);
 
         // Logic specific to Task1 post-completion
         Debug.Log("Post-completion logic for Task1 executed.");
@@ -275,24 +298,32 @@ public class TaskManagerMythOrange : MonoBehaviour
         if (currentTaskIndex < taskList.tasks.Length)
         {
             string taskName = taskList.tasks[currentTaskIndex].taskName;
-
-            foreach (Transform child in taskPanel)
+            if (taskList.tasks[currentTaskIndex].IsShowenInUI)
             {
-                if (child.gameObject.name == taskName)
+                foreach (Transform child in taskPanel)
                 {
-                    TaskItem taskItem = child.GetComponent<TaskItem>();
-                    if (taskItem != null)
+                    if (child.gameObject.name == taskName)
                     {
-                        taskItem.CompleteTask();  // Mark task as complete
-                        Debug.Log(taskName + " is completed.");
+                        TaskItem taskItem = child.GetComponent<TaskItem>();
+                        if (taskItem != null)
+                        {
+                            taskItem.CompleteTask();  // Mark task as complete
+                            Debug.Log(taskName + " is completed.");
 
-                        // Play the task completion sound
-                        PlayTaskSound(taskList.tasks[currentTaskIndex].taskSound);
+                            // Play the task completion sound
+                            PlayTaskSound(taskList.tasks[currentTaskIndex].taskSound);
 
-                        currentTaskIndex++;  // Move to the next task
+                            currentTaskIndex++;  // Move to the next task
+                        }
+                        return;
                     }
-                    return;
                 }
+            }
+            else
+            {
+                Debug.Log(taskName + " is completed.");
+                currentTaskIndex++;
+                return;
             }
 
             Debug.LogError("Task not found: " + taskName);

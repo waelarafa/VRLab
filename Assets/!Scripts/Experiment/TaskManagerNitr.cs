@@ -24,7 +24,8 @@ public class TaskManagerNitr : MonoBehaviour
     public TaskList taskList;                  // Reference to the ScriptableObject task list
     public Color taskTextColor;                // Color for task text in UI
     public AudioSource audioSource;            // AudioSource to play task sounds
-
+    public GameObject canvas;
+    public GameObject Endcanvas;
     private int currentTaskIndex = 1;          // Tracks current task being worked on
 
     [Header("Trigger Configurations")]
@@ -32,10 +33,15 @@ public class TaskManagerNitr : MonoBehaviour
 
     private void Start()
     {
+        InitializeTasksUI();
         InitializeTasks();     // Initialize tasks on the UI
         InitializeTriggers();  // Initialize trigger settings
     }
 
+    void InitializeTasksUI()
+    {
+        canvas.SetActive(true);
+    }
     // Initializes the tasks in the task list at the start
     void InitializeTasks()
     {
@@ -133,10 +139,16 @@ public class TaskManagerNitr : MonoBehaviour
             case "Task 5":
                 CompleteTask5_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
+            case "Task 6":
+                CompleteTask6_PreLogic(triggerConfig.objectsToManipulate[0]);
+                break;
             case "Task 8":
                 CompleteTask8_PreLogic(triggerConfig);
                  break;
-
+            case "Task 17":
+                CompleteTask17_PreLogic(triggerConfig.objectsToManipulate[0]);
+                break;
+                
             // Add more cases for additional tasks as needed
 
             default:
@@ -144,13 +156,25 @@ public class TaskManagerNitr : MonoBehaviour
                 break;
         }
     }
+    private void CompleteTask6_PreLogic(GameObject ob)
+    {
+        ob.SetActive(true);
 
+    }
+    private void CompleteTask17_PreLogic(GameObject ob)
+    {
+        if (Endcanvas) { 
+            Endcanvas.SetActive(true);
+        }
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Close");
+    }
     private void PostCompletionLogic(TriggerConfigNitr triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)
         {
-            case "Task 1":
-                CompleteTask1_PostLogic();
+            case "Task 2.2":
+                CompleteTask2_2_PostLogic(triggerConfig);
                 break;
 
             case "Task 2":
@@ -163,12 +187,28 @@ public class TaskManagerNitr : MonoBehaviour
             case "Task 7":
                 CompleteTask7_PostLogic(triggerConfig.objectsToManipulate[0]);
             break;
+            case "Task 8":
+                CompleteTask8_PostLogic(triggerConfig);
+                break;
+            case "Task 6":
+                CompleteTask6_PostLogic(triggerConfig);
+                break;
             // Add more cases for additional tasks as needed
 
             default:
                 Debug.LogWarning("No specific post-completion logic defined for task: " + triggerConfig.taskNameToComplete);
                 break;
         }
+    }
+    private void CompleteTask2_2_PostLogic(TriggerConfigNitr triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(true);
+    }
+    private void CompleteTask6_PostLogic(TriggerConfigNitr triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+
     }
     private void CompleteTask12_PostLogic(TriggerConfig triggerConfig)
     {
@@ -185,18 +225,22 @@ public class TaskManagerNitr : MonoBehaviour
     // Example methods for specific pre-completion logic
     private void CompleteTask8_PreLogic(TriggerConfigNitr triggerConfig)
     {
-        GameObject ob = triggerConfig.objectsToManipulate[0];
-        if (ob.GetComponent<Animator>())
-            ob.GetComponent<Animator>().SetTrigger("Spin");
+        triggerConfig.objectsToManipulate[0].SetActive(false);
 
     }
 
+    private void CompleteTask8_PostLogic(TriggerConfigNitr triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(true);
+
+    }
     private void CompleteTask2_PreLogic(TriggerConfigNitr OB)
     {
         // Logic specific to Task2 pre-completion
+     
         OB.objectsToManipulate[0].gameObject.SetActive(true);
-        OB.objectsToManipulate[1].gameObject.SetActive(true);
-        OB.objectsToManipulate[2].gameObject.SetActive(false);
+     
+        
     }
 
     private void CompleteTask3_PreLogic(GameObject OB)
@@ -223,6 +267,7 @@ public class TaskManagerNitr : MonoBehaviour
     // Example methods for post completion logic
     private void CompleteTask1_PostLogic()
     {
+        canvas.SetActive(false);
         // Logic specific to Task1 post-completion
         Debug.Log("Post-completion logic for Task1 executed.");
     }

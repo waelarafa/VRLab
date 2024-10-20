@@ -31,7 +31,7 @@ MonoBehaviour:
     IsShowenInUI: 0
   - taskName: Task 3.2
     taskDescription: 
-    taskSound: {fileID: 0}
+    taskSound: {fileID: 8300000, guid: 0a65b143e8bf8d744953898f672da010, type: 3}
     IsShowenInUI: 0
   - taskName: Task 4.1
     taskDescription: 
@@ -43,7 +43,7 @@ MonoBehaviour:
     IsShowenInUI: 1
   - taskName: Task 5
     taskDescription: Pure the solution into the Flask
-    taskSound: {fileID: 0}
+    taskSound: {fileID: 8300000, guid: 3ea02a8786d2bbe4bb6c49da3da410a3, type: 3}
     IsShowenInUI: 1
   - taskName: Task 5.1
     taskDescription: 

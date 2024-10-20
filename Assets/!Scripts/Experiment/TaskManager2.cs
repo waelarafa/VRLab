@@ -24,7 +24,7 @@ public class TaskManager2 : MonoBehaviour
     public TaskList taskList;                  // Reference to the ScriptableObject task list
     public Color taskTextColor;                // Color for task text in UI
     public AudioSource audioSource;            // AudioSource to play task sounds
-
+    public GameObject canvas;
     private int currentTaskIndex = 1;          // Tracks current task being worked on
 
     [Header("Trigger Configurations")]
@@ -32,10 +32,14 @@ public class TaskManager2 : MonoBehaviour
 
     private void Start()
     {
+        InitializeTasksUI();
         InitializeTasks();     // Initialize tasks on the UI
         InitializeTriggers();  // Initialize trigger settings
     }
-
+    void InitializeTasksUI()
+    {
+        canvas.SetActive(true);
+    }
     // Initializes the tasks in the task list at the start
     void InitializeTasks()
     {
@@ -123,8 +127,8 @@ public class TaskManager2 : MonoBehaviour
     {
         switch (triggerConfig.taskNameToComplete)
         {
-            case "Task 1":
-            
+            case "Task 1.2":
+                CompleteTask1_2_PreLogic();
                 break;
 
             case "Task 2":
@@ -149,7 +153,10 @@ public class TaskManager2 : MonoBehaviour
                 break;
         }
     }
-
+    private void CompleteTask1_2_PreLogic()
+    {
+        canvas.SetActive(false);
+    }
     private void PostCompletionLogic(TriggerConfig triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)
@@ -195,6 +202,7 @@ public class TaskManager2 : MonoBehaviour
     private void CompleteTask9_PostLogic(TriggerConfig triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
     }
     private void CompleteTask6_PreLogic(TriggerConfig triggerConfig)
     {
@@ -215,6 +223,7 @@ public class TaskManager2 : MonoBehaviour
         GameObject ob = triggerConfig.objectsToManipulate[0];
         if (ob.GetComponent<Animator>())
             ob.GetComponent<Animator>().SetTrigger("Close");
+        triggerConfig.objectsToManipulate[0].SetActive(true);
     }
     private void CompleteTask4_PreLogic(TriggerConfig triggerConfig)
     {
@@ -274,7 +283,8 @@ public class TaskManager2 : MonoBehaviour
     private void CompleteTask10_PostLogic(TriggerConfig triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
-       
+        triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
+
 
     }
     private void CompleteTask2_PostLogic()
