@@ -34,6 +34,7 @@ TagManager:
   - Flask 2.1
   - Flask 2.2
   - Flask 2.3
+  - TubeCover
   layers:
   - Default
   - TransparentFX

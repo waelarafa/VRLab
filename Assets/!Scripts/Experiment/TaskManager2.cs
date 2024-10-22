@@ -179,6 +179,9 @@ public class TaskManager2 : MonoBehaviour
             case "Task 7":
                 CompleteTask7_PostLogic(triggerConfig);
                 break;
+            case "Task 7.1":
+                CompleteTask7_1_PostLogic(triggerConfig);
+                break;
             case "Task 10":
                 CompleteTask10_PostLogic(triggerConfig);
                 break;
@@ -276,11 +279,16 @@ public class TaskManager2 : MonoBehaviour
     }
 
     private void CompleteTask7_PostLogic(TriggerConfig triggerConfig){
-        triggerConfig.objectsToManipulate[0].gameObject.SetActive(false);
-        triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
+        triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
+     
 
     }
-    private void CompleteTask10_PostLogic(TriggerConfig triggerConfig)
+    private void CompleteTask7_1_PostLogic(TriggerConfig triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].gameObject.SetActive(false);
+        triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
+    }
+        private void CompleteTask10_PostLogic(TriggerConfig triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
         triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);

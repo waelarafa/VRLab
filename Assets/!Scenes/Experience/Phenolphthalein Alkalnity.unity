@@ -5493,7 +5493,7 @@ MonoBehaviour:
   ThrowForceMultiplier: 2
   ThrowForceMultiplierAngular: 1.5
   BreakDistance: 0
-  HideHandGraphics: 0
+  HideHandGraphics: 1
   ParentToHands: 0
   ParentHandModel: 1
   SnapHandModel: 1
@@ -5652,12 +5652,12 @@ PrefabInstance:
     - target: {fileID: 7288449745304622249, guid: b827b6465e0b898449e0563e2bcf5b17,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7288449745304622249, guid: b827b6465e0b898449e0563e2bcf5b17,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.006
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 7288449745304622249, guid: b827b6465e0b898449e0563e2bcf5b17,
         type: 3}
@@ -6940,12 +6940,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fcac502efa6b64d49aa5f331071ae66e, type: 2}
+      objectReference: {fileID: 2100000, guid: b7a49b3e75f38c54f9d2586d2c630eee, type: 2}
     - target: {fileID: 8159615270611076165, guid: b6eb06cafdc60c648867771c324e1f85,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: cc0a68632181bdf489ccc90e4034dbeb, type: 2}
+      objectReference: {fileID: 2100000, guid: ebb3250b34570df46ba6a019f7e368b9, type: 2}
     - target: {fileID: 9193099977897285756, guid: b6eb06cafdc60c648867771c324e1f85,
         type: 3}
       propertyPath: m_RootOrder
@@ -6979,7 +6979,7 @@ PrefabInstance:
     - target: {fileID: 9193099977897285756, guid: b6eb06cafdc60c648867771c324e1f85,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0005
+      value: -0.0002
       objectReference: {fileID: 0}
     - target: {fileID: 9193099977897285756, guid: b6eb06cafdc60c648867771c324e1f85,
         type: 3}
@@ -9001,7 +9001,7 @@ MonoBehaviour:
   ThrowForceMultiplier: 2
   ThrowForceMultiplierAngular: 1.5
   BreakDistance: 0
-  HideHandGraphics: 0
+  HideHandGraphics: 1
   ParentToHands: 0
   ParentHandModel: 1
   SnapHandModel: 1
@@ -13398,7 +13398,7 @@ MonoBehaviour:
   ThrowForceMultiplier: 2
   ThrowForceMultiplierAngular: 1.5
   BreakDistance: 0
-  HideHandGraphics: 0
+  HideHandGraphics: 1
   ParentToHands: 0
   ParentHandModel: 1
   SnapHandModel: 1
@@ -14782,12 +14782,12 @@ PrefabInstance:
     - target: {fileID: 7288449745304622249, guid: b827b6465e0b898449e0563e2bcf5b17,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0003
       objectReference: {fileID: 0}
     - target: {fileID: 7288449745304622249, guid: b827b6465e0b898449e0563e2bcf5b17,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.014
+      value: 0.007
       objectReference: {fileID: 0}
     - target: {fileID: 7288449745304622249, guid: b827b6465e0b898449e0563e2bcf5b17,
         type: 3}
@@ -28391,7 +28391,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fcac502efa6b64d49aa5f331071ae66e, type: 2}
+      objectReference: {fileID: 2100000, guid: a2c6a52be154f7e41adcf352eaddbe7b, type: 2}
     - target: {fileID: 8159615270611076165, guid: b6eb06cafdc60c648867771c324e1f85,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
