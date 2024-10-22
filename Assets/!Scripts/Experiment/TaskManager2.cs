@@ -188,7 +188,7 @@ public class TaskManager2 : MonoBehaviour
             case "Task 11":
                 CompleteTask11_PostLogic(triggerConfig);
                 break;
-            case "Task 12":
+            case "Task 13":
                 CompleteTask12_PostLogic(triggerConfig);
                 break;
             case "Task 9":

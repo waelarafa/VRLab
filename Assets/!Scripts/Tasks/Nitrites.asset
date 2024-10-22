@@ -46,10 +46,10 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: 68c9ba0604fbee449afa09a3b529b4c8, type: 3}
     IsShowenInUI: 1
   - taskName: Task 8
-    taskDescription: Fill the tube with the solution
+    taskDescription: Fill the specto tube with the solution
     taskSound: {fileID: 8300000, guid: cb871dc0d88e2d146936220a1f138015, type: 3}
     IsShowenInUI: 1
   - taskName: Task 17
-    taskDescription: Put the tube in the spectrophotometer
+    taskDescription: Put the tube in the spectrophotometer and close the cover
     taskSound: {fileID: 8300000, guid: fa0ec3f08b7b9b2448cefc2983a6934d, type: 3}
     IsShowenInUI: 1

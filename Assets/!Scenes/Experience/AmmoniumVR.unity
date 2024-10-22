@@ -1586,10 +1586,17 @@ MonoBehaviour:
   - trigger: {fileID: 491283675}
     taskNameToComplete: Task 12
     tag: spect
+    objectsToManipulate: []
+    waitTime: 2
+    usePreCompletionLogic: 0
+    usePostCompletionLogic: 0
+  - trigger: {fileID: 1592941664}
+    taskNameToComplete: Task 13
+    tag: SpectroNano
     objectsToManipulate:
     - {fileID: 770447683}
     - {fileID: 2139118577}
-    waitTime: 2
+    waitTime: 1
     usePreCompletionLogic: 0
     usePostCompletionLogic: 1
 --- !u!4 &448375135
@@ -5635,6 +5642,11 @@ PrefabInstance:
       propertyPath: m_Lightmapping
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -3443004660046781794, guid: 93f206cf915f26d43b7868338d0fa133,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3348346264199094159, guid: 93f206cf915f26d43b7868338d0fa133,
         type: 3}
       propertyPath: m_IsActive
@@ -5675,10 +5687,35 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4206946744376586965, guid: 93f206cf915f26d43b7868338d0fa133,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588258745184874186, guid: 93f206cf915f26d43b7868338d0fa133,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4588258745184874186, guid: 93f206cf915f26d43b7868338d0fa133,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8144410576893384993, guid: 93f206cf915f26d43b7868338d0fa133,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990522312544361954, guid: 93f206cf915f26d43b7868338d0fa133,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0052
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990522312544361954, guid: 93f206cf915f26d43b7868338d0fa133,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -6353,7 +6390,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 0.211
@@ -7556,6 +7593,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskNameToComplete: 
 --- !u!114 &1592941663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592941655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8b9a6a4db79a64aadb2d51b62325e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskNameToComplete: 
+--- !u!114 &1592941664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9332,6 +9382,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1592941663}
+    - targetCorrespondingSourceObject: {fileID: 8170599905902840505, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1592941664}
     - targetCorrespondingSourceObject: {fileID: 7014749678520600486, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
       insertIndex: -1
