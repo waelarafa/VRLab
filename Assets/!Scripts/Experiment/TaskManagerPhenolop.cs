@@ -127,12 +127,21 @@ public class TaskManagerPhenolop : MonoBehaviour
     {
         switch (triggerConfig.taskNameToComplete)
         {
+            case "Task 1.2":
+                DropPreLogic(triggerConfig);
+                break;
+            case "Task 1.4":
+                DropPreLogic(triggerConfig);
+                break;
+            case "Task 1.6":
+                DropPreLogic(triggerConfig);
+                break;
             case "Task 1.8":
                 CompleteTask1_PreLogic(triggerConfig);
                 break;
 
             case "Task 2":
-                CompleteTask2_PreLogic();
+                CompleteTask2_PreLogic(triggerConfig);
                 break;
             case "Task 5":
                 CompleteTask5_PreLogic(triggerConfig);
@@ -150,6 +159,10 @@ public class TaskManagerPhenolop : MonoBehaviour
                 break;
         }
     }
+    private void DropPreLogic(TriggerConfigPhenolop ob)
+    {
+        ob.objectsToManipulate[0].SetActive(true);
+    }
     private void CompleteTask7_PreLogic(TriggerConfigPhenolop triggerConfig)
     {
  
@@ -160,11 +173,14 @@ public class TaskManagerPhenolop : MonoBehaviour
         EndCanvas.SetActive(true);
         triggerConfig.objectsToManipulate[2].GetComponent<TMP_InputField>().text = "11 ml";
         triggerConfig.objectsToManipulate[3].GetComponent<TMP_InputField>().text = "8.3";
+        triggerConfig.objectsToManipulate[4].SetActive(false);
+        triggerConfig.objectsToManipulate[5].SetActive(true);
+
     }
     private void CompleteTask5_PreLogic(TriggerConfigPhenolop triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].SetActive(false);
-        triggerConfig.objectsToManipulate[0].SetActive(true);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
     }
     private void PostCompletionLogic(TriggerConfigPhenolop triggerConfig)
     {
@@ -211,8 +227,9 @@ public class TaskManagerPhenolop : MonoBehaviour
         Debug.Log("Pre-completion logic for Task1 executed.");
     }
 
-    private void CompleteTask2_PreLogic()
+    private void CompleteTask2_PreLogic(TriggerConfigPhenolop ob)
     {
+        ob.objectsToManipulate[0].SetActive(true);
         // Logic specific to Task2 pre-completion
         Debug.Log("Pre-completion logic for Task2 executed.");
     }

@@ -163,8 +163,11 @@ public class TaskManagerNitr : MonoBehaviour
     }
     private void CompleteTask17_PreLogic(GameObject ob)
     {
-        if (Endcanvas) { 
+        if (Endcanvas) {
+
+            canvas.SetActive(false);
             Endcanvas.SetActive(true);
+
         }
         if (ob.GetComponent<Animator>())
             ob.GetComponent<Animator>().SetTrigger("Close");
@@ -202,6 +205,7 @@ public class TaskManagerNitr : MonoBehaviour
     }
     private void CompleteTask2_2_PostLogic(TriggerConfigNitr triggerConfig)
     {
+        
         triggerConfig.objectsToManipulate[0].SetActive(true);
     }
     private void CompleteTask6_PostLogic(TriggerConfigNitr triggerConfig)
@@ -267,7 +271,7 @@ public class TaskManagerNitr : MonoBehaviour
     // Example methods for post completion logic
     private void CompleteTask1_PostLogic()
     {
-        canvas.SetActive(false);
+     
         // Logic specific to Task1 post-completion
         Debug.Log("Post-completion logic for Task1 executed.");
     }
@@ -285,6 +289,7 @@ public class TaskManagerNitr : MonoBehaviour
     }
     private void CompleteTask2_PostLogic(TriggerConfigNitr triggerConfig)
     {
+        canvas.SetActive(false);
         triggerConfig.objectsToManipulate[0].SetActive(false);
         triggerConfig.objectsToManipulate[1].SetActive(true);
         // Logic specific to Task2 post-completion

@@ -129,15 +129,15 @@ public class TaskManagerMythOrange : MonoBehaviour
     {
         switch (triggerConfig.taskNameToComplete)
         {
-            case "Task 1":
-                CompleteTask1_PreLogic();
+            case "Task 2.2":
+                CompleteTask1_PreLogic(triggerConfig);
                 break;
 
-            case "Task 2":
-                CompleteTask2_PreLogic();
+            case "Task 3.2":
+                CompleteTask2_PreLogic(triggerConfig);
                 break;
             case "Task 4.2":
-                CompleteTask4_2_PreLogic(triggerConfig.objectsToManipulate[0]);
+                CompleteTask4_2_PreLogic(triggerConfig);
                 break;
             case "Task 5":
                 CompleteTask5_PreLogic(triggerConfig);
@@ -188,14 +188,15 @@ public class TaskManagerMythOrange : MonoBehaviour
         triggerConfig.objectsToManipulate[0].SetActive(false);
         triggerConfig.objectsToManipulate[1].SetActive(true);
     }
-    private void CompleteTask4_2_PreLogic(GameObject ob)
+    private void CompleteTask4_2_PreLogic(TriggerConfigMyth ob)
     {
-        ob.SetActive(true);
+        ob.objectsToManipulate[0].SetActive(true);
+        ob.objectsToManipulate[1].SetActive(true);
     }
     private void CompleteTask5_PreLogic(TriggerConfigMyth ob)
     {
         ob.objectsToManipulate[0].SetActive(true);
-        ob.objectsToManipulate[1].GetComponent<TextMeshPro>().text = "3";
+        ob.objectsToManipulate[1].GetComponent<TextMeshProUGUI>().text = "3";
     }
     private void CompleteTask8_PreLogic(TriggerConfigMyth ob)
     {
@@ -207,15 +208,15 @@ public class TaskManagerMythOrange : MonoBehaviour
         ob.objectsToManipulate[4].SetActive(true);
         ob.objectsToManipulate[5].SetActive(true);
         ob.objectsToManipulate[6].SetActive(true);
-        ob.objectsToManipulate[7].GetComponent<TMP_InputField>().text = "23 ml";
-        ob.objectsToManipulate[8].GetComponent<TMP_InputField>().text = "4.5";
+        ob.objectsToManipulate[10].GetComponent<TMP_InputField>().text = "23 ml";
+        ob.objectsToManipulate[11].GetComponent<TMP_InputField>().text = "4.5";
     }
     private void CompleteTask8_PostLogic(TriggerConfigMyth ob)
     {
 
         ob.objectsToManipulate[7].SetActive(false);
         ob.objectsToManipulate[8].SetActive(true);
-        ob.objectsToManipulate[8].SetActive(true);
+        ob.objectsToManipulate[9].SetActive(true);
 
     }
     private void CompleteTask12_PostLogic(TriggerConfig triggerConfig)
@@ -229,20 +230,24 @@ public class TaskManagerMythOrange : MonoBehaviour
 
     }
     // Example methods for specific pre-completion logic
-    private void CompleteTask1_PreLogic()
+    private void CompleteTask1_PreLogic(TriggerConfigMyth ob)
     {
+        ob.objectsToManipulate[0].SetActive(true);
+        canvas.SetActive(false);
         // Logic specific to Task1 pre-completion
         Debug.Log("Pre-completion logic for Task1 executed.");
     }
 
-    private void CompleteTask2_PreLogic()
+    private void CompleteTask2_PreLogic(TriggerConfigMyth ob)
     {
+        ob.objectsToManipulate[0].SetActive(true);
         // Logic specific to Task2 pre-completion
         Debug.Log("Pre-completion logic for Task2 executed.");
     }
 
-    private void CompleteTask3_PreLogic()
+    private void CompleteTask3_PreLogic(TriggerConfigMyth ob)
     {
+        
         // Logic specific to Task3 pre-completion
         Debug.Log("Pre-completion logic for Task3 executed.");
     }

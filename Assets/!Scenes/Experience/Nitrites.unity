@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1792827, g: 0.22448851, b: 0.30620256, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -346,7 +345,7 @@ PrefabInstance:
     - target: {fileID: 8092695731923795623, guid: 4159ea190608c75479a29c7c289728b4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00002
+      value: 0.00004
       objectReference: {fileID: 0}
     - target: {fileID: 8175288951835745931, guid: 4159ea190608c75479a29c7c289728b4,
         type: 3}
@@ -4539,6 +4538,7 @@ GameObject:
   - component: {fileID: 1188361466}
   - component: {fileID: 1188361468}
   - component: {fileID: 1188361467}
+  - component: {fileID: 1188361469}
   m_Layer: 0
   m_Name: Drop
   m_TagString: Untagged
@@ -4611,6 +4611,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188361465}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &1188361469
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188361465}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1196604322
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,7 +5217,7 @@ MonoBehaviour:
   ThrowForceMultiplier: 2
   ThrowForceMultiplierAngular: 1.5
   BreakDistance: 0
-  HideHandGraphics: 0
+  HideHandGraphics: 1
   ParentToHands: 0
   ParentHandModel: 1
   SnapHandModel: 1
@@ -9876,7 +9903,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b7a49b3e75f38c54f9d2586d2c630eee, type: 2}
-  - {fileID: 2100000, guid: ebb3250b34570df46ba6a019f7e368b9, type: 2}
+  - {fileID: 2100000, guid: 0d99c5573eab3314bb5f0e260d4c2024, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10569,7 +10596,7 @@ Transform:
   m_GameObject: {fileID: 5565188045532046525}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.000000029802319, w: 1}
-  m_LocalPosition: {x: 0.0000006346, y: 2.73e-12, z: 0.00022686}
+  m_LocalPosition: {x: 0.000001, y: 0, z: 0.000257}
   m_LocalScale: {x: 0.009646405, y: 0.0096464, z: 0.0021571408}
   m_ConstrainProportionsScale: 0
   m_Children: []
