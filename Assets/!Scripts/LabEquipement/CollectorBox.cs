@@ -9,13 +9,11 @@ public class CollectorBox : MonoBehaviour
     public TaskManager taskManager;
 
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        // "collision" contains details about the object that collided with the box
-        GameObject enteringObject = collision.gameObject;
-        taskManager.CompleteTaskByName(enteringObject.name);
   
+
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject enteringObject = other.gameObject;
+        taskManager.CompleteTaskByName(enteringObject.name);
     }
-
-
 }

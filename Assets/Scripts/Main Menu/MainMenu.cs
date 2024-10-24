@@ -9,8 +9,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject labButtons;
     [SerializeField] private GameObject SampleAnalysisButton;
 
-    private string PhenolphthaleinAlkaliniyExperieceName = "Alkalimetric Titration Experience";
-    private string CompletePhenolphthaleinAlkaliniyExperieceName = "Complete Alkalimetric Titration Experience";
+    private string PhenolphthaleinAlkaliniyExperieceName = "Phenolphthalein Alkanity";
+    private string CompletePhenolphthaleinAlkaliniyExperieceName = "MythOrange";
     private string RiverSceneName = "River";
     private string Ammonium = "AmmoniumVR";
     private string SpectroVR = "SpectroVR";

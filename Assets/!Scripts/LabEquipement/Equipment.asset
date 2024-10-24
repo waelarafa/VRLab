@@ -14,10 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tasks:
   - taskName: Gloves
-    taskDescription: pick gloves
-  - taskName: Boxes
-    taskDescription: pick Boxes
+    taskDescription: Pick gloves
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+  - taskName: Cooler
+    taskDescription: Pick Cooler
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
   - taskName: Bottles
-    taskDescription: pick Bottles
+    taskDescription: Pick Bottles
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
   - taskName: Multiparameter
-    taskDescription: pick multiparameter
+    taskDescription: Pick multiparameter
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1

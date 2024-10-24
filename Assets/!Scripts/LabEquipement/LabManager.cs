@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using BNG;
+using System.Collections;
 
 public class TaskManager : MonoBehaviour
 {
@@ -16,6 +17,12 @@ public class TaskManager : MonoBehaviour
     public TextMeshProUGUI progressUI;
     public GameObject TaskCanva;
     public GameObject endCanva;
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] audioClips; // Array to hold audio clips
+    [SerializeField] private AudioClip finalAudioClip; // Final audio clip for completion
+    private AudioClip currentClip; // Variable to store the current playing audio clip
+
     private void Start()
     {
         endCanva.SetActive(false);
@@ -25,47 +32,34 @@ public class TaskManager : MonoBehaviour
         TotalProgress = 0;
         for (int i = 0; i < tasksLength; i++)
         {
-            // Set the toggle state based on the task index
             bool isChecked = (i == 0 && checkFirstItem); // Only check the first task
             CreateTask(taskList.tasks[i].taskName, taskList.tasks[i].taskDescription, isChecked);
         }
     }
 
-    // Create a task with task name, description, and a checked state
     void CreateTask(string taskName, string taskDescription, bool isChecked)
     {
         GameObject taskObj = Instantiate(taskPrefab, taskPanel);
-
-        // Set the task GameObject's name to the taskName from the ScriptableObject
         taskObj.name = taskName;
 
         TaskItem taskItem = taskObj.GetComponent<TaskItem>();
-        taskItem.SetTaskDescription(taskDescription); // Set task description
-
-        // Apply the custom text color to the task text
+        taskItem.SetTaskDescription(taskDescription);
         taskItem.SetTaskTextColor(taskTextColor);
+        taskItem.toggle.isOn = isChecked;
+        taskItem.toggle.interactable = false;
 
-        // Set the toggle state
-        taskItem.toggle.isOn = isChecked; // Check the toggle for the first task
-        taskItem.toggle.interactable = false; // Disable user interaction
-
-        // Add listener to handle task completion
         taskItem.toggle.onValueChanged.AddListener(delegate { OnTaskToggle(taskItem.toggle); });
     }
 
-    // Handle task toggle change
     void OnTaskToggle(Toggle toggle)
     {
         // Logic when a task toggle is changed
     }
 
-    // Call this function to complete a task programmatically by its GameObject name (which is the taskName)
     public void CompleteTaskByName(string taskName)
     {
-      
         foreach (Transform child in taskPanel)
         {
-            // Check if the GameObject's name matches the task name
             if (child.gameObject.name == taskName)
             {
                 TaskItem taskItem = child.GetComponent<TaskItem>();
@@ -73,6 +67,9 @@ public class TaskManager : MonoBehaviour
                 {
                     upgradeProgress();
                     taskItem.CompleteTask(); // Mark task as completed
+
+                    // Play the audio corresponding to the task
+                    PlayTaskAudio(taskName);
                     Debug.Log(taskName + " is completed.");
                 }
                 return;
@@ -81,23 +78,74 @@ public class TaskManager : MonoBehaviour
 
         Debug.Log("Task not found: " + taskName);
     }
+
     public void upgradeProgress()
     {
-       
-        TotalProgress = TotalProgress + progressRate;
-        progressUI.text = "progress " + TotalProgress + "%";
-        Debug.Log(" TotalProgress: " + TotalProgress);
-        if (TotalProgress == 100)
+        TotalProgress += progressRate;
+        progressUI.text = "Progress " + TotalProgress + "%";
+        Debug.Log("TotalProgress: " + TotalProgress);
+        if (TotalProgress >= 100) // Use >= to handle overshooting due to floating point errors
         {
             endCanva.SetActive(true);
-            Debug.Log(" endCanva.enabled: ");
+
+            StartCoroutine(PlayFinalAudio());
+
+            Debug.Log("End Canvas enabled.");
         }
     }
+
+    // Play audio corresponding to the completed task
+    private void PlayTaskAudio(string taskName)
+    {
+        // Stop the currently playing audio
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
+        // Find the corresponding audio clip
+        AudioClip clipToPlay = FindAudioClipByTaskName(taskName);
+        if (clipToPlay != null)
+        {
+            audioSource.clip = clipToPlay;
+            audioSource.Play();
+            currentClip = clipToPlay; // Store the current clip
+        }
+        else
+        {
+            Debug.LogWarning("Audio clip not found for task: " + taskName);
+        }
+    }
+
+    // Find the audio clip based on the task name
+    private AudioClip FindAudioClipByTaskName(string taskName)
+    {
+        // Assuming task names match the audio clip names
+        foreach (AudioClip clip in audioClips)
+        {
+            if (clip.name == taskName)
+            {
+                return clip; // Return the clip if the name matches
+            }
+        }
+        return null; // Return null if no matching clip is found
+    }
+
+    // Play the final audio when all tasks are completed
+    private IEnumerator PlayFinalAudio()
+    {
+        yield return new WaitForSeconds(3f);   
+
+        audioSource.Stop(); 
+        audioSource.clip = finalAudioClip;
+        audioSource.Play();
+    }
+
     public void Update()
     {
         if (InputBridge.Instance.XButtonDown)
         {
-            TaskCanva.SetActive(true) ;
+            TaskCanva.SetActive(true);
         }
         if (InputBridge.Instance.XButtonUp)
         {
