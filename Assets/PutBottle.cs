@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class PutBottle : MonoBehaviour
 {
-   
 
-    public TakeWaterSample takeWaterSample;
-  
-    public void OnTriggerEnter(Collider other)
+
+
+    public Task requiredTask;
+    public Task requiredTask2;
+    public void OnTriggerEnter(Collider other )
     {
-        if (other.CompareTag("Bottle"))
+        GameTask currentTask = TaskHandler.instance.currentTask;
+        if (other.CompareTag("Bottle")) { 
+        if (currentTask.task == requiredTask || currentTask.task == requiredTask2)
         {
+
             Debug.Log("cooler got trigred");
             TaskHandler.instance.TaskDone(TaskHandler.instance.currentTask.currentBehaviour);
-        //    takeWaterSample.mouveNext();
-      
-      
-            
+            //    takeWaterSample.mouveNext();
 
+
+
+        }
 
         }
         
