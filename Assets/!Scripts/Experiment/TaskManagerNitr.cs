@@ -145,6 +145,9 @@ public class TaskManagerNitr : MonoBehaviour
             case "Task 8":
                 CompleteTask8_PreLogic(triggerConfig);
                  break;
+            case "Task 8.1":
+                CompleteTask8_1_PreLogic(triggerConfig);
+                break;
             case "Task 17":
                 CompleteTask17_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
@@ -187,11 +190,14 @@ public class TaskManagerNitr : MonoBehaviour
             case "Task 3":
                 CompleteTask3_PostLogic();
                 break;
-            case "Task 7":
-                CompleteTask7_PostLogic(triggerConfig.objectsToManipulate[0]);
+            case "Task 7.1":
+                CompleteTask7_1_PostLogic(triggerConfig.objectsToManipulate[0]);
             break;
             case "Task 8":
                 CompleteTask8_PostLogic(triggerConfig);
+                break;
+            case "Task 8.1":
+                CompleteTask8_1_PostLogic(triggerConfig);
                 break;
             case "Task 6":
                 CompleteTask6_PostLogic(triggerConfig);
@@ -238,6 +244,22 @@ public class TaskManagerNitr : MonoBehaviour
         triggerConfig.objectsToManipulate[0].SetActive(true);
 
     }
+    private void CompleteTask8_1_PreLogic(TriggerConfigNitr triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+
+
+
+    }
+    private void CompleteTask8_1_PostLogic(TriggerConfigNitr triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+
+
+
+    }
     private void CompleteTask2_PreLogic(TriggerConfigNitr OB)
     {
         // Logic specific to Task2 pre-completion
@@ -255,7 +277,7 @@ public class TaskManagerNitr : MonoBehaviour
     {
         OB.GetComponent<Animator>().SetTrigger("Tube");
     }
-    private void CompleteTask7_PostLogic(GameObject ob)
+    private void CompleteTask7_1_PostLogic(GameObject ob)
     {
         
         if (ob.GetComponent<Animator>())

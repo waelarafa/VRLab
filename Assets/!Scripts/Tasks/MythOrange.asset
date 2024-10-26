@@ -42,7 +42,7 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: 0a65b143e8bf8d744953898f672da010, type: 3}
     IsShowenInUI: 1
   - taskName: Task 5
-    taskDescription: Pure the solution into the Flask
+    taskDescription: Pour the solution into the conical  Flask.
     taskSound: {fileID: 8300000, guid: 3ea02a8786d2bbe4bb6c49da3da410a3, type: 3}
     IsShowenInUI: 1
   - taskName: Task 5.1
@@ -50,23 +50,26 @@ MonoBehaviour:
     taskSound: {fileID: 0}
     IsShowenInUI: 0
   - taskName: Task 5.2
-    taskDescription: Now fill the burette with 0.2 HCL solution
+    taskDescription: Fill the burette with 0.02 normal HCI solution.
     taskSound: {fileID: 8300000, guid: b23c86818e8c4f84c8e4021ca4bbbe34, type: 3}
     IsShowenInUI: 1
   - taskName: Task 6
-    taskDescription: "Add the magnetic into the flask\r"
+    taskDescription: "Add the magnetic bar to the conical  flask.\r"
     taskSound: {fileID: 8300000, guid: c42bc097056dc3a48b1e333a4ca500f1, type: 3}
     IsShowenInUI: 1
   - taskName: Task 7
-    taskDescription: Put the flask on the magnetic stirrer  and turn it on with 
-      the green  button
-    taskSound: {fileID: 8300000, guid: 1e114c6a6fb108245970561e64811e56, type: 3}
+    taskDescription: 'Put the conical flask on the magnetic stirrer. '
+    taskSound: {fileID: 0}
     IsShowenInUI: 1
   - taskName: Task 8
-    taskDescription: "Start adding hcl solution\r"
+    taskDescription: "Press  the green  button to activate it for homogoneous mixing.\r"
+    taskSound: {fileID: 8300000, guid: 1e114c6a6fb108245970561e64811e56, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 8.1
+    taskDescription: "Start adding HCI solution.\r"
     taskSound: {fileID: 8300000, guid: 815f07244798a394aa3dfe3877a09fb6, type: 3}
     IsShowenInUI: 1
   - taskName: Task 9
-    taskDescription: "Done\r"
-    taskSound: {fileID: 8300000, guid: 815f07244798a394aa3dfe3877a09fb6, type: 3}
+    taskDescription: "Perform the reading.\r"
+    taskSound: {fileID: 0}
     IsShowenInUI: 1

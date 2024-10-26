@@ -145,6 +145,10 @@ public class TaskManagerMythOrange : MonoBehaviour
             case "Task 8":
                 CompleteTask8_PreLogic(triggerConfig);
             break;
+            case "Task 8.1":
+                CompleteTask8_1_PreLogic(triggerConfig);
+                break;
+
             // Add more cases for additional tasks as needed
 
             default:
@@ -174,7 +178,7 @@ public class TaskManagerMythOrange : MonoBehaviour
             case "Task 8":
                 CompleteTask8_PostLogic(triggerConfig);
                 break;
-
+        
 
             // Add more cases for additional tasks as needed
 
@@ -190,26 +194,39 @@ public class TaskManagerMythOrange : MonoBehaviour
     }
     private void CompleteTask4_2_PreLogic(TriggerConfigMyth ob)
     {
-        ob.objectsToManipulate[0].SetActive(true);
+        ob.objectsToManipulate[0].SetActive(false);
         ob.objectsToManipulate[1].SetActive(true);
+        ob.objectsToManipulate[2].SetActive(true);
+        ob.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "3";
     }
     private void CompleteTask5_PreLogic(TriggerConfigMyth ob)
     {
         ob.objectsToManipulate[0].SetActive(true);
-        ob.objectsToManipulate[1].GetComponent<TextMeshProUGUI>().text = "3";
+       
     }
     private void CompleteTask8_PreLogic(TriggerConfigMyth ob)
     {
         if (ob.objectsToManipulate[0].GetComponent<Animator>())
             ob.objectsToManipulate[0].GetComponent<Animator>().SetTrigger("Spin");
+   
+    
+    }  
+    private void CompleteTask8_1_PreLogic(TriggerConfigMyth ob)
+    {
+        ob.objectsToManipulate[0].SetActive(true);
         ob.objectsToManipulate[1].SetActive(true);
         ob.objectsToManipulate[2].SetActive(true);
         ob.objectsToManipulate[3].SetActive(true);
         ob.objectsToManipulate[4].SetActive(true);
         ob.objectsToManipulate[5].SetActive(true);
         ob.objectsToManipulate[6].SetActive(true);
-        ob.objectsToManipulate[10].GetComponent<TMP_InputField>().text = "23 ml";
-        ob.objectsToManipulate[11].GetComponent<TMP_InputField>().text = "4.5";
+        ob.objectsToManipulate[7].SetActive(false);
+        ob.objectsToManipulate[8].SetActive(true);
+     
+        ob.objectsToManipulate[9].GetComponent<TMP_InputField>().text = "23 ml";
+        ob.objectsToManipulate[10].GetComponent<TMP_InputField>().text = "4.5";
+        if (ob.objectsToManipulate[11].GetComponent<Animator>())
+            ob.objectsToManipulate[11].GetComponent<Animator>().SetTrigger("Spin");
     }
     private void CompleteTask8_PostLogic(TriggerConfigMyth ob)
     {
@@ -234,13 +251,17 @@ public class TaskManagerMythOrange : MonoBehaviour
     {
         ob.objectsToManipulate[0].SetActive(true);
         canvas.SetActive(false);
+        ob.objectsToManipulate[1].GetComponent<TextMeshProUGUI>().text = "1";
         // Logic specific to Task1 pre-completion
         Debug.Log("Pre-completion logic for Task1 executed.");
     }
 
     private void CompleteTask2_PreLogic(TriggerConfigMyth ob)
     {
-        ob.objectsToManipulate[0].SetActive(true);
+        ob.objectsToManipulate[0].SetActive(false);
+        ob.objectsToManipulate[1].SetActive(true);
+        ob.objectsToManipulate[2].SetActive(true);
+        ob.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "2";
         // Logic specific to Task2 pre-completion
         Debug.Log("Pre-completion logic for Task2 executed.");
     }

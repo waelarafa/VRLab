@@ -131,7 +131,7 @@ public class TaskManagerPhenolop : MonoBehaviour
                 DropPreLogic(triggerConfig);
                 break;
             case "Task 1.4":
-                DropPreLogic(triggerConfig);
+                DropPreLogic1(triggerConfig);
                 break;
             case "Task 1.6":
                 DropPreLogic(triggerConfig);
@@ -149,6 +149,7 @@ public class TaskManagerPhenolop : MonoBehaviour
             case "Task 7":
                 CompleteTask7_PreLogic(triggerConfig);
                 break;
+            
 
 
 
@@ -162,6 +163,15 @@ public class TaskManagerPhenolop : MonoBehaviour
     private void DropPreLogic(TriggerConfigPhenolop ob)
     {
         ob.objectsToManipulate[0].SetActive(true);
+        ob.objectsToManipulate[1].GetComponent<TextMeshProUGUI>().text = "1";
+    } 
+    
+    private void DropPreLogic1(TriggerConfigPhenolop ob)
+    {
+        ob.objectsToManipulate[0].SetActive(true);
+        ob.objectsToManipulate[1].SetActive(false);
+        ob.objectsToManipulate[2].SetActive(true);
+        ob.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "2";
     }
     private void CompleteTask7_PreLogic(TriggerConfigPhenolop triggerConfig)
     {
@@ -169,13 +179,21 @@ public class TaskManagerPhenolop : MonoBehaviour
        GameObject ob = triggerConfig.objectsToManipulate[0];
         if (ob.GetComponent<Animator>())
             ob.GetComponent<Animator>().SetTrigger("Spin");
-        triggerConfig.objectsToManipulate[1].SetActive(true);
-        EndCanvas.SetActive(true);
-        triggerConfig.objectsToManipulate[2].GetComponent<TMP_InputField>().text = "11 ml";
-        triggerConfig.objectsToManipulate[3].GetComponent<TMP_InputField>().text = "8.3";
-        triggerConfig.objectsToManipulate[4].SetActive(false);
-        triggerConfig.objectsToManipulate[5].SetActive(true);
+       
+      
+    
 
+    }
+    private void CompleteTask8_PostLogic(TriggerConfigPhenolop triggerConfig)
+    {
+ 
+        triggerConfig.objectsToManipulate[0].SetActive(true);
+        EndCanvas.SetActive(true);
+        triggerConfig.objectsToManipulate[1].GetComponent<TMP_InputField>().text = "11 ml";
+        triggerConfig.objectsToManipulate[2].GetComponent<TMP_InputField>().text = "8.3";
+        triggerConfig.objectsToManipulate[3].SetActive(false);
+        triggerConfig.objectsToManipulate[4].SetActive(true);
+        EndCanvas.SetActive(true);
     }
     private void CompleteTask5_PreLogic(TriggerConfigPhenolop triggerConfig)
     {
@@ -194,8 +212,8 @@ public class TaskManagerPhenolop : MonoBehaviour
                 CompleteTask2_PostLogic();
                 break;
 
-            case "Task 3":
-                CompleteTask3_PostLogic();
+            case "Task 8":
+                CompleteTask8_PostLogic(triggerConfig);
                 break;
 
           
@@ -222,7 +240,9 @@ public class TaskManagerPhenolop : MonoBehaviour
     {
         canvas.SetActive(false);
         triggerConfig.objectsToManipulate[0].SetActive(false);
-        triggerConfig.objectsToManipulate[1].SetActive(true);
+        triggerConfig.objectsToManipulate[1].SetActive(true); 
+        triggerConfig.objectsToManipulate[2].SetActive(true);
+        triggerConfig.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "3";
         // Logic specific to Task1 pre-completion
         Debug.Log("Pre-completion logic for Task1 executed.");
     }
@@ -230,6 +250,9 @@ public class TaskManagerPhenolop : MonoBehaviour
     private void CompleteTask2_PreLogic(TriggerConfigPhenolop ob)
     {
         ob.objectsToManipulate[0].SetActive(true);
+        ob.objectsToManipulate[1].GetComponent<MeshRenderer>().enabled = false;
+        ob.objectsToManipulate[2].SetActive(false);
+        ob.objectsToManipulate[3].GetComponent<MeshRenderer>().enabled = true;
         // Logic specific to Task2 pre-completion
         Debug.Log("Pre-completion logic for Task2 executed.");
     }

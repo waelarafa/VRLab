@@ -145,6 +145,13 @@ public class TaskManager2 : MonoBehaviour
             case "Task 6":
                 CompleteTask6_PreLogic(triggerConfig);
                 break;
+            case "Task 7.1":
+                CompleteTask7_1_PreLogic(triggerConfig);
+                break;
+                
+            case "Task 12":
+                CompleteTask12_PreLogic(triggerConfig);
+                break;
 
             // Add more cases for additional tasks as needed
 
@@ -156,6 +163,11 @@ public class TaskManager2 : MonoBehaviour
     private void CompleteTask1_2_PreLogic()
     {
         canvas.SetActive(false);
+    }
+    private void CompleteTask12_PreLogic(TriggerConfig triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
     }
     private void PostCompletionLogic(TriggerConfig triggerConfig)
     {
@@ -179,13 +191,12 @@ public class TaskManager2 : MonoBehaviour
             case "Task 7":
                 CompleteTask7_PostLogic(triggerConfig);
                 break;
-            case "Task 7.1":
-                CompleteTask7_1_PostLogic(triggerConfig);
+          
                 break;
             case "Task 10":
                 CompleteTask10_PostLogic(triggerConfig);
                 break;
-            case "Task 11":
+            case "Task 11.1":
                 CompleteTask11_PostLogic(triggerConfig);
                 break;
             case "Task 13":
@@ -226,7 +237,7 @@ public class TaskManager2 : MonoBehaviour
         GameObject ob = triggerConfig.objectsToManipulate[0];
         if (ob.GetComponent<Animator>())
             ob.GetComponent<Animator>().SetTrigger("Close");
-        triggerConfig.objectsToManipulate[0].SetActive(true);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
     }
     private void CompleteTask4_PreLogic(TriggerConfig triggerConfig)
     {
@@ -283,7 +294,7 @@ public class TaskManager2 : MonoBehaviour
      
 
     }
-    private void CompleteTask7_1_PostLogic(TriggerConfig triggerConfig)
+    private void CompleteTask7_1_PreLogic(TriggerConfig triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].gameObject.SetActive(false);
         triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);

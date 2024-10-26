@@ -46,23 +46,28 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: 8d799860ea27f314389fa570a00ed79c, type: 3}
     IsShowenInUI: 1
   - taskName: Task 7
-    taskDescription: Pour the solution into the volumetric flask and close it.
+    taskDescription: Pour the solution into the volumetric flask and close it the
+      cover.
     taskSound: {fileID: 0}
     IsShowenInUI: 1
   - taskName: Task 7.1
     taskDescription: "Close the volumetric flask with the cover.\r"
-    taskSound: {fileID: 8300000, guid: f5ec09da0174cd2478e0eacdd26c1bc2, type: 3}
+    taskSound: {fileID: 8300000, guid: 8490900e558ca604f944edc32fcd3104, type: 3}
     IsShowenInUI: 1
   - taskName: Task 8
-    taskDescription: Put the volumetric flask in the cardboard box and close it.
+    taskDescription: Put the volumetric flask in the cardboard box .
     taskSound: {fileID: 0}
     IsShowenInUI: 1
   - taskName: Task 9
-    taskDescription: After a while, open the cardboard box
+    taskDescription: Close the cardboard box and open it after a while.
     taskSound: {fileID: 8300000, guid: e669449562d5afc4d9d3c899c69054d1, type: 3}
     IsShowenInUI: 1
   - taskName: Task 11
     taskDescription: Set the spectrophotometer wavelength to 630 nm.
+    taskSound: {fileID: 8300000, guid: 9afac4bb89eafb74588d6ab10b0f02b0, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 11.1
+    taskDescription: open the spectrophotometer cover
     taskSound: {fileID: 8300000, guid: 7225a947196078a448293e77679d9f98, type: 3}
     IsShowenInUI: 1
   - taskName: Task 10

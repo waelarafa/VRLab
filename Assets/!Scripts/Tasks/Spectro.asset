@@ -30,34 +30,42 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: cb871dc0d88e2d146936220a1f138015, type: 3}
     IsShowenInUI: 0
   - taskName: Task 2.2
-    taskDescription: add   0.5 ml of  Reagent Flask.
+    taskDescription: Add   2 ml of  Combined  reagent.
     taskSound: {fileID: 8300000, guid: 4a65f4f6da1c16c41af0108457b7a127, type: 3}
     IsShowenInUI: 1
   - taskName: Task 3
-    taskDescription: Pure the solution into the test tube
+    taskDescription: Pour the solution into the test tube
     taskSound: {fileID: 8300000, guid: 5c31ad76cdbaeca4194e5625d11ba810, type: 3}
     IsShowenInUI: 1
   - taskName: Task 4
-    taskDescription: "Put the solution into the mixer \r"
-    taskSound: {fileID: 0}
-    IsShowenInUI: 1
-  - taskName: Task 5
-    taskDescription: Turn on the mixer
+    taskDescription: "Move the solution to the magnet stirrer. \r"
     taskSound: {fileID: 8300000, guid: 8bc62e807c655334a8863dd45bde1298, type: 3}
     IsShowenInUI: 1
-  - taskName: Task 6
-    taskDescription: Move the solution to the rack
+  - taskName: Task 5
+    taskDescription: to activate it for a homogeneous mixing.
     taskSound: {fileID: 8300000, guid: 2d10d3ac9bb3bc1419f9bdc469361e43, type: 3}
     IsShowenInUI: 1
-  - taskName: Task 7
-    taskDescription: Set the spectrophotometer to 537 nanometer
+  - taskName: Task 6
+    taskDescription: Move the solution to the rack and leave it resting for 30 minutes.
     taskSound: {fileID: 8300000, guid: b0e9ff9689e961342baebb303addce7f, type: 3}
     IsShowenInUI: 1
+  - taskName: Task 7
+    taskDescription: Set the spectrophotometer wavelength  to [ 700 nm.800nm]
+    taskSound: {fileID: 8300000, guid: 28ebfe44ff725c94398784a1d42a094e, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 7.1
+    taskDescription: Open the spectrophotometer cover.
+    taskSound: {fileID: 8300000, guid: 3d35593bc502fbf4e88fff86a7c341b1, type: 3}
+    IsShowenInUI: 1
   - taskName: Task 8
-    taskDescription: Fill the tube with the solution
+    taskDescription: Fill the tube with the solution.
     taskSound: {fileID: 8300000, guid: fac1cf1d709ba1741a42cc2bdc3a52eb, type: 3}
     IsShowenInUI: 1
-  - taskName: Task 17
-    taskDescription: Put the tube in the spectrophotometer and close the cover
+  - taskName: Task 8.1
+    taskDescription: Put the tube in the spectrophotometer and close the cover.
     taskSound: {fileID: 8300000, guid: 7f428ba3ff734d44bbb54243d69768a7, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 17
+    taskDescription: Perform the reading.
+    taskSound: {fileID: 0}
     IsShowenInUI: 1
