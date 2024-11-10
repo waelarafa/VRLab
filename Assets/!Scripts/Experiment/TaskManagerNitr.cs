@@ -166,14 +166,20 @@ public class TaskManagerNitr : MonoBehaviour
     }
     private void CompleteTask17_PreLogic(GameObject ob)
     {
-        if (Endcanvas) {
+       
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Close");
+    }
+    private void CompleteTask17_PostLogic()
+    {
+
+        if (Endcanvas)
+        {
 
             canvas.SetActive(false);
             Endcanvas.SetActive(true);
 
         }
-        if (ob.GetComponent<Animator>())
-            ob.GetComponent<Animator>().SetTrigger("Close");
     }
     private void PostCompletionLogic(TriggerConfigNitr triggerConfig)
     {
@@ -201,6 +207,9 @@ public class TaskManagerNitr : MonoBehaviour
                 break;
             case "Task 6":
                 CompleteTask6_PostLogic(triggerConfig);
+                break;
+            case "Task 17":
+                CompleteTask17_PostLogic();
                 break;
             // Add more cases for additional tasks as needed
 

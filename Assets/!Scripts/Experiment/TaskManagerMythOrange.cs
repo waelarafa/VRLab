@@ -201,8 +201,11 @@ public class TaskManagerMythOrange : MonoBehaviour
     }
     private void CompleteTask5_PreLogic(TriggerConfigMyth ob)
     {
-        ob.objectsToManipulate[0].SetActive(true);
-       
+        ob.objectsToManipulate[0].SetActive(false);
+        ob.objectsToManipulate[1].SetActive(false);
+        ob.objectsToManipulate[2].SetActive(true);  
+            ob.objectsToManipulate[3].SetActive(true);
+
     }
     private void CompleteTask8_PreLogic(TriggerConfigMyth ob)
     {

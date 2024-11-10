@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityEngine.UIElements;
-
+using Unity.VisualScripting;
 [System.Serializable]
-public class TriggerConfig
+public class TriggerConfigNitrV2
 {
-    public TaskTrigger trigger;                // Reference to the TaskTrigger
+    public TaskTriggerNitr trigger;                // Reference to the TaskTrigger
     public string taskNameToComplete;          // Task to complete when triggered
     public string tag;                         // Tag to compare when trigger is entered
     public GameObject[] objectsToManipulate;   // The objects that will be manipulated
@@ -17,7 +16,8 @@ public class TriggerConfig
     public bool usePostCompletionLogic = false; // Whether to use post-completion logic
 }
 
-public class TaskManager2 : MonoBehaviour
+
+public class TaskManagerNitrV2 : MonoBehaviour
 {
     public GameObject taskPrefab;              // Task prefab for UI
     public Transform taskPanel;                // UI panel to display tasks
@@ -25,10 +25,11 @@ public class TaskManager2 : MonoBehaviour
     public Color taskTextColor;                // Color for task text in UI
     public AudioSource audioSource;            // AudioSource to play task sounds
     public GameObject canvas;
+    public GameObject Endcanvas;
     private int currentTaskIndex = 1;          // Tracks current task being worked on
 
     [Header("Trigger Configurations")]
-    public TriggerConfig[] triggerConfigs;      // Array of triggers and their settings
+    public TriggerConfigNitr[] triggerConfigs;      // Array of triggers and their settings
 
     private void Start()
     {
@@ -36,6 +37,7 @@ public class TaskManager2 : MonoBehaviour
         InitializeTasks();     // Initialize tasks on the UI
         InitializeTriggers();  // Initialize trigger settings
     }
+
     void InitializeTasksUI()
     {
         canvas.SetActive(true);
@@ -46,7 +48,7 @@ public class TaskManager2 : MonoBehaviour
         for (int i = 0; i < taskList.tasks.Length; i++)
         {
             bool isChecked = (i == 0);  // The first task is checked (active) by default
-            if(taskList.tasks[i].IsShowenInUI)
+            if (taskList.tasks[i].IsShowenInUI)
                 CreateTask(taskList.tasks[i].taskName, taskList.tasks[i].taskDescription, isChecked);
         }
     }
@@ -80,7 +82,7 @@ public class TaskManager2 : MonoBehaviour
     }
 
     // Method that handles the task completion when the trigger is activated
-    public void HandleTaskTrigger(TaskTrigger trigger)
+    public void HandleTaskTrigger(TaskTriggerNitrV2 trigger)
     {
         // Find the corresponding TriggerConfig
         foreach (var config in triggerConfigs)
@@ -100,7 +102,7 @@ public class TaskManager2 : MonoBehaviour
     }
 
     // Coroutine to handle task completion logic after a delay
-    private IEnumerator CompleteTaskAfterDelay(TriggerConfig triggerConfig)
+    private IEnumerator CompleteTaskAfterDelay(TriggerConfigNitr triggerConfig)
     {
         // Pre-completion logic here
         if (triggerConfig.usePreCompletionLogic)
@@ -112,7 +114,6 @@ public class TaskManager2 : MonoBehaviour
         yield return new WaitForSeconds(triggerConfig.waitTime); // Use the waitTime from TriggerConfig
 
         // Mark the task as complete
-
         CompleteCurrentTask();
 
         // Post-completion logic here
@@ -123,39 +124,34 @@ public class TaskManager2 : MonoBehaviour
 
     }
 
-    private void PreCompletionLogic(TriggerConfig triggerConfig)
+    private void PreCompletionLogic(TriggerConfigNitr triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)
         {
-            case "Task 1.2":
-                CompleteTask1_2_PreLogic();
-                break;
+            
 
             case "Task 2":
-                CompleteTask2_PreLogic(triggerConfig.objectsToManipulate[0]);
+                CompleteTask2_PreLogic(triggerConfig);
                 break;
-
             case "Task 3":
-                CompleteTask2_PreLogic(triggerConfig.objectsToManipulate[0]);
+                CompleteTask3_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
-
-            case "Task 4":
-                CompleteTask4_PreLogic(triggerConfig);
+            case "Task 5":
+                CompleteTask5_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
             case "Task 6":
-                CompleteTask6_PreLogic(triggerConfig);
+                CompleteTask6_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
-            case "Task 7.1":
-                CompleteTask7_1_PreLogic(triggerConfig);
+            case "Task 8":
+                CompleteTask8_PreLogic(triggerConfig);
+                 break;
+            case "Task 8.1":
+                CompleteTask8_1_PreLogic(triggerConfig);
+                break;
+            case "Task 17":
+                CompleteTask17_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
                 
-            case "Task 12":
-                CompleteTask12_PreLogic(triggerConfig);
-                break;
-            case "Task 13":
-                CompleteTask13_PreLogic(triggerConfig);
-                break;
-
             // Add more cases for additional tasks as needed
 
             default:
@@ -163,52 +159,58 @@ public class TaskManager2 : MonoBehaviour
                 break;
         }
     }
-    private void CompleteTask1_2_PreLogic()
+    private void CompleteTask6_PreLogic(GameObject ob)
     {
-        canvas.SetActive(false);
+        ob.SetActive(true);
+
     }
-    private void CompleteTask12_PreLogic(TriggerConfig triggerConfig)
+    private void CompleteTask17_PreLogic(GameObject ob)
     {
-        triggerConfig.objectsToManipulate[0].SetActive(false);
-        triggerConfig.objectsToManipulate[1].SetActive(true);
+       
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Close");
     }
-    private void PostCompletionLogic(TriggerConfig triggerConfig)
+    private void CompleteTask17_PostLogic()
+    {
+
+        if (Endcanvas)
+        {
+
+            canvas.SetActive(false);
+            Endcanvas.SetActive(true);
+
+        }
+    }
+    private void PostCompletionLogic(TriggerConfigNitr triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)
         {
-            case "Task 1":
-                CompleteTask1_PostLogic();
+            case "Task 2.2":
+                CompleteTask2_2_PostLogic(triggerConfig);
                 break;
 
             case "Task 2":
-                CompleteTask2_PostLogic();
+                CompleteTask2_PostLogic(triggerConfig);
                 break;
 
             case "Task 3":
                 CompleteTask3_PostLogic();
                 break;
-
-            case "Task 5":
-                CompleteTask5_PostLogic(triggerConfig.objectsToManipulate[0]);
+            case "Task 7.1":
+                CompleteTask7_1_PostLogic(triggerConfig.objectsToManipulate[0]);
+            break;
+            case "Task 8":
+                CompleteTask8_PostLogic(triggerConfig);
                 break;
-            case "Task 7":
-                CompleteTask7_PostLogic(triggerConfig);
+            case "Task 8.1":
+                CompleteTask8_1_PostLogic(triggerConfig);
                 break;
-          
-              
-            case "Task 10":
-                CompleteTask10_PostLogic(triggerConfig);
+            case "Task 6":
+                CompleteTask6_PostLogic(triggerConfig);
                 break;
-            case "Task 11.1":
-                CompleteTask11_PostLogic(triggerConfig);
+            case "Task 17":
+                CompleteTask17_PostLogic();
                 break;
-            case "Task 13":
-                CompleteTask13_PostLogic(triggerConfig);
-                break;
-            case "Task 9":
-                CompleteTask9_PostLogic(triggerConfig);
-                break;
-
             // Add more cases for additional tasks as needed
 
             default:
@@ -216,106 +218,111 @@ public class TaskManager2 : MonoBehaviour
                 break;
         }
     }
-    private void CompleteTask9_PostLogic(TriggerConfig triggerConfig)
+    private void CompleteTask2_2_PostLogic(TriggerConfigNitr triggerConfig)
+    {
+        
+        triggerConfig.objectsToManipulate[0].SetActive(true);
+    }
+    private void CompleteTask6_PostLogic(TriggerConfigNitr triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].SetActive(false);
         triggerConfig.objectsToManipulate[1].SetActive(true);
-    }
-    private void CompleteTask6_PreLogic(TriggerConfig triggerConfig)
-    {
-        GameObject ob = triggerConfig.objectsToManipulate[0];
-        if(ob.GetComponent<Animator>())
-            ob.GetComponent<Animator>().SetTrigger("Spin");
-        
-    }
-    private void CompleteTask11_PostLogic(TriggerConfig triggerConfig)
-    {
 
-        GameObject ob = triggerConfig.objectsToManipulate[0];
-        if (ob.GetComponent<Animator>())
-            ob.GetComponent<Animator>().SetTrigger("Open");
     }
-    private void CompleteTask13_PostLogic(TriggerConfig triggerConfig)
+    private void CompleteTask12_PostLogic(TriggerConfig triggerConfig)
     {
-  
-        triggerConfig.objectsToManipulate[1].SetActive(true);
-    }  
-    private void CompleteTask13_PreLogic(TriggerConfig triggerConfig)
-    {
-        GameObject ob = triggerConfig.objectsToManipulate[0];
-        if (ob.GetComponent<Animator>())
-            ob.GetComponent<Animator>().SetTrigger("Close");
-       
+        triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
     }
     private void CompleteTask4_PreLogic(TriggerConfig triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].gameObject.SetActive(false);
+        triggerConfig.objectsToManipulate[2].gameObject.SetActive(false);
         triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
+        
 
     }
     // Example methods for specific pre-completion logic
-    private void CompleteTask2_PreLogic(GameObject ob )
+    private void CompleteTask8_PreLogic(TriggerConfigNitr triggerConfig)
     {
-        
-        StartCoroutine(DropReset(ob));
-        // Logic specific to Task1 pre-completion
-        Debug.Log("Pre-completion logic for Task1 executed.");
-    }
-    IEnumerator DropReset(GameObject drop)
-    {
-        Transform initialTran = drop.transform;
-        drop.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-        drop.SetActive(false);
-        drop.transform.position = initialTran.position;
-    }
-    private void CompleteTask2_PreLogic()
-    {
-        // Logic specific to Task2 pre-completion
-        Debug.Log("Pre-completion logic for Task2 executed.");
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+
     }
 
-    private void CompleteTask3_PreLogic()
+    private void CompleteTask8_PostLogic(TriggerConfigNitr triggerConfig)
     {
-        // Logic specific to Task3 pre-completion
-        Debug.Log("Pre-completion logic for Task3 executed.");
+        triggerConfig.objectsToManipulate[0].SetActive(true);
+
     }
-    private void CompleteTask5_PostLogic(GameObject magnet)
+    private void CompleteTask8_1_PreLogic(TriggerConfigNitr triggerConfig)
     {
-        magnet.SetActive(true);
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+
+
+
+    }
+    private void CompleteTask8_1_PostLogic(TriggerConfigNitr triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+
+
+
+    }
+    private void CompleteTask2_PreLogic(TriggerConfigNitr OB)
+    {
+        // Logic specific to Task2 pre-completion
+     
+        OB.objectsToManipulate[0].gameObject.SetActive(true);
+     
+        
+    }
+
+    private void CompleteTask3_PreLogic(GameObject OB)
+    {
+        OB.gameObject.SetActive(true);
+    }
+    private void CompleteTask5_PreLogic(GameObject OB)
+    {
+        OB.GetComponent<Animator>().SetTrigger("Tube");
+    }
+    private void CompleteTask7_1_PostLogic(GameObject ob)
+    {
+        
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Open");
+
 
     }
     // Coroutine to rotate the magnet for a given number of rotations
-  
+
     // Coroutine to rotate the magnet over time
     // Coroutine to rotate the magnet once (360 degrees) over a duration
 
     // Example methods for post completion logic
     private void CompleteTask1_PostLogic()
     {
+     
         // Logic specific to Task1 post-completion
         Debug.Log("Post-completion logic for Task1 executed.");
     }
 
     private void CompleteTask7_PostLogic(TriggerConfig triggerConfig){
-        triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
-     
-
-    }
-    private void CompleteTask7_1_PreLogic(TriggerConfig triggerConfig)
-    {
         triggerConfig.objectsToManipulate[0].gameObject.SetActive(false);
         triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
+
     }
-        private void CompleteTask10_PostLogic(TriggerConfig triggerConfig)
+    private void CompleteTask10_PostLogic(TriggerConfig triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
-        triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
-
+       
 
     }
-    private void CompleteTask2_PostLogic()
+    private void CompleteTask2_PostLogic(TriggerConfigNitr triggerConfig)
     {
+        canvas.SetActive(false);
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
         // Logic specific to Task2 post-completion
         Debug.Log("Post-completion logic for Task2 executed.");
     }

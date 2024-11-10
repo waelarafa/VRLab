@@ -739,17 +739,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230102901}
-  m_LocalRotation: {x: -0, y: 0.2667108, z: -0, w: 0.96377665}
-  m_LocalPosition: {x: 0, y: 0, z: 0.36}
+  m_LocalRotation: {x: -0, y: 0.5903541, z: -0, w: 0.8071444}
+  m_LocalPosition: {x: 0, y: 0, z: 0.831}
   m_LocalScale: {x: 0.006461237, y: 0.006461237, z: 0.006461237}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1203280237}
+  - {fileID: 973008089}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 30.937, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 72.364, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -3.49, y: 1.71}
+  m_AnchoredPosition: {x: -3.49, y: 1.46}
   m_SizeDelta: {x: 509.5001, y: 672.0271}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &270723376
@@ -766,7 +767,7 @@ GameObject:
   - component: {fileID: 270723382}
   - component: {fileID: 270723383}
   - component: {fileID: 270723384}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Object001
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -1766,8 +1767,8 @@ MonoBehaviour:
     objectsToManipulate:
     - {fileID: 770447683}
     - {fileID: 2139118577}
-    waitTime: 1
-    usePreCompletionLogic: 0
+    waitTime: 5
+    usePreCompletionLogic: 1
     usePostCompletionLogic: 1
 --- !u!4 &448375135
 Transform:
@@ -2285,7 +2286,7 @@ GameObject:
   - component: {fileID: 518584809}
   - component: {fileID: 518584808}
   - component: {fileID: 518584807}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4746,17 +4747,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973008088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0.9926119, z: 0, w: -0.12133269}
+  m_LocalPosition: {x: 0, y: 0, z: 46.2}
+  m_LocalScale: {x: 0.5422265, y: 0.5422265, z: 0.5422265}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1146906738}
-  m_Father: {fileID: 2091696926}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 230102905}
+  m_LocalEulerAnglesHint: {x: 0, y: 206.425, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -193.6, y: 51.7}
+  m_AnchoredPosition: {x: -159.7, y: -199}
   m_SizeDelta: {x: 225.51, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &973008090
@@ -5422,7 +5423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Back to Main Menu
+  m_text: 'Main menu
 
 '
   m_isRightToLeft: 0
@@ -7487,7 +7488,7 @@ GameObject:
   - component: {fileID: 1470926342}
   - component: {fileID: 1470926341}
   - component: {fileID: 1470926340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tube Cover
   m_TagString: Cover
   m_Icon: {fileID: 0}
@@ -8300,7 +8301,7 @@ GameObject:
   - component: {fileID: 1626810071}
   - component: {fileID: 1626810070}
   - component: {fileID: 1626810069}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9369,7 +9370,7 @@ GameObject:
   - component: {fileID: 1905322530}
   - component: {fileID: 1905322535}
   - component: {fileID: 1905322536}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: box_cap:box_cap (1)
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -10557,7 +10558,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1747970712}
-  - {fileID: 973008089}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12869,7 +12869,7 @@ GameObject:
   - component: {fileID: 4417189670954130845}
   - component: {fileID: 4417189670954130844}
   - component: {fileID: 4417189670954130847}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Task4
   m_TagString: Magnetic
   m_Icon: {fileID: 0}
@@ -15867,7 +15867,7 @@ GameObject:
   - component: {fileID: 5479738912596550471}
   - component: {fileID: 5479738912596550472}
   - component: {fileID: 5479738912596550473}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpectoTube
   m_TagString: spect
   m_Icon: {fileID: 0}
@@ -17483,7 +17483,7 @@ GameObject:
   - component: {fileID: 8570522591066476133}
   - component: {fileID: 8570522591066476134}
   - component: {fileID: 8570522591066476135}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Water Beaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19958,6 +19958,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3408763945699788890, guid: 070cea9fe6390a642b4fd9bfbc96fab3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3408763945699788890, guid: 070cea9fe6390a642b4fd9bfbc96fab3,
         type: 3}

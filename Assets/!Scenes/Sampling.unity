@@ -506,6 +506,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -1006,6 +1011,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -1259,6 +1269,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -3508,6 +3523,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -3991,6 +4011,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -4578,6 +4603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -5497,6 +5527,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -7610,6 +7645,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -8325,6 +8365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -10211,6 +10256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -11885,6 +11935,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -16511,6 +16566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -18577,6 +18637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -19573,6 +19638,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -19764,6 +19834,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -24407,7 +24482,7 @@ PrefabInstance:
     - target: {fileID: 823944705744540968, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.75
+      value: -4.43
       objectReference: {fileID: 0}
     - target: {fileID: 823944705744540968, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -24817,7 +24892,7 @@ PrefabInstance:
     - target: {fileID: 2034762070309436085, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.51
+      value: -4.04
       objectReference: {fileID: 0}
     - target: {fileID: 2034762070309436085, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -24842,7 +24917,7 @@ PrefabInstance:
     - target: {fileID: 2061550496757856294, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.59
+      value: -4.04
       objectReference: {fileID: 0}
     - target: {fileID: 2061550496757856294, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -25062,7 +25137,7 @@ PrefabInstance:
     - target: {fileID: 2995001090586033272, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -4.3499994
       objectReference: {fileID: 0}
     - target: {fileID: 2995001090586033272, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -25387,7 +25462,7 @@ PrefabInstance:
     - target: {fileID: 3607928142370548243, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7600017
+      value: -4.43
       objectReference: {fileID: 0}
     - target: {fileID: 3607928142370548243, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -25692,7 +25767,7 @@ PrefabInstance:
     - target: {fileID: 4561929620284756235, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.27
+      value: -4.04
       objectReference: {fileID: 0}
     - target: {fileID: 4561929620284756235, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -25787,7 +25862,7 @@ PrefabInstance:
     - target: {fileID: 4791900865372234776, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.649999
+      value: -4.13
       objectReference: {fileID: 0}
     - target: {fileID: 4791900865372234776, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -26072,7 +26147,7 @@ PrefabInstance:
     - target: {fileID: 5257173226604870297, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.649999
+      value: -4.265
       objectReference: {fileID: 0}
     - target: {fileID: 5257173226604870297, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -26182,7 +26257,7 @@ PrefabInstance:
     - target: {fileID: 5555926593818774250, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4999957
+      value: -4.04
       objectReference: {fileID: 0}
     - target: {fileID: 5555926593818774250, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -26638,7 +26713,7 @@ PrefabInstance:
     - target: {fileID: 6293623049552733199, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.6100025
+      value: -4.35
       objectReference: {fileID: 0}
     - target: {fileID: 6293623049552733199, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -27024,7 +27099,7 @@ PrefabInstance:
     - target: {fileID: 7235996041205767686, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.549999
+      value: -4.37
       objectReference: {fileID: 0}
     - target: {fileID: 7235996041205767686, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -27329,7 +27404,7 @@ PrefabInstance:
     - target: {fileID: 7928352517219833097, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.31
+      value: -4.04
       objectReference: {fileID: 0}
     - target: {fileID: 7928352517219833097, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -27419,7 +27494,7 @@ PrefabInstance:
     - target: {fileID: 8111889917511333927, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.7600017
+      value: -4.43
       objectReference: {fileID: 0}
     - target: {fileID: 8111889917511333927, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -27444,7 +27519,7 @@ PrefabInstance:
     - target: {fileID: 8196238247128781100, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.519998
+      value: -4.04
       objectReference: {fileID: 0}
     - target: {fileID: 8196238247128781100, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -27684,7 +27759,7 @@ PrefabInstance:
     - target: {fileID: 8983120335177757322, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.18
+      value: -4.3499994
       objectReference: {fileID: 0}
     - target: {fileID: 8983120335177757322, guid: 54c91baff8c09d546a13788a563ba64a,
         type: 3}
@@ -28174,6 +28249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -32798,6 +32878,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
+        type: 3}
       propertyPath: m_TagString
       value: Multiparameter
       objectReference: {fileID: 0}
@@ -32917,6 +33002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -35240,6 +35330,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -36491,6 +36586,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -37593,6 +37693,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
+        type: 3}
       propertyPath: m_TagString
       value: Multiparameter
       objectReference: {fileID: 0}
@@ -37620,15 +37725,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1906413219}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1906413218}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1906413217}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1906413219}
     - targetCorrespondingSourceObject: {fileID: 4117398746976106805, guid: 40249d69df7640144a8cb67d21bdfed4,
         type: 3}
       insertIndex: -1
@@ -38910,7 +39015,7 @@ RectTransform:
   m_GameObject: {fileID: 973008088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -59}
-  m_LocalScale: {x: 1.7793745, y: 2.2402866, z: 1.579588}
+  m_LocalScale: {x: 3, y: 8.651066, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1146906738}
@@ -38918,7 +39023,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 328, y: 516}
+  m_AnchoredPosition: {x: 345, y: 619}
   m_SizeDelta: {x: 225.51, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &973008090
@@ -38934,7 +39039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -40484,6 +40589,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -40940,6 +41050,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -42694,6 +42809,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -48130,6 +48250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -51091,6 +51216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -58160,6 +58290,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40249d69df7640144a8cb67d21bdfed4,
+        type: 3}
       propertyPath: m_TagString
       value: Multiparameter
       objectReference: {fileID: 0}
@@ -58600,6 +58735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -60451,6 +60591,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -62429,6 +62574,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -63521,6 +63671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -65661,6 +65816,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1351141663}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1540927326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5885571433683049865, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2634128103435655830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1540927328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540927326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1554548282
 GameObject:
   m_ObjectHideFlags: 0
@@ -66332,6 +66516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -69184,6 +69373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -70184,6 +70378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -70428,6 +70627,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -70647,6 +70851,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -78104,6 +78313,35 @@ CapsuleCollider:
   m_Height: 0.035
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1849744072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8516297021300253504, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2634128103435655830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1849744074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849744072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &1852944846
 GameObject:
   m_ObjectHideFlags: 0
@@ -79043,6 +79281,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -82748,6 +82991,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
       propertyPath: m_TagString
       value: Bottle
       objectReference: {fileID: 0}
@@ -83096,6 +83344,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bottle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2593729961644823461, guid: ad3d6b012b71915499359f2cfbcd52dc,
         type: 3}
@@ -89550,6 +89803,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1227871152}
+    - targetCorrespondingSourceObject: {fileID: 5885571433683049865, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1540927328}
+    - targetCorrespondingSourceObject: {fileID: 8516297021300253504, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1849744074}
   m_SourcePrefab: {fileID: 100100000, guid: 4ac7df741a9c0a2418ec19477729ee3d, type: 3}
 --- !u!114 &2634128103435655831 stripped
 MonoBehaviour:

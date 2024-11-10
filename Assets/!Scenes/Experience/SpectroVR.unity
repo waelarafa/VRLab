@@ -657,14 +657,15 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230102901}
-  m_LocalRotation: {x: 0, y: 0.5735764, z: 0, w: 0.8191521}
+  m_LocalRotation: {x: -0, y: 0.7749758, z: -0, w: 0.631991}
   m_LocalPosition: {x: 0, y: 0, z: 0.36}
   m_LocalScale: {x: 0.006461237, y: 0.006461237, z: 0.006461237}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1203280237}
+  - {fileID: 973008089}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 70, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 101.606, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -3.49, y: 1.71}
@@ -975,7 +976,7 @@ GameObject:
   - component: {fileID: 338853840}
   - component: {fileID: 338853839}
   - component: {fileID: 338853838}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dropper2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2659,7 +2660,7 @@ MonoBehaviour:
     waitTime: 1
     usePreCompletionLogic: 0
     usePostCompletionLogic: 1
-  - trigger: {fileID: 983760780}
+  - trigger: {fileID: 2100754487}
     taskNameToComplete: Task 8.1
     tag: volumetric
     objectsToManipulate:
@@ -2673,9 +2674,9 @@ MonoBehaviour:
     tag: SpectroNano
     objectsToManipulate:
     - {fileID: 1575949491}
-    waitTime: 1
+    waitTime: 5
     usePreCompletionLogic: 1
-    usePostCompletionLogic: 0
+    usePostCompletionLogic: 1
 --- !u!4 &694239968
 Transform:
   m_ObjectHideFlags: 0
@@ -3379,7 +3380,7 @@ GameObject:
   - component: {fileID: 892750139}
   - component: {fileID: 892750138}
   - component: {fileID: 892750137}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AscorbikAcid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4025,17 +4026,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973008088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.9992423, z: -0, w: 0.038920913}
+  m_LocalPosition: {x: 0, y: 0, z: -0.8}
+  m_LocalScale: {x: 0.5422265, y: 0.5422265, z: 0.5422265}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1146906738}
-  m_Father: {fileID: 2091696926}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 230102905}
+  m_LocalEulerAnglesHint: {x: 0, y: 175.539, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -202.74, y: 43.9}
+  m_AnchoredPosition: {x: -170, y: -196}
   m_SizeDelta: {x: 225.51, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &973008090
@@ -4675,7 +4676,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Back to Main Menu
+  m_text: ' Main menu
 
 '
   m_isRightToLeft: 0
@@ -5639,7 +5640,7 @@ GameObject:
   - component: {fileID: 1226162895}
   - component: {fileID: 1226162898}
   - component: {fileID: 1226162897}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Dropper1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9202,7 +9203,7 @@ GameObject:
   - component: {fileID: 2067857626}
   - component: {fileID: 2067857629}
   - component: {fileID: 2067857630}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Test Tube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9499,7 +9500,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1747970712}
-  - {fileID: 973008089}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9519,7 +9519,9 @@ GameObject:
   - component: {fileID: 2100754485}
   - component: {fileID: 2100754484}
   - component: {fileID: 2100754483}
-  m_Layer: 0
+  - component: {fileID: 2100754488}
+  - component: {fileID: 2100754487}
+  m_Layer: 10
   m_Name: SpectoTube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9660,6 +9662,31 @@ Transform:
   - {fileID: 646354541}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100754487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100754482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff85e9eb01382146a10f369ec56cd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskNameToComplete: 
+--- !u!114 &2100754488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100754482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8279a47ff75f46b7c852ece1888d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2132411570 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 292154147353046212, guid: 62f4987b7e086ff43ab61a31ee443048,
@@ -13000,7 +13027,7 @@ GameObject:
   - component: {fileID: 8216530175963857247}
   - component: {fileID: 8216530175963857246}
   - component: {fileID: 8216530175963857245}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Water Beaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}

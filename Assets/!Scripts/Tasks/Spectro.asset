@@ -42,7 +42,8 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: 8bc62e807c655334a8863dd45bde1298, type: 3}
     IsShowenInUI: 1
   - taskName: Task 5
-    taskDescription: to activate it for a homogeneous mixing.
+    taskDescription: Press the gray button to activate the stirrer  for homogoneous
+      mixing.
     taskSound: {fileID: 8300000, guid: 2d10d3ac9bb3bc1419f9bdc469361e43, type: 3}
     IsShowenInUI: 1
   - taskName: Task 6
