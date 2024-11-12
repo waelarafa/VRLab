@@ -15,7 +15,7 @@ public class GameEnd : MonoBehaviour
     
     public void End()
     {
-        if (taskFinished >= tasks)
+        if (taskFinished >= tasks-1)
         {
             finalCanvas.SetActive(true);
           

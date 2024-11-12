@@ -50,7 +50,7 @@ public class TaskHandler : IGlobalSingleton<TaskHandler>
 [System.Serializable]
 public class GameTask
 {
-    [SerializeField] private Task task;
+    [SerializeField] public Task task;
     [SerializeField] private GameObject taskListItem;
     [SerializeField] private TaskBehaviour behaviourHolder;
     public TaskBehaviour currentBehaviour => behaviourHolder;

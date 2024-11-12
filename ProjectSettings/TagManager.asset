@@ -24,6 +24,19 @@ TagManager:
   - MixerButton
   - SpectroNano
   - flask 3
+  - Magnet
+  - FillDropper
+  - Drop
+  - FillDropper2
+  - Flask 1.1
+  - Flask 1.2
+  - Flask 1.3
+  - Flask 2.1
+  - Flask 2.2
+  - Flask 2.3
+  - TubeCover
+  - Cover
+  - AddHCI
   layers:
   - Default
   - TransparentFX

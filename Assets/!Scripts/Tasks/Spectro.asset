@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8471440008c7cdf43be8b04bd3aa9eb0, type: 3}
+  m_Name: Spectro
+  m_EditorClassIdentifier: 
+  tasks:
+  - taskName: Task 1
+    taskDescription: Take 50 ml of water sample into the beaker.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+  - taskName: Task 1.2
+    taskDescription: "Take  0.5 ml of Alkaline solution.\r"
+    taskSound: {fileID: 8300000, guid: 92f1078e2ccc69d40a7047790d3fc48c, type: 3}
+    IsShowenInUI: 0
+  - taskName: Task 2
+    taskDescription: Add  0.5 ml of  Ascorbic Acid.
+    taskSound: {fileID: 8300000, guid: 95c28988694a70248a5f95ee9b98bf26, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 2.1
+    taskDescription: Put the volumetric flask in the cardboard box and close it.
+    taskSound: {fileID: 8300000, guid: cb871dc0d88e2d146936220a1f138015, type: 3}
+    IsShowenInUI: 0
+  - taskName: Task 2.2
+    taskDescription: Add   2 ml of  Combined  reagent.
+    taskSound: {fileID: 8300000, guid: 4a65f4f6da1c16c41af0108457b7a127, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 3
+    taskDescription: Pour the solution into the test tube
+    taskSound: {fileID: 8300000, guid: 5c31ad76cdbaeca4194e5625d11ba810, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 4
+    taskDescription: "Move the solution to the magnet stirrer. \r"
+    taskSound: {fileID: 8300000, guid: 8bc62e807c655334a8863dd45bde1298, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 5
+    taskDescription: Press the gray button to activate the stirrer  for homogoneous
+      mixing.
+    taskSound: {fileID: 8300000, guid: 2d10d3ac9bb3bc1419f9bdc469361e43, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 6
+    taskDescription: Move the solution to the rack and leave it resting for 30 minutes.
+    taskSound: {fileID: 8300000, guid: b0e9ff9689e961342baebb303addce7f, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 7
+    taskDescription: Set the spectrophotometer wavelength  to [ 700 nm.800nm]
+    taskSound: {fileID: 8300000, guid: 28ebfe44ff725c94398784a1d42a094e, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 7.1
+    taskDescription: Open the spectrophotometer cover.
+    taskSound: {fileID: 8300000, guid: 3d35593bc502fbf4e88fff86a7c341b1, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 8
+    taskDescription: Fill the tube with the solution.
+    taskSound: {fileID: 8300000, guid: fac1cf1d709ba1741a42cc2bdc3a52eb, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 8.1
+    taskDescription: Put the tube in the spectrophotometer and close the cover.
+    taskSound: {fileID: 8300000, guid: 7f428ba3ff734d44bbb54243d69768a7, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 17
+    taskDescription: Perform the reading.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1

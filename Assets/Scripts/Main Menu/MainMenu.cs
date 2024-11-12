@@ -9,20 +9,36 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject labButtons;
     [SerializeField] private GameObject SampleAnalysisButton;
 
-    private string PhenolphthaleinAlkaliniyExperieceName = "Alkalimetric Titration Experience";
-    private string CompletePhenolphthaleinAlkaliniyExperieceName = "Complete Alkalimetric Titration Experience";
+    private string PhenolphthaleinAlkaliniyExperieceName = "Phenolphthalein Alkalnity";
+    private string CompletePhenolphthaleinAlkaliniyExperieceName = "MythOrange";
     private string RiverSceneName = "River";
-
+    private string Ammonium = "AmmoniumVR";
+    private string SpectroVR = "SpectroVR";
+    private string Nitrites = "Nitrites";
+    private string MaterialPreparation = "EquipmentCollect";
+    private string Sampling = "Sampling";
+    private string mainMenu = "MainMenu";
     public void ShowLabButtons()
     {
         labButtons.SetActive(true);
     }
-
-
     public void ShowSampleAnalysisButtons()
     {
         SampleAnalysisButton.SetActive(true);
     }
+    public void LoadMaterialPreparationScene()
+    {
+        SceneManager.LoadScene(MaterialPreparation);
+    }
+    public void LoadSamplingScene()
+    {
+        SceneManager.LoadScene(Sampling);
+    }
+    public void LoadMainMenuScene()
+    {
+        SceneManager.LoadScene(mainMenu);
+    }
+    
 
 
     public void LoadPhenolphthaleinAlkalinityExperience()
@@ -34,7 +50,18 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(CompletePhenolphthaleinAlkaliniyExperieceName);
     }
-
+    public void LoadOrthophosphateExperience()
+    {
+        SceneManager.LoadScene(SpectroVR);
+    }
+    public void LoadAmmoniumExperience()
+    {
+        SceneManager.LoadScene(Ammonium);
+    }
+    public void LoadNitritesExperience()
+    {
+        SceneManager.LoadScene(Nitrites);
+    }
     public void Quit()
     {
         Application.Quit();

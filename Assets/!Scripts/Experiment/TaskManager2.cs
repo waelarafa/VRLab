@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.UIElements;
 
 [System.Serializable]
 public class TriggerConfig
@@ -23,7 +24,7 @@ public class TaskManager2 : MonoBehaviour
     public TaskList taskList;                  // Reference to the ScriptableObject task list
     public Color taskTextColor;                // Color for task text in UI
     public AudioSource audioSource;            // AudioSource to play task sounds
-
+    public GameObject canvas;
     private int currentTaskIndex = 1;          // Tracks current task being worked on
 
     [Header("Trigger Configurations")]
@@ -31,17 +32,22 @@ public class TaskManager2 : MonoBehaviour
 
     private void Start()
     {
+        InitializeTasksUI();
         InitializeTasks();     // Initialize tasks on the UI
         InitializeTriggers();  // Initialize trigger settings
     }
-
+    void InitializeTasksUI()
+    {
+        canvas.SetActive(true);
+    }
     // Initializes the tasks in the task list at the start
     void InitializeTasks()
     {
         for (int i = 0; i < taskList.tasks.Length; i++)
         {
             bool isChecked = (i == 0);  // The first task is checked (active) by default
-            CreateTask(taskList.tasks[i].taskName, taskList.tasks[i].taskDescription, isChecked);
+            if(taskList.tasks[i].IsShowenInUI)
+                CreateTask(taskList.tasks[i].taskName, taskList.tasks[i].taskDescription, isChecked);
         }
     }
 
@@ -106,6 +112,7 @@ public class TaskManager2 : MonoBehaviour
         yield return new WaitForSeconds(triggerConfig.waitTime); // Use the waitTime from TriggerConfig
 
         // Mark the task as complete
+
         CompleteCurrentTask();
 
         // Post-completion logic here
@@ -120,16 +127,33 @@ public class TaskManager2 : MonoBehaviour
     {
         switch (triggerConfig.taskNameToComplete)
         {
-            case "Task 1":
-                CompleteTask1_PreLogic();
+            case "Task 1.2":
+                CompleteTask1_2_PreLogic();
                 break;
 
             case "Task 2":
-                CompleteTask2_PreLogic();
+                CompleteTask2_PreLogic(triggerConfig.objectsToManipulate[0]);
+                break;
+
+            case "Task 3":
+                CompleteTask2_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
 
             case "Task 4":
                 CompleteTask4_PreLogic(triggerConfig);
+                break;
+            case "Task 6":
+                CompleteTask6_PreLogic(triggerConfig);
+                break;
+            case "Task 7.1":
+                CompleteTask7_1_PreLogic(triggerConfig);
+                break;
+                
+            case "Task 12":
+                CompleteTask12_PreLogic(triggerConfig);
+                break;
+            case "Task 13":
+                CompleteTask13_PreLogic(triggerConfig);
                 break;
 
             // Add more cases for additional tasks as needed
@@ -139,7 +163,15 @@ public class TaskManager2 : MonoBehaviour
                 break;
         }
     }
-
+    private void CompleteTask1_2_PreLogic()
+    {
+        canvas.SetActive(false);
+    }
+    private void CompleteTask12_PreLogic(TriggerConfig triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+    }
     private void PostCompletionLogic(TriggerConfig triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)
@@ -162,11 +194,19 @@ public class TaskManager2 : MonoBehaviour
             case "Task 7":
                 CompleteTask7_PostLogic(triggerConfig);
                 break;
+          
+              
             case "Task 10":
                 CompleteTask10_PostLogic(triggerConfig);
                 break;
-            case "Task 12":
-                CompleteTask12_PostLogic(triggerConfig);
+            case "Task 11.1":
+                CompleteTask11_PostLogic(triggerConfig);
+                break;
+            case "Task 13":
+                CompleteTask13_PostLogic(triggerConfig);
+                break;
+            case "Task 9":
+                CompleteTask9_PostLogic(triggerConfig);
                 break;
 
             // Add more cases for additional tasks as needed
@@ -176,9 +216,36 @@ public class TaskManager2 : MonoBehaviour
                 break;
         }
     }
-    private void CompleteTask12_PostLogic(TriggerConfig triggerConfig)
+    private void CompleteTask9_PostLogic(TriggerConfig triggerConfig)
     {
-        triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
+        triggerConfig.objectsToManipulate[0].SetActive(false);
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+    }
+    private void CompleteTask6_PreLogic(TriggerConfig triggerConfig)
+    {
+        GameObject ob = triggerConfig.objectsToManipulate[0];
+        if(ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Spin");
+        
+    }
+    private void CompleteTask11_PostLogic(TriggerConfig triggerConfig)
+    {
+
+        GameObject ob = triggerConfig.objectsToManipulate[0];
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Open");
+    }
+    private void CompleteTask13_PostLogic(TriggerConfig triggerConfig)
+    {
+  
+        triggerConfig.objectsToManipulate[1].SetActive(true);
+    }  
+    private void CompleteTask13_PreLogic(TriggerConfig triggerConfig)
+    {
+        GameObject ob = triggerConfig.objectsToManipulate[0];
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Close");
+       
     }
     private void CompleteTask4_PreLogic(TriggerConfig triggerConfig)
     {
@@ -187,12 +254,21 @@ public class TaskManager2 : MonoBehaviour
 
     }
     // Example methods for specific pre-completion logic
-    private void CompleteTask1_PreLogic()
+    private void CompleteTask2_PreLogic(GameObject ob )
     {
+        
+        StartCoroutine(DropReset(ob));
         // Logic specific to Task1 pre-completion
         Debug.Log("Pre-completion logic for Task1 executed.");
     }
-
+    IEnumerator DropReset(GameObject drop)
+    {
+        Transform initialTran = drop.transform;
+        drop.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        drop.SetActive(false);
+        drop.transform.position = initialTran.position;
+    }
     private void CompleteTask2_PreLogic()
     {
         // Logic specific to Task2 pre-completion
@@ -222,14 +298,20 @@ public class TaskManager2 : MonoBehaviour
     }
 
     private void CompleteTask7_PostLogic(TriggerConfig triggerConfig){
-        triggerConfig.objectsToManipulate[0].gameObject.SetActive(false);
-        triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
+        triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
+     
 
     }
-    private void CompleteTask10_PostLogic(TriggerConfig triggerConfig)
+    private void CompleteTask7_1_PreLogic(TriggerConfig triggerConfig)
+    {
+        triggerConfig.objectsToManipulate[0].gameObject.SetActive(false);
+        triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
+    }
+        private void CompleteTask10_PostLogic(TriggerConfig triggerConfig)
     {
         triggerConfig.objectsToManipulate[0].gameObject.SetActive(true);
-       
+        triggerConfig.objectsToManipulate[1].gameObject.SetActive(true);
+
 
     }
     private void CompleteTask2_PostLogic()
@@ -250,24 +332,32 @@ public class TaskManager2 : MonoBehaviour
         if (currentTaskIndex < taskList.tasks.Length)
         {
             string taskName = taskList.tasks[currentTaskIndex].taskName;
-
-            foreach (Transform child in taskPanel)
+            if (taskList.tasks[currentTaskIndex].IsShowenInUI)
             {
-                if (child.gameObject.name == taskName)
+                foreach (Transform child in taskPanel)
                 {
-                    TaskItem taskItem = child.GetComponent<TaskItem>();
-                    if (taskItem != null)
+                    if (child.gameObject.name == taskName)
                     {
-                        taskItem.CompleteTask();  // Mark task as complete
-                        Debug.Log(taskName + " is completed.");
+                        TaskItem taskItem = child.GetComponent<TaskItem>();
+                        if (taskItem != null)
+                        {
+                            taskItem.CompleteTask();  // Mark task as complete
+                            Debug.Log(taskName + " is completed.");
 
-                        // Play the task completion sound
-                        PlayTaskSound(taskList.tasks[currentTaskIndex].taskSound);
+                            // Play the task completion sound
+                            PlayTaskSound(taskList.tasks[currentTaskIndex].taskSound);
 
-                        currentTaskIndex++;  // Move to the next task
+                            currentTaskIndex++;  // Move to the next task
+                        }
+                        return;
                     }
-                    return;
                 }
+            }
+            else
+            {
+                Debug.Log(taskName + " is completed.");
+                currentTaskIndex++;
+                return;
             }
 
             Debug.LogError("Task not found: " + taskName);

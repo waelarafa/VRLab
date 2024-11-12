@@ -38,6 +38,7 @@ public class TakeMeasurements : TaskBehaviour
     }
     public void MultiparameterBack()
     {
+        print("Ui was triggered");
         measurementCanvas.SetActive(false);
         MultiparmeterResetUI.SetActive(false);
 
