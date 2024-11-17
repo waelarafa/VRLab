@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/BNG Framework/Scenes/XR Demo.unity
     guid: a1360534006d3f845bc79b46b93cfec5
   - enabled: 0
@@ -23,28 +23,28 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/BNG Framework/Scenes/Quest Demo.unity
     guid: eac0312c32df12949a47d07747a9d1cd
-  - enabled: 1
+  - enabled: 0
     path: Assets/!Scenes/MainMenu.unity
     guid: 1ace9b8ee05272e43bebf9fe4700067a
-  - enabled: 1
+  - enabled: 0
     path: Assets/!Scenes/EquipmentCollect.unity
     guid: f7e315e4981d96447a9cf65bccb4685e
-  - enabled: 1
+  - enabled: 0
     path: Assets/!Scenes/Sampling.unity
     guid: 65bff8fd2ac75524dbdde63fb8fb7f21
-  - enabled: 1
+  - enabled: 0
     path: Assets/!Scenes/Experience/Nitrites.unity
     guid: 92595d4acaef49c478d13f79d6097b92
-  - enabled: 1
+  - enabled: 0
     path: Assets/!Scenes/Experience/SpectroVR.unity
     guid: 73741922b38c4ca4a951eb2d924d3d49
-  - enabled: 1
+  - enabled: 0
     path: Assets/!Scenes/Experience/Phenolphthalein Alkalnity.unity
     guid: 5b2656ecf6a5dcb4f8e70270588f8fbb
-  - enabled: 1
+  - enabled: 0
     path: Assets/!Scenes/Experience/MythOrange.unity
     guid: c175f1b010958c947b3aac30ec9d17d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/!Scenes/Experience/AmmoniumVR.unity
     guid: 75a1b11a27d62624fb86b8cd3e4ae411
   m_configObjects:

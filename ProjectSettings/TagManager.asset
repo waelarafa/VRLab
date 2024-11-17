@@ -37,6 +37,9 @@ TagManager:
   - TubeCover
   - Cover
   - AddHCI
+  - Reagent
+  - Flask 1
+  - Flask 3
   layers:
   - Default
   - TransparentFX
