@@ -124,29 +124,34 @@ public class TaskManagerNitrV2 : MonoBehaviour
                         int ChildIndex = trigger.GetChildTaskIndex();
                         if (ChildIndex != null)
                         {
-                            
+                         
                             // Update the task name to the next child task
                             // config.taskNameToComplete = childTaskName;
                             // trigger.currentCompletions++;
 
                             // Check if required completions are met for this child task
-                            if (configs.currentCompletions < configs.NombreOfChilds)
+                            if (configs.currentCompletions <= configs.NombreOfChilds)
                             {
                                
-                                    Debug.Log("hello");
+                                    Debug.Log("currentCompletions ="+ configs.currentCompletions);
                                     StartCoroutine(CompleteChildTaskAfterDelay(configs.childsTriggerConfigNitrV2[ChildIndex]));
-                                    // trigger.DisableTrigger();  // Disable further triggering
+                                // trigger.DisableTrigger();  // Disable further triggering
+                                if (configs.currentCompletions == configs.NombreOfChilds)
+                                {
+                                    StartCoroutine(CompleteTaskAfterDelay(configs));
+                                    trigger.DisaBleTrigger();
+
+                                }
+                                if (configs.currentCompletions < configs.NombreOfChilds)
+                                {
                                     trigger.NextChildTask();
-                                    trigger.SetTag(configs.childsTriggerConfigNitrV2[ChildIndex+1].tag);
+                                    trigger.SetTag(configs.childsTriggerConfigNitrV2[ChildIndex + 1].tag);
                                     configs.currentCompletions++;
+                                }
                                
-                            }
-                            else if (configs.currentCompletions == configs.NombreOfChilds)
-                            {
-                                StartCoroutine(CompleteTaskAfterDelay(configs));
-                                trigger.DisaBleTrigger();
 
                             }
+                          
                             return;
                         }
                     }
@@ -254,10 +259,18 @@ public class TaskManagerNitrV2 : MonoBehaviour
     {
         switch (triggerConfig.childTaskName)
         {
-            
 
-      
-                
+            case "animeDrawer":
+                OpenDrawer(triggerConfig.objectsToManipulate);
+                break;
+            case "animeDrawerC":
+                CloseDrawer(triggerConfig.objectsToManipulate);
+                break; 
+            case "MagnetStirr":
+                AnimeMagnett(triggerConfig.objectsToManipulate);
+                break;
+
+
             // Add more cases for additional tasks as needed
 
             default:
@@ -265,7 +278,22 @@ public class TaskManagerNitrV2 : MonoBehaviour
                 break;
         }
     }
-   
+    public void OpenDrawer(GameObject[] ob)
+    {
+      
+        ob[0].GetComponent<Animator>().SetTrigger("Open");
+    }
+    public void CloseDrawer(GameObject[] ob)
+    {
+
+        ob[0].GetComponent<Animator>().SetTrigger("Close");
+    }
+    public void AnimeMagnett(GameObject[] ob)
+    {
+        ob[0].GetComponent<Animator>().SetTrigger("Spin");
+        ob[1].GetComponent<Animator>().SetTrigger("Spin");
+        ob[2].GetComponent<Animator>().SetTrigger("Spin");
+    }
     private void PostCompletionLogic(TriggerConfigNitrV2 triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)

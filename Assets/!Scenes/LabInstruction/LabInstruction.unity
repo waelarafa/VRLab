@@ -1589,6 +1589,7 @@ GameObject:
   - component: {fileID: 973008092}
   - component: {fileID: 973008091}
   - component: {fileID: 973008090}
+  - component: {fileID: 973008093}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1660,7 +1661,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 973008093}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: LoadMainMenuScene
         m_Mode: 1
@@ -1710,6 +1711,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973008088}
   m_CullTransparentMesh: 1
+--- !u!114 &973008093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973008088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4d544da9a247848b0770e337d8f17e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labButtons: {fileID: 0}
+  SampleAnalysisButton: {fileID: 0}
 --- !u!1001 &1095868929
 PrefabInstance:
   m_ObjectHideFlags: 0

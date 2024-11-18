@@ -28,7 +28,7 @@ public class TakeWaterSample : TaskBehaviour
             other.transform.GetChild(1).gameObject.SetActive(true);
 
 
-        }
+     }
        
 
 

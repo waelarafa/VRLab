@@ -1597,7 +1597,7 @@ PrefabInstance:
     - target: {fileID: 5354092851941308864, guid: 600f9a5d969ce274c9b10643f095b5ca,
         type: 3}
       propertyPath: m_text
-      value: Phenolphthalein Alkaliniy
+      value: Hydroxide alkalinity
       objectReference: {fileID: 0}
     - target: {fileID: 5354092851941308864, guid: 600f9a5d969ce274c9b10643f095b5ca,
         type: 3}

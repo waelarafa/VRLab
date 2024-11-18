@@ -69,12 +69,13 @@ MonoBehaviour:
     IsShowenInUI: 1
     childTasks: []
   - taskName: Task 11
-    taskDescription: Take out the first cuvette and puut the second one.
+    taskDescription: Perform the Reading.
     taskSound: {fileID: 0}
     IsShowenInUI: 1
     childTasks: []
   - taskName: Task 12
-    taskDescription: Take out the second cuvette and put the third one.
+    taskDescription: Take out the first cuvette and put the second one and close
+      the cover.
     taskSound: {fileID: 0}
     IsShowenInUI: 1
     childTasks: []
@@ -82,4 +83,20 @@ MonoBehaviour:
     taskDescription: Perform the reading.
     taskSound: {fileID: 0}
     IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 14
+    taskDescription: Take out the second cuvette and put the third one and close
+      the cover.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 15
+    taskDescription: Perform the reading.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 16
+    taskDescription: Perform the reading.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 0
     childTasks: []

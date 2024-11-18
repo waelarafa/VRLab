@@ -3255,8 +3255,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The water's color has changer to orange the volume add of HCI is 23 ml
-    and total alkanility is 230 ppm.
+  m_text: "he color change to orange/pink shows that you have reached a pH of\r\naround
+    4.3 which indicates that the alkalinity, including bicarbonates (HCO\u2083\u207B)
+    and\r\ncarbonates (CO\u2083\xB2\u207B), has been neutralized. The volume added
+    of HCl is VHC."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9385,7 +9387,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Total alkalinity (Rodier 9th edition)
+  m_text: Hydroxide alkalinity (Rodier 9th edition)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

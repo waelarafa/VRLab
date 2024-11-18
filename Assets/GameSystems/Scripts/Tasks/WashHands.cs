@@ -6,30 +6,32 @@ using UnityEngine.Events;
 public class WashHands : TaskBehaviour
 {
     [SerializeField] private GameObject worldCanvas;
-
+   
     public Progress progress;
     public int progressIndex;
     public int toAdd;
-
+    public GameObject bottleTable;
+    private bool BottleIn=false;
     public UnityEvent startEvent;
     public UnityEvent doneEvent;
-    public void InteractionAction()
-    {
-        if(!taskDone)
-        {
-            taskDone = true;
-            TaskHandler.instance.TaskDone(this);
-        }
-    }
+  
     private void OnTriggerEnter(Collider other)
     {
-        if (taskDone) return;
-
+        Debug.Log("BottleRinzing collider trigred :" + other.tag);
+        if (other.CompareTag("Bottle") && !BottleIn)
+        {
+            Debug.Log("Bottle collider trigred :");
+            BottleIn = true;
+            bottleTable.SetActive(true);
+            //other.transform.GetChild(0).gameObject.SetActive(true);
+            other.transform.GetChild(1).gameObject.SetActive(true);
+        }
     }
     public override void TaskDone()
     {
-        doneEvent.Invoke();
-        worldCanvas.gameObject.SetActive(false);
+         doneEvent.Invoke();
+        // worldCanvas.gameObject.SetActive(false);
+        gameObject.SetActive(false);
         progress.toAdd = toAdd;
         progress.AddToProgress(progressIndex);
     }
