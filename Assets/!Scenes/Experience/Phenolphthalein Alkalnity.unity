@@ -3588,8 +3588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 311.25, y: -73.94}
-  m_SizeDelta: {x: 622.5, y: 147.88}
+  m_AnchoredPosition: {x: 311.25, y: -106.135}
+  m_SizeDelta: {x: 622.5, y: 212.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555392438
 MonoBehaviour:
@@ -3611,8 +3611,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The water\u2019s color has changed back to its original state, the volume
-    added of HCl is 11 ml, and Phenolphthalein Alkalinity is 110 ppm."
+  m_text: 'The pink color fades to colorless, it indicates that the hydroxide ions
+    have
+
+    been neutralized, and the solution has reached a <sub>P</sub>H of
+    about 8.2. The volume added of HCl
+
+    is V<sub>HCl</sub>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12226,7 +12231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Phenolphthalein alkalinity (Rodier 9th edition)  '
+  m_text: 'Hydroxide alkalinity (Rodier 9th edition)  '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15273,7 +15278,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 3.3}
-  m_SizeDelta: {x: -108.28967, y: 42.208405}
+  m_SizeDelta: {x: -108.28967, y: 106.598404}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2139118579
 MonoBehaviour:

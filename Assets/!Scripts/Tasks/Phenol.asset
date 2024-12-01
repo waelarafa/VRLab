@@ -34,7 +34,7 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: 8490900e558ca604f944edc32fcd3104, type: 3}
     IsShowenInUI: 0
   - taskName: Task 1.8
-    taskDescription: Add 3 drop of phenolphthalein (1 ml per drop)
+    taskDescription: Add 3 drop of phenolphthalein (0.05 ml per drop)
     taskSound: {fileID: 8300000, guid: c3a90642b820c1246ab9f3e357816380, type: 3}
     IsShowenInUI: 1
   - taskName: Task 2

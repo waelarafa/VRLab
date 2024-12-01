@@ -163,7 +163,7 @@ public class TaskManagerPhenolop : MonoBehaviour
     private void DropPreLogic(TriggerConfigPhenolop ob)
     {
         ob.objectsToManipulate[0].SetActive(true);
-        ob.objectsToManipulate[1].GetComponent<TextMeshProUGUI>().text = "1";
+        ob.objectsToManipulate[1].GetComponent<TextMeshProUGUI>().text = "0.05";
     } 
     
     private void DropPreLogic1(TriggerConfigPhenolop ob)
@@ -171,7 +171,7 @@ public class TaskManagerPhenolop : MonoBehaviour
         ob.objectsToManipulate[0].SetActive(true);
         ob.objectsToManipulate[1].SetActive(false);
         ob.objectsToManipulate[2].SetActive(true);
-        ob.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "2";
+        ob.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "0.1";
     }
     private void CompleteTask7_PreLogic(TriggerConfigPhenolop triggerConfig)
     {
@@ -242,7 +242,7 @@ public class TaskManagerPhenolop : MonoBehaviour
         triggerConfig.objectsToManipulate[0].SetActive(false);
         triggerConfig.objectsToManipulate[1].SetActive(true); 
         triggerConfig.objectsToManipulate[2].SetActive(true);
-        triggerConfig.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "3";
+        triggerConfig.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "0.15";
         // Logic specific to Task1 pre-completion
         Debug.Log("Pre-completion logic for Task1 executed.");
     }
