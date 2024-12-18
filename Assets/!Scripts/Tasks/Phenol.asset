@@ -34,7 +34,7 @@ MonoBehaviour:
     taskSound: {fileID: 8300000, guid: 8490900e558ca604f944edc32fcd3104, type: 3}
     IsShowenInUI: 0
   - taskName: Task 1.8
-    taskDescription: Add 3 drop of phenolphthalein (1 ml per drop)
+    taskDescription: Add 3 drop of phenolphthalein (0.05 ml per drop)
     taskSound: {fileID: 8300000, guid: c3a90642b820c1246ab9f3e357816380, type: 3}
     IsShowenInUI: 1
   - taskName: Task 2
@@ -64,7 +64,7 @@ MonoBehaviour:
     IsShowenInUI: 1
   - taskName: Task 8
     taskDescription: Start adding HCI solution.
-    taskSound: {fileID: 8300000, guid: 9ccab1d563f43d04aa598dde9dc8a7df, type: 3}
+    taskSound: {fileID: 8300000, guid: 5191fd5eb73e558478554c4810f567ad, type: 3}
     IsShowenInUI: 1
   - taskName: Task 9
     taskDescription: Perform the reading.

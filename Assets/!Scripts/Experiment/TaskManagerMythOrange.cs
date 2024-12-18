@@ -197,7 +197,7 @@ public class TaskManagerMythOrange : MonoBehaviour
         ob.objectsToManipulate[0].SetActive(false);
         ob.objectsToManipulate[1].SetActive(true);
         ob.objectsToManipulate[2].SetActive(true);
-        ob.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "3";
+        ob.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "0.15";
     }
     private void CompleteTask5_PreLogic(TriggerConfigMyth ob)
     {
@@ -227,7 +227,7 @@ public class TaskManagerMythOrange : MonoBehaviour
         ob.objectsToManipulate[8].SetActive(true);
      
         ob.objectsToManipulate[9].GetComponent<TMP_InputField>().text = "23 ml";
-        ob.objectsToManipulate[10].GetComponent<TMP_InputField>().text = "4.5";
+        ob.objectsToManipulate[10].GetComponent<TMP_InputField>().text = "4.3";
         if (ob.objectsToManipulate[11].GetComponent<Animator>())
             ob.objectsToManipulate[11].GetComponent<Animator>().SetTrigger("Spin");
     }
@@ -254,7 +254,7 @@ public class TaskManagerMythOrange : MonoBehaviour
     {
         ob.objectsToManipulate[0].SetActive(true);
         canvas.SetActive(false);
-        ob.objectsToManipulate[1].GetComponent<TextMeshProUGUI>().text = "1";
+        ob.objectsToManipulate[1].GetComponent<TextMeshProUGUI>().text = "0.05";
         // Logic specific to Task1 pre-completion
         Debug.Log("Pre-completion logic for Task1 executed.");
     }
@@ -264,7 +264,7 @@ public class TaskManagerMythOrange : MonoBehaviour
         ob.objectsToManipulate[0].SetActive(false);
         ob.objectsToManipulate[1].SetActive(true);
         ob.objectsToManipulate[2].SetActive(true);
-        ob.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "2";
+        ob.objectsToManipulate[3].GetComponent<TextMeshProUGUI>().text = "0.1";
         // Logic specific to Task2 pre-completion
         Debug.Log("Pre-completion logic for Task2 executed.");
     }

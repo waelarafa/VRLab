@@ -3,27 +3,42 @@ using UnityEngine.UI;
 using System.Collections;
 using Unity.VisualScripting;
 [System.Serializable]
-public class TriggerConfigNitrV2
+public class ChildsTriggerConfigNitrV2
 {
-    public TaskTriggerNitr trigger;                // Reference to the TaskTrigger
-    public string taskNameToComplete;              // Task to complete when triggered
-    public string tag;                             // Tag to compare when trigger is entered
-    public GameObject[] objectsToManipulate;       // Objects to manipulate (for future use or other tasks)
-    public float waitTime = 1f;                    // Time to wait before completing the task
+            
 
-    public int requiredCompletions = 1;            // Number of times the task needs to be triggered
-    [HideInInspector] public int currentCompletions = 0;  // Track the number of completions
+    public float waitTime = 1f;                    // Time to wait before completing the task
+    public string childTaskName;
+    public string tag;
 
     // Objects to activate before or after task completion
     public GameObject[] preObjectsToActivate;      // Objects to activate before completing the task
     public GameObject[] postObjectsToActivate;     // Objects to activate after completing the task
 
     // Objects to deactivate before or after task completion
-    public GameObject[] preObjectsToDeactivate;    // Objects to deactivate before completing the task
-    public GameObject[] postObjectsToDeactivate;   // Objects to deactivate after completing the task
-
+    public GameObject[] preObjectsToDesactivate;    // Objects to deactivate before completing the task
+    public GameObject[] postObjectsToDesactivate;   // Objects to deactivate after completing the task
+    public GameObject[] objectsToManipulate;         // Objects to manipulate (for future use or other tasks)
     public bool usePreCompletionLogic = false; // Whether to use pre-completion logic
     public bool usePostCompletionLogic = false; // Whether to use post-completion logic
+   
+}
+
+[System.Serializable]
+public class TriggerConfigNitrV2
+{
+    public TaskTriggerNitrV2 trigger;                // Reference to the TaskTrigger
+    public string taskNameToComplete;              // Task to complete when triggered
+                       
+      
+    public float waitTime = 1f;                    // Time to wait before completing the task
+
+
+
+    public int NombreOfChilds = 1;  // Number of completions required to complete the task
+    public int currentCompletions = 0;  // Counter for completions
+    public ChildsTriggerConfigNitrV2[] childsTriggerConfigNitrV2;
+  
 }
 
 
@@ -31,7 +46,7 @@ public class TaskManagerNitrV2 : MonoBehaviour
 {
     public GameObject taskPrefab;              // Task prefab for UI
     public Transform taskPanel;                // UI panel to display tasks
-    public TaskList taskList;                  // Reference to the ScriptableObject task list
+    public TaskListV2 taskList;                  // Reference to the ScriptableObject task list
     public Color taskTextColor;                // Color for task text in UI
     public AudioSource audioSource;            // AudioSource to play task sounds
     public GameObject canvas;
@@ -46,6 +61,7 @@ public class TaskManagerNitrV2 : MonoBehaviour
         InitializeTasksUI();
         InitializeTasks();     // Initialize tasks on the UI
         InitializeTriggers();  // Initialize trigger settings
+        
     }
 
     void InitializeTasksUI()
@@ -86,7 +102,9 @@ public class TaskManagerNitrV2 : MonoBehaviour
             if (config.trigger != null)
             {
                 config.trigger.taskNameToComplete = config.taskNameToComplete;  // Assign task to trigger
-                config.trigger.SetTag(config.tag);  // Assign tag to trigger
+                config.trigger.SetTag(config.childsTriggerConfigNitrV2[0].tag);  // Assign tag to trigger
+
+
             }
         }
     }
@@ -94,25 +112,52 @@ public class TaskManagerNitrV2 : MonoBehaviour
     // Method that handles the task completion when the trigger is activated
     public void HandleTaskTrigger(TaskTriggerNitrV2 trigger)
     {
-        // Find the corresponding TriggerConfigNitrV2 for this trigger
-        foreach (var config in triggerConfigs)
+        foreach (var configs in triggerConfigs)
         {
-            if (config.trigger == trigger && config.taskNameToComplete == trigger.taskNameToComplete)
+            foreach (var config in configs.childsTriggerConfigNitrV2)
             {
-                if (IsCurrentTask(config.taskNameToComplete))
+                if (configs.trigger == trigger)
                 {
-                    // Increase the completion count
-                    config.currentCompletions++;
-
-                    // Check if the required number of completions is met
-                    if (config.currentCompletions >= config.requiredCompletions)
+                    if (IsCurrentTask(configs.taskNameToComplete))
                     {
-                        StartCoroutine(CompleteTaskAfterDelay(config));
+                        // Get the next child task and check if it exists
+                        int ChildIndex = trigger.GetChildTaskIndex();
+                        if (ChildIndex != null)
+                        {
+                         
+                            // Update the task name to the next child task
+                            // config.taskNameToComplete = childTaskName;
+                            // trigger.currentCompletions++;
+
+                            // Check if required completions are met for this child task
+                            if (configs.currentCompletions <= configs.NombreOfChilds)
+                            {
+                               
+                                    Debug.Log("currentCompletions ="+ configs.currentCompletions);
+                                    StartCoroutine(CompleteChildTaskAfterDelay(configs.childsTriggerConfigNitrV2[ChildIndex]));
+                                // trigger.DisableTrigger();  // Disable further triggering
+                                if (configs.currentCompletions == configs.NombreOfChilds)
+                                {
+                                    StartCoroutine(CompleteTaskAfterDelay(configs));
+                                    trigger.DisaBleTrigger();
+
+                                }
+                                if (configs.currentCompletions < configs.NombreOfChilds)
+                                {
+                                    trigger.NextChildTask();
+                                    trigger.SetTag(configs.childsTriggerConfigNitrV2[ChildIndex + 1].tag);
+                                    configs.currentCompletions++;
+                                }
+                               
+
+                            }
+                          
+                            return;
+                        }
                     }
-                    return;
                 }
             }
-        }
+            }
 
         Debug.LogWarning("No handler for trigger: " + trigger);
     }
@@ -120,16 +165,28 @@ public class TaskManagerNitrV2 : MonoBehaviour
     // Coroutine to handle task completion logic after a delay
     private IEnumerator CompleteTaskAfterDelay(TriggerConfigNitrV2 triggerConfig)
     {
+        // Wait for the specified time before completing the task
+        yield return new WaitForSeconds(triggerConfig.waitTime);
+
+        // Mark the task as complete
+        CompleteCurrentTask();
+
+     
+      
+
+    }
+    private IEnumerator CompleteChildTaskAfterDelay(ChildsTriggerConfigNitrV2 triggerConfig)
+    {
         // Run pre-custom logic if assigned
         if (triggerConfig.usePreCompletionLogic)
         {
-            PreCompletionLogic(triggerConfig); // Execute custom logic before task completion
+            ChildPreCompletionLogic(triggerConfig); // Execute custom logic before task completion
         }
 
         // Deactivate pre-objects if assigned
-        if (triggerConfig.preObjectsToDeactivate != null && triggerConfig.preObjectsToDeactivate.Length > 0)
+        if (triggerConfig.preObjectsToDesactivate != null && triggerConfig.preObjectsToDesactivate.Length > 0)
         {
-            foreach (var obj in triggerConfig.preObjectsToDeactivate)
+            foreach (var obj in triggerConfig.preObjectsToDesactivate)
             {
                 if (obj != null)
                     obj.SetActive(false);  // Deactivate pre objects
@@ -148,14 +205,14 @@ public class TaskManagerNitrV2 : MonoBehaviour
 
         // Wait for the specified time before completing the task
         yield return new WaitForSeconds(triggerConfig.waitTime);
-
+        Debug.Log( " child task is completed.");
         // Mark the task as complete
-        CompleteCurrentTask();
+        // CompleteCurrentTask();
 
         // Deactivate post-objects if assigned
-        if (triggerConfig.postObjectsToDeactivate != null && triggerConfig.postObjectsToDeactivate.Length > 0)
+        if (triggerConfig.postObjectsToDesactivate != null && triggerConfig.postObjectsToDesactivate.Length > 0)
         {
-            foreach (var obj in triggerConfig.postObjectsToDeactivate)
+            foreach (var obj in triggerConfig.postObjectsToDesactivate)
             {
                 if (obj != null)
                     obj.SetActive(false);  // Deactivate post objects
@@ -176,11 +233,10 @@ public class TaskManagerNitrV2 : MonoBehaviour
         // Post-completion logic here
         if (triggerConfig.usePostCompletionLogic)
         {
-            PostCompletionLogic(triggerConfig);
+          //  PostCompletionLogic(triggerConfig);
         }
 
-        // Optionally, reset completion count
-        triggerConfig.currentCompletions = 0;
+
 
     }
 
@@ -199,7 +255,45 @@ public class TaskManagerNitrV2 : MonoBehaviour
                 break;
         }
     }
-   
+    private void ChildPreCompletionLogic(ChildsTriggerConfigNitrV2 triggerConfig)
+    {
+        switch (triggerConfig.childTaskName)
+        {
+
+            case "animeDrawer":
+                OpenDrawer(triggerConfig.objectsToManipulate);
+                break;
+            case "animeDrawerC":
+                CloseDrawer(triggerConfig.objectsToManipulate);
+                break; 
+            case "MagnetStirr":
+                AnimeMagnett(triggerConfig.objectsToManipulate);
+                break;
+
+
+            // Add more cases for additional tasks as needed
+
+            default:
+                Debug.LogWarning("No specific pre-completion logic defined for task: " );
+                break;
+        }
+    }
+    public void OpenDrawer(GameObject[] ob)
+    {
+      
+        ob[0].GetComponent<Animator>().SetTrigger("Open");
+    }
+    public void CloseDrawer(GameObject[] ob)
+    {
+
+        ob[0].GetComponent<Animator>().SetTrigger("Close");
+    }
+    public void AnimeMagnett(GameObject[] ob)
+    {
+        ob[0].GetComponent<Animator>().SetTrigger("Spin");
+        ob[1].GetComponent<Animator>().SetTrigger("Spin");
+        ob[2].GetComponent<Animator>().SetTrigger("Spin");
+    }
     private void PostCompletionLogic(TriggerConfigNitrV2 triggerConfig)
     {
         switch (triggerConfig.taskNameToComplete)

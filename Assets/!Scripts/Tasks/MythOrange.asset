@@ -38,7 +38,7 @@ MonoBehaviour:
     taskSound: {fileID: 0}
     IsShowenInUI: 0
   - taskName: Task 4.2
-    taskDescription: Add two to three drop of 1% of MEO
+    taskDescription: 'Add two to three drop of 1% of methyl indicator. '
     taskSound: {fileID: 8300000, guid: 0a65b143e8bf8d744953898f672da010, type: 3}
     IsShowenInUI: 1
   - taskName: Task 5
@@ -67,7 +67,7 @@ MonoBehaviour:
     IsShowenInUI: 1
   - taskName: Task 8.1
     taskDescription: "Start adding HCI solution.\r"
-    taskSound: {fileID: 8300000, guid: 815f07244798a394aa3dfe3877a09fb6, type: 3}
+    taskSound: {fileID: 8300000, guid: 91acc7e656d82d043973ac63d08a4558, type: 3}
     IsShowenInUI: 1
   - taskName: Task 9
     taskDescription: "Perform the reading.\r"

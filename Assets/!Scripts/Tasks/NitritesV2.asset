@@ -20,7 +20,7 @@ MonoBehaviour:
   - taskName: Task 1.2
     taskDescription: "add   0.5 ml of Diazotization Reagent.\r"
     taskSound: {fileID: 0}
-    IsShowenInUI: 0
+    IsShowenInUI: 1
   - taskName: Task 2
     taskDescription: Add   0.5 ml of Diazotization Reagent.
     taskSound: {fileID: 8300000, guid: 02a711dba3951584d9140186f49bb8c4, type: 3}

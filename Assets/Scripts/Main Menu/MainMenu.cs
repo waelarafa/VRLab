@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     private string RiverSceneName = "River";
     private string Ammonium = "AmmoniumVR";
     private string SpectroVR = "SpectroVR";
-    private string Nitrites = "Nitrites";
+    private string Nitrites = "NitritesV2";
     private string MaterialPreparation = "EquipmentCollect";
     private string Sampling = "Sampling";
     private string mainMenu = "MainMenu";

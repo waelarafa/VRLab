@@ -239,6 +239,7 @@ public class TaskManager2 : MonoBehaviour
     {
   
         triggerConfig.objectsToManipulate[1].SetActive(true);
+        triggerConfig.objectsToManipulate[2].SetActive(true);
     }  
     private void CompleteTask13_PreLogic(TriggerConfig triggerConfig)
     {

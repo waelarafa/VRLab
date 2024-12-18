@@ -23,12 +23,12 @@ public class TakeWaterSample : TaskBehaviour
     {
     if (other.CompareTag("Bottle"))
     {
-            BottleLable.SetActive(true);
+           // BottleLable.SetActive(true);
             other.transform.GetChild(0).gameObject.SetActive(true);  
             other.transform.GetChild(1).gameObject.SetActive(true);
 
 
-        }
+     }
        
 
 

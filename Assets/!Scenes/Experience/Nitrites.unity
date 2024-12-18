@@ -2453,6 +2453,7 @@ GameObject:
   - component: {fileID: 694239967}
   - component: {fileID: 694239969}
   - component: {fileID: 694239970}
+  - component: {fileID: 694239971}
   m_Layer: 0
   m_Name: ScenManager
   m_TagString: Untagged
@@ -2695,6 +2696,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   labButtons: {fileID: 0}
   SampleAnalysisButton: {fileID: 0}
+--- !u!114 &694239971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694239966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e4f284c5fbf1b4ea86021328078f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HandModelId: 1
+  hms: {fileID: 1224082202}
 --- !u!1001 &707016618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5261,6 +5276,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 983760782}
   m_SourcePrefab: {fileID: 100100000, guid: 4ac7df741a9c0a2418ec19477729ee3d, type: 3}
+--- !u!114 &1224082202 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5959677274440945754, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1224082201}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6194a870e97cfe14081ff58549a6852a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1226162894
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab85a5f6b459a748812927f4c9c0a8b, type: 3}
+  m_Name: NitriteV2
+  m_EditorClassIdentifier: 
+  tasks:
+  - taskName: Task 1
+    taskDescription: Take 25 mL of the water sample and pour it into a beaker (repeat
+      3 times).
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 2
+    taskDescription: Add 0.5 mL of the diazotization reagent to the sample (repeat
+      3 times)
+    taskSound: {fileID: 8300000, guid: 7c5d53082dc761f47b422cb0309c1d16, type: 3}
+    IsShowenInUI: 1
+    childTasks:
+    - taskName: 
+      taskDescription: 
+  - taskName: Task 3
+    taskDescription: Place a magnetic stir bar in each beaker (repeat 3 times).
+    taskSound: {fileID: 8300000, guid: abc4173f19e6ac947a10a6c4ba407c53, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 4
+    taskDescription: Place the beakers on the magnetic stirrer.
+    taskSound: {fileID: 8300000, guid: b265e19191fa3d5439dc796d8103095b, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 5
+    taskDescription: Press the button to activate stirring for homogeneous mixing.
+    taskSound: {fileID: 8300000, guid: e4c2e31932ce7be44a80a9c053d326bb, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 6
+    taskDescription: Allow the solutions to rest for 30 minutes.
+    taskSound: {fileID: 8300000, guid: f7bff8be0fdacf44e9de6029f6613898, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 7
+    taskDescription: Set the spectrophotometer wavelength to 537 nm.
+    taskSound: {fileID: 8300000, guid: a36c4b0742f29e04ea61e3d8a1c1fd50, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 8
+    taskDescription: Fill the cuvette with the solution (repeat 3 times).
+    taskSound: {fileID: 8300000, guid: c5370ba26042e3e4fb4d809b7e0e1e50, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 9
+    taskDescription: Open the spectrophotometer cover.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 10
+    taskDescription: Place the first cuvette(nb 3) in the spectrophotometer and close
+      the cover.
+    taskSound: {fileID: 8300000, guid: f51ad4ce1af22ce4c97f27cc150a81e4, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 11
+    taskDescription: Perform the Reading.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 12
+    taskDescription: Take out the first cuvette and put the second one(nb 2) and
+      close the cover.
+    taskSound: {fileID: 8300000, guid: 188e64f8f428ec546ad381fa9dfc9e7b, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 13
+    taskDescription: Perform the reading.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 14
+    taskDescription: Take out the second cuvette and put the third one(nb 1) and
+      close the cover.
+    taskSound: {fileID: 8300000, guid: d6ca77f94ff7f884798c76a81a4fe690, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 15
+    taskDescription: Perform the reading.
+    taskSound: {fileID: 8300000, guid: 173bc409c7785d7499d9e40a92d0be96, type: 3}
+    IsShowenInUI: 1
+    childTasks: []
+  - taskName: Task 16
+    taskDescription: Perform the reading.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 0
+    childTasks: []
