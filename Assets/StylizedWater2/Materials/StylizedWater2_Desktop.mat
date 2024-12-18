@@ -36,7 +36,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _PointSpotLightReflectionDistortion
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -290,7 +290,7 @@ Material:
     - _ZClip: 1
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.14573842, b: 0.3018868, a: 0.5176471}
+    - _BaseColor: {r: 0.05571532, g: 0.05660379, b: 0.04832682, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _DepthMapBounds: {r: -402.3, g: -459.43, b: 0.0012693577, a: 0}
     - _Direction: {r: 1, g: 1, b: 0, a: 0}
@@ -298,11 +298,11 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0.92941177}
     - _FoamTiling: {r: 0.1, g: 0.1, b: 0, a: 0}
-    - _HorizonColor: {r: 0.68, g: 1, b: 0.99, a: 0.15}
+    - _HorizonColor: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
     - _IntersectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _NormalTiling: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShallowColor: {r: 0.3962264, g: 0.32808945, b: 0.31585974, a: 0.45490196}
+    - _ShallowColor: {r: 0.122641504, g: 0.07494438, b: 0.06652723, a: 0.45490196}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _WaterColor: {r: 0.21176466, g: 0.6745098, b: 1, a: 1}
     - _WaterShallowColor: {r: 0, g: 0.9394503, b: 1, a: 1}

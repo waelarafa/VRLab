@@ -35,11 +35,11 @@ MonoBehaviour:
     IsShowenInUI: 1
   - taskName: Task 3
     taskDescription: Pour the solution into the test tube
-    taskSound: {fileID: 8300000, guid: 5c31ad76cdbaeca4194e5625d11ba810, type: 3}
+    taskSound: {fileID: 8300000, guid: 6c7dd28ab64fe3d4fb8ae8f6284f5c71, type: 3}
     IsShowenInUI: 1
   - taskName: Task 4
     taskDescription: "Move the solution to the magnet stirrer. \r"
-    taskSound: {fileID: 8300000, guid: 8bc62e807c655334a8863dd45bde1298, type: 3}
+    taskSound: {fileID: 8300000, guid: 52e7e51e9fb1e284bacafc70f6f28e79, type: 3}
     IsShowenInUI: 1
   - taskName: Task 5
     taskDescription: Press the gray button to activate the stirrer  for homogoneous
@@ -52,21 +52,64 @@ MonoBehaviour:
     IsShowenInUI: 1
   - taskName: Task 7
     taskDescription: Set the spectrophotometer wavelength  to [ 700 nm.800nm]
-    taskSound: {fileID: 8300000, guid: 28ebfe44ff725c94398784a1d42a094e, type: 3}
+    taskSound: {fileID: 8300000, guid: 5dae9eda8d8239b448c12031d7b621f3, type: 3}
     IsShowenInUI: 1
-  - taskName: Task 7.1
-    taskDescription: Open the spectrophotometer cover.
-    taskSound: {fileID: 8300000, guid: 3d35593bc502fbf4e88fff86a7c341b1, type: 3}
-    IsShowenInUI: 1
-  - taskName: Task 8
-    taskDescription: Fill the tube with the solution.
-    taskSound: {fileID: 8300000, guid: fac1cf1d709ba1741a42cc2bdc3a52eb, type: 3}
-    IsShowenInUI: 1
-  - taskName: Task 8.1
-    taskDescription: Put the tube in the spectrophotometer and close the cover.
-    taskSound: {fileID: 8300000, guid: 7f428ba3ff734d44bbb54243d69768a7, type: 3}
-    IsShowenInUI: 1
-  - taskName: Task 17
-    taskDescription: Perform the reading.
+  - taskName: Task 8.01
+    taskDescription: Fill the cuvette with the solution (repeat 3 times).
     taskSound: {fileID: 0}
+    IsShowenInUI: 0
+  - taskName: Task 8
+    taskDescription: Fill the cuvette with the solution (repeat 3 times).
+    taskSound: {fileID: 0}
+    IsShowenInUI: 0
+  - taskName: Task 8.02
+    taskDescription: Fill the cuvette with the solution (repeat 3 times).
+    taskSound: {fileID: 8300000, guid: d9dde137627c7054fb1d786717e242f8, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 9.1
+    taskDescription: Open the spectrophotometer cover.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+  - taskName: Task 9
+    taskDescription: Place the first cuvette in the spectrophotometer and close the
+      cover
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+  - taskName: Task 9.2
+    taskDescription: Close the cover.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 0
+  - taskName: Task 9.3
+    taskDescription: Open the cover and Perform the reading.
+    taskSound: {fileID: 8300000, guid: e4e2e5f319d156c488771a3a84c610a3, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 10
+    taskDescription: 'Take out the first cuvette and put the second one in the spectrophotometer
+      and close
+
+      the cover.'
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+  - taskName: Task 10.1
+    taskDescription: Close the cover.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 0
+  - taskName: Task 10.2
+    taskDescription: Open the cover and perform the reading.
+    taskSound: {fileID: 8300000, guid: dfd0d50e057e3b14cbc328e100a341bf, type: 3}
+    IsShowenInUI: 1
+  - taskName: Task 11
+    taskDescription: 'Take out the second cuvette and put the third one in the spectrophotometer
+      and close
+
+      the cover'
+    taskSound: {fileID: 0}
+    IsShowenInUI: 1
+  - taskName: Task 11.1
+    taskDescription: Close the cover.
+    taskSound: {fileID: 0}
+    IsShowenInUI: 0
+  - taskName: Task 11.2
+    taskDescription: Open the cover and perform the reading.
+    taskSound: {fileID: 8300000, guid: 39c8d706e98826d45a6faf73495b5488, type: 3}
     IsShowenInUI: 1

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LableBottle : MonoBehaviour
 {
-    GameObject labelingUI;
+    [SerializeField] private GameObject labelingUI;
    public void showLabelingUi()
     {
         labelingUI.SetActive(true);

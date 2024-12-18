@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: StylizedWater2_Murky
   m_Shader: {fileID: 482279110045391116, guid: d7b0192b9bf19c949900035fa781fdc4, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ADVANCED_SHADING
   - _CAUSTICS
@@ -34,6 +36,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -303,7 +306,7 @@ Material:
     - _IntersectionColor: {r: 1, g: 1, b: 1, a: 1}
     - _NormalTiling: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShallowColor: {r: 0.7169812, g: 0.21014106, b: 0, a: 1}
+    - _ShallowColor: {r: 0.20754719, g: 0.0991996, b: 0.053844795, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _WaterColor: {r: 0.21176466, g: 0.6745098, b: 1, a: 1}
     - _WaterShallowColor: {r: 0, g: 0.9394503, b: 1, a: 1}

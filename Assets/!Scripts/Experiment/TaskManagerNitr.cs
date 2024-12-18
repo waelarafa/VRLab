@@ -133,6 +133,9 @@ public class TaskManagerNitr : MonoBehaviour
             case "Task 2":
                 CompleteTask2_PreLogic(triggerConfig);
                 break;
+            case "Task 1.2":
+                CompleteTask2_1_PreLogic(triggerConfig.objectsToManipulate[0]);
+                break;
             case "Task 3":
                 CompleteTask3_PreLogic(triggerConfig.objectsToManipulate[0]);
                 break;
@@ -147,6 +150,33 @@ public class TaskManagerNitr : MonoBehaviour
                  break;
             case "Task 8.1":
                 CompleteTask8_1_PreLogic(triggerConfig);
+                break;
+            case "Task 9":
+                CompleteTask6_PostLogic(triggerConfig);
+                break;
+            case "Task 10":
+                CompleteTask6_PostLogic(triggerConfig);
+                break;
+            case "Task 10.1":
+                closeDrawer(triggerConfig.objectsToManipulate[0]);
+                break;
+            case "Task 10.2":
+                EditTable(triggerConfig);
+                break;
+            case "Task 11":
+                CompleteTask6_PostLogic(triggerConfig);
+                break;
+            case "Task 11.1":
+                closeDrawer(triggerConfig.objectsToManipulate[0]);
+                break;
+            case "Task 11.2":
+                EditTable11_2(triggerConfig);
+                break;
+            case "Task 9.1":
+                openDrawer(triggerConfig.objectsToManipulate[0]);
+                break;
+            case "Task 9.2":
+                closeDrawer(triggerConfig.objectsToManipulate[0]);
                 break;
             case "Task 17":
                 CompleteTask17_PreLogic(triggerConfig.objectsToManipulate[0]);
@@ -202,12 +232,23 @@ public class TaskManagerNitr : MonoBehaviour
             case "Task 8":
                 CompleteTask8_PostLogic(triggerConfig);
                 break;
+            case "Task 8.01":
+                CompleteTask8_PostLogic(triggerConfig);
+                break;
+            case "Task 8.02":
+                CompleteTask8_PostLogic(triggerConfig);
+                break;
             case "Task 8.1":
                 CompleteTask8_1_PostLogic(triggerConfig);
                 break;
             case "Task 6":
                 CompleteTask6_PostLogic(triggerConfig);
                 break;
+            case "Task 9.3":
+                EditTable(triggerConfig);
+                break; 
+           
+
             case "Task 17":
                 CompleteTask17_PostLogic();
                 break;
@@ -217,6 +258,25 @@ public class TaskManagerNitr : MonoBehaviour
                 Debug.LogWarning("No specific post-completion logic defined for task: " + triggerConfig.taskNameToComplete);
                 break;
         }
+    }
+    private void EditTable(TriggerConfigNitr triggerConfig)
+    {
+        
+        if (triggerConfig.objectsToManipulate[0].GetComponent<Animator>())
+            triggerConfig.objectsToManipulate[0].GetComponent<Animator>().SetTrigger("Open");
+        triggerConfig.objectsToManipulate[1].SetActive(true); 
+        triggerConfig.objectsToManipulate[2].SetActive(true);
+
+    }  
+    private void EditTable11_2(TriggerConfigNitr triggerConfig)
+    {
+        
+        if (triggerConfig.objectsToManipulate[0].GetComponent<Animator>())
+            triggerConfig.objectsToManipulate[0].GetComponent<Animator>().SetTrigger("Open");
+        triggerConfig.objectsToManipulate[1].SetActive(true); 
+        triggerConfig.objectsToManipulate[2].SetActive(true); 
+        triggerConfig.objectsToManipulate[3].SetActive(true);
+
     }
     private void CompleteTask2_2_PostLogic(TriggerConfigNitr triggerConfig)
     {
@@ -277,7 +337,10 @@ public class TaskManagerNitr : MonoBehaviour
      
         
     }
-
+    private void CompleteTask2_1_PreLogic(GameObject OB)
+    {
+        OB.gameObject.SetActive(false);
+    }
     private void CompleteTask3_PreLogic(GameObject OB)
     {
         OB.gameObject.SetActive(true);
@@ -293,6 +356,17 @@ public class TaskManagerNitr : MonoBehaviour
             ob.GetComponent<Animator>().SetTrigger("Open");
 
 
+    }
+    private void closeDrawer(GameObject ob)
+    {
+
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Close");
+    }
+    private void openDrawer(GameObject ob)
+    {
+        if (ob.GetComponent<Animator>())
+            ob.GetComponent<Animator>().SetTrigger("Open");
     }
     // Coroutine to rotate the magnet for a given number of rotations
 

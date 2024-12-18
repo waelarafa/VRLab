@@ -40,6 +40,8 @@ TagManager:
   - Reagent
   - Flask 1
   - Flask 3
+  - TestTube2
+  - TestTube1
   layers:
   - Default
   - TransparentFX

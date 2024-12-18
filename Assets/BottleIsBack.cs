@@ -11,8 +11,10 @@ public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bottle"))
         {
+            other.gameObject.tag = "Untagged";
             bottleTable.SetActive(false);
             TaskHandler.instance.TaskDone(TaskHandler.instance.currentTask.currentBehaviour);
+
         }
     }
 }

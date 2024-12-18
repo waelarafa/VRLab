@@ -63,8 +63,8 @@ MonoBehaviour:
     IsShowenInUI: 1
     childTasks: []
   - taskName: Task 10
-    taskDescription: Place the first cuvette in the spectrophotometer and close the
-      cover.
+    taskDescription: Place the first cuvette(nb 3) in the spectrophotometer and close
+      the cover.
     taskSound: {fileID: 8300000, guid: f51ad4ce1af22ce4c97f27cc150a81e4, type: 3}
     IsShowenInUI: 1
     childTasks: []
@@ -74,8 +74,8 @@ MonoBehaviour:
     IsShowenInUI: 1
     childTasks: []
   - taskName: Task 12
-    taskDescription: Take out the first cuvette and put the second one and close
-      the cover.
+    taskDescription: Take out the first cuvette and put the second one(nb 2) and
+      close the cover.
     taskSound: {fileID: 8300000, guid: 188e64f8f428ec546ad381fa9dfc9e7b, type: 3}
     IsShowenInUI: 1
     childTasks: []
@@ -85,14 +85,14 @@ MonoBehaviour:
     IsShowenInUI: 1
     childTasks: []
   - taskName: Task 14
-    taskDescription: Take out the second cuvette and put the third one and close
-      the cover.
+    taskDescription: Take out the second cuvette and put the third one(nb 1) and
+      close the cover.
     taskSound: {fileID: 8300000, guid: d6ca77f94ff7f884798c76a81a4fe690, type: 3}
     IsShowenInUI: 1
     childTasks: []
   - taskName: Task 15
     taskDescription: Perform the reading.
-    taskSound: {fileID: 8300000, guid: beeaf75e93f59cf4584cd4dc20263255, type: 3}
+    taskSound: {fileID: 8300000, guid: 173bc409c7785d7499d9e40a92d0be96, type: 3}
     IsShowenInUI: 1
     childTasks: []
   - taskName: Task 16

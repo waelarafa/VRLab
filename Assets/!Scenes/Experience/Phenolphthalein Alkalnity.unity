@@ -1904,6 +1904,11 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7014749678520600486, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+        type: 3}
+      propertyPath: m_TagString
+      value: MixerButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8123834767609328093, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
       propertyPath: SlowTimeClip
@@ -1931,6 +1936,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 408136794}
+    - targetCorrespondingSourceObject: {fileID: 7014749678520600486, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 333931448}
+    - targetCorrespondingSourceObject: {fileID: 7014749678520600486, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 333931447}
   m_SourcePrefab: {fileID: 100100000, guid: 4ac7df741a9c0a2418ec19477729ee3d, type: 3}
 --- !u!1 &228265249 stripped
 GameObject:
@@ -2508,6 +2521,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322312893}
   m_Mesh: {fileID: 8569869812216274421, guid: eb2b6570b86a1dc4b888e729cab739ed, type: 3}
+--- !u!1 &333931443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7014749678520600486, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 205124625}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &333931447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333931443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6331161671c25384c82f277d3c53d393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskNameToComplete: 
+--- !u!114 &333931448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333931443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6331161671c25384c82f277d3c53d393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskNameToComplete: 
 --- !u!1 &337653339
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,8 +3659,8 @@ MonoBehaviour:
   m_text: 'The pink color fades to colorless, it indicates that the hydroxide ions
     have
 
-    been neutralized, and the solution has reached a <sub>P</sub>H of
-    about 8.2. The volume added of HCl
+    been neutralized, and the solution has reached a <sub>P</sub>H of about
+    8.2. The volume added of HCl
 
     is V<sub>HCl</sub>'
   m_isRightToLeft: 0
@@ -7455,6 +7500,7 @@ GameObject:
   - component: {fileID: 1181901992}
   - component: {fileID: 1181901995}
   - component: {fileID: 1181901996}
+  - component: {fileID: 1181901997}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -7673,7 +7719,7 @@ MonoBehaviour:
     waitTime: 1
     usePreCompletionLogic: 0
     usePostCompletionLogic: 0
-  - trigger: {fileID: 408136790}
+  - trigger: {fileID: 333931448}
     taskNameToComplete: Task 7
     tag: MixerButton
     objectsToManipulate:
@@ -7681,7 +7727,7 @@ MonoBehaviour:
     waitTime: 1
     usePreCompletionLogic: 1
     usePostCompletionLogic: 0
-  - trigger: {fileID: 408136794}
+  - trigger: {fileID: 333931447}
     taskNameToComplete: Task 8
     tag: AddHCI
     objectsToManipulate:
@@ -7736,6 +7782,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   labButtons: {fileID: 0}
   SampleAnalysisButton: {fileID: 0}
+--- !u!114 &1181901997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181901991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e4f284c5fbf1b4ea86021328078f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HandModelId: 1
+  hms: {fileID: 1844274253}
 --- !u!1 &1203280236
 GameObject:
   m_ObjectHideFlags: 0
@@ -13263,6 +13323,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838550760}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1844274253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5959677274440945754, guid: 4ac7df741a9c0a2418ec19477729ee3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 205124625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6194a870e97cfe14081ff58549a6852a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1847917051 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1000237291965178654, guid: 99c83809a3813954aa2b5a6ee6360925,

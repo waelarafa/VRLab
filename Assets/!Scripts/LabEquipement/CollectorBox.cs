@@ -16,13 +16,17 @@ public class CollectorBox : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject enteringObject = other.gameObject;
-        if (enteringObject.name == "Bottle")
+        if (enteringObject.name == "Bottles")
         {
             nbBottleIn += 1;
+
+            Debug.Log("Bottle nb: " + nbBottleIn);
             if (nbBottleIn == nbBottle)
             {
                 taskManager.CompleteTaskByName(enteringObject.name);
             }
+            
+            enteringObject.name = "BottleIn";
         }
         else { taskManager.CompleteTaskByName(enteringObject.name); }
        

@@ -64,7 +64,7 @@ MonoBehaviour:
     IsShowenInUI: 1
   - taskName: Task 8
     taskDescription: Start adding HCI solution.
-    taskSound: {fileID: 8300000, guid: 9ccab1d563f43d04aa598dde9dc8a7df, type: 3}
+    taskSound: {fileID: 8300000, guid: 5191fd5eb73e558478554c4810f567ad, type: 3}
     IsShowenInUI: 1
   - taskName: Task 9
     taskDescription: Perform the reading.
